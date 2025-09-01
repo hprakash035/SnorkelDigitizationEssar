@@ -1,0 +1,34 @@
+{
+    "css.customData": [
+        "./.vscode/my-less.css-data.json"
+    ],
+    "mdk.uieditor": {
+        "left": {
+            "visible": true,
+            "width": 202.99478149414062
+        },
+        "right": {
+            "visible": true,
+            "width": 451.01043701171875
+        },
+        "device": "tablet"
+    },
+    "mdk.platform": "Web",
+    "mdk.defaultEditor": "Text Editor",
+    "workbench.editorAssociations": {
+        "*.app": "default",
+        "*.global": "default",
+        "*.action": "default",
+        "*.extension": "default",
+        "*.page": "default",
+        "*.service": "default",
+        "*.cim": "default",
+        "*.rule": "default",
+        "*.properties": "default",
+        "*.fragment": "default"
+    },
+    "mdk.bundlerExternals": [
+      "tns-core-modules/file-system",
+      "tns-core-modules/utils/utils"
+    ]
+}

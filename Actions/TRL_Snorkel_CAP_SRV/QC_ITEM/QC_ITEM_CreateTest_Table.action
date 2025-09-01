@@ -1,0 +1,42 @@
+{
+    "ParentLink": {
+        "Property": "qc_TESTS",
+        "Target": {
+            "EntitySet": "QC_ITEM",
+            "ReadLink": "{@odata.readLink}"
+        }
+    },
+    "OnFailure": "/TRL_RH_SnorkelApp/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/TRL_RH_SnorkelApp/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "sheetNo": "#Page:QC_ITEM_CreateTest_Table/#Control:sheetNo/#Value",
+        "actualvalue": "#Page:QC_ITEM_CreateTest_Table/#Control:actualvalue/#Value",
+        "date": "#Page:QC_ITEM_CreateTest_Table/#Control:date/#Value",
+        "ff": "#Page:QC_ITEM_CreateTest_Table/#Control:ff/#Value",
+        "fluidity": "#Page:QC_ITEM_CreateTest_Table/#Control:fluidity/#Value",
+        "method": "#Page:QC_ITEM_CreateTest_Table/#Control:method/#Value",
+        "no": "#Page:QC_ITEM_CreateTest_Table/#Control:no/#Value",
+        "position": "#Page:QC_ITEM_CreateTest_Table/#Control:position/#Value",
+        "powderweight": "#Page:QC_ITEM_CreateTest_Table/#Control:powderweight/#Value",
+        "remark": "#Page:QC_ITEM_CreateTest_Table/#Control:remark/#Value",
+        "settleduration": "#Page:QC_ITEM_CreateTest_Table/#Control:settleduration/#Value",
+        "spec": "#Page:QC_ITEM_CreateTest_Table/#Control:spec/#Value",
+        "specification": "#Page:QC_ITEM_CreateTest_Table/#Control:specification/#Value",
+        "testNo": "#Page:QC_ITEM_CreateTest_Table/#Control:testNo/#Value",
+        "testname": "#Page:QC_ITEM_CreateTest_Table/#Control:testname/#Value",
+        "tf": "#Page:QC_ITEM_CreateTest_Table/#Control:tf/#Value",
+        "tolerance": "#Page:QC_ITEM_CreateTest_Table/#Control:tolerance/#Value",
+        "vibration": "#Page:QC_ITEM_CreateTest_Table/#Control:vibration/#Value",
+        "watercasting": "#Page:QC_ITEM_CreateTest_Table/#Control:watercasting/#Value",
+        "qC_HEADER_SNORKEL_NO": "#Page:QC_ITEM_CreateTest_Table/#Control:qC_HEADER_SNORKEL_NO/#SelectedValue",
+        "qC_HEADER_CUSTOMER_NAME": "#Page:QC_ITEM_CreateTest_Table/#Control:qC_HEADER_CUSTOMER_NAME/#Value"
+    },
+    "Target": {
+        "EntitySet": "Test_Table",
+        "Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateRelatedEntity"
+}

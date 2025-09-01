@@ -1,0 +1,19 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section193Create"
+	},
+	"OnFailure": "/TRL_RH_SnorkelApp/Actions/CreateEntityFailureMessage.action",
+	"Target": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_ITEM"
+	},
+	"Properties": {
+		"DATE_INSPECTED": "#Page:SnorkelInstallation/#Control:Section193Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation/#Control:Section193DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation/#Control:Section193InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation/#Control:Section193Method/#Value",
+		"QUESTION": "19.3 Putting the mark with clearly *12",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}

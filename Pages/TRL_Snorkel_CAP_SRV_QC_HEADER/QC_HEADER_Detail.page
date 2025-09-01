@@ -1,0 +1,239 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_HEADER",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/TRL_RH_SnorkelApp/Actions/TRL_Snorkel_CAP_SRV/QC_HEADER/NavToQC_HEADER_Edit.action",
+				"Position": "Right",
+				"SystemItem": "Edit",
+				"_Type": "Control.Type.ActionBarItem"
+			},
+			{
+				"OnPress": "/TRL_RH_SnorkelApp/Actions/TRL_Snorkel_CAP_SRV/QC_HEADER/QC_HEADER_DetailPopover.action",
+				"Position": "Right",
+				"Caption": "More",
+				"_Type": "Control.Type.ActionBarItem"
+			}
+		],
+		"Caption": "$(L,QC_HEADER_Detail)",
+		"_Type": "Control.Type.ActionBar"
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{CUSTOMER_NAME}",
+						"Subhead": "{createdAt}",
+						"BodyText": "",
+						"Footnote": "{modifiedAt}",
+						"Description": "{createdBy}",
+						"StatusText": "{modifiedBy}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{SNORKEL_NO}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "Created On",
+							"Value": "{createdAt}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "Created By",
+							"Value": "{createdBy}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "Changed On",
+							"Value": "{modifiedAt}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "Changed By",
+							"Value": "{modifiedBy}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "SNORKEL_NO",
+							"Value": "{SNORKEL_NO}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "SHEET_NO",
+							"Value": "{SHEET_NO}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "DATE_ENDED",
+							"Value": "{DATE_ENDED}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "DATE_STARTED",
+							"Value": "{DATE_STARTED}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "DRAFT_FLAG",
+							"Value": "{DRAFT_FLAG}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "SECTIONCOMPLETED",
+							"Value": "{SECTIONCOMPLETED}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "TYPE",
+							"Value": "{TYPE}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "CUSTOMER_NAME",
+							"Value": "{CUSTOMER_NAME}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "PRODUCTION_NO",
+							"Value": "{PRODUCTION_NO}",
+							"_Type": "KeyValue.Type.Item"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				},
+				{
+					"Header": {
+						"Caption": "qc_ATTACHMENTS",
+						"_Type": "SectionCommon.Type.Header"
+					},
+					"ObjectCell": {
+						"AccessoryType": "DisclosureIndicator",
+						"Description": "{createdBy}",
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": ""
+								}
+							],
+							"ImageIsCircular": false
+						},
+						"Icons": [],
+						"StatusImage": "",
+						"Title": "{name}",
+						"Footnote": "{modifiedAt}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{modifiedBy}",
+						"Subhead": "{createdAt}",
+						"SubstatusText": "{sheetNo}",
+						"OnPress": "/TRL_RH_SnorkelApp/Actions/TRL_Snorkel_CAP_SRV/ATTACHMENTS/NavToATTACHMENTS_Detail.action",
+						"_Type": "ObjectTable.Type.ObjectCell"
+					},
+					"EmptySection": {
+						"Caption": "No record found!"
+					},
+					"Target": {
+						"EntitySet": "{@odata.readLink}/qc_ATTACHMENTS",
+						"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service"
+					},
+					"_Type": "Section.Type.ObjectTable"
+				},
+				{
+					"Header": {
+						"Caption": "qc_ITEMS",
+						"_Type": "SectionCommon.Type.Header"
+					},
+					"ObjectCell": {
+						"AccessoryType": "DisclosureIndicator",
+						"Description": "{COMMENTS}",
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": ""
+								}
+							],
+							"ImageIsCircular": false
+						},
+						"Icons": [],
+						"StatusImage": "",
+						"Title": "{qC_HEADER_CUSTOMER_NAME}",
+						"Footnote": "{CORRECTIVE_ACTION}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{DATE_INSPECTED}",
+						"Subhead": "{ACTUAL_VALUE}",
+						"SubstatusText": "{DECISION_TAKEN}",
+						"OnPress": "/TRL_RH_SnorkelApp/Actions/TRL_Snorkel_CAP_SRV/QC_ITEM/NavToQC_ITEM_Detail.action",
+						"_Type": "ObjectTable.Type.ObjectCell"
+					},
+					"EmptySection": {
+						"Caption": "No record found!"
+					},
+					"Target": {
+						"EntitySet": "{@odata.readLink}/qc_ITEMS",
+						"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service"
+					},
+					"_Type": "Section.Type.ObjectTable"
+				},
+				{
+					"Header": {
+						"Caption": "qc_TESTS",
+						"_Type": "SectionCommon.Type.Header"
+					},
+					"ObjectCell": {
+						"AccessoryType": "DisclosureIndicator",
+						"Description": "{createdBy}",
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": ""
+								}
+							],
+							"ImageIsCircular": false
+						},
+						"Icons": [],
+						"StatusImage": "",
+						"Title": "{testname}",
+						"Footnote": "{modifiedAt}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{modifiedBy}",
+						"Subhead": "{createdAt}",
+						"SubstatusText": "{sheetNo}",
+						"OnPress": "/TRL_RH_SnorkelApp/Actions/TRL_Snorkel_CAP_SRV/Test_Table/NavToTest_Table_Detail.action",
+						"_Type": "ObjectTable.Type.ObjectCell"
+					},
+					"EmptySection": {
+						"Caption": "No record found!"
+					},
+					"Target": {
+						"EntitySet": "{@odata.readLink}/qc_TESTS",
+						"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service"
+					},
+					"_Type": "Section.Type.ObjectTable"
+				}
+			],
+			"DataSubscriptions": [
+				"ATTACHMENTS",
+				"QC_ITEM",
+				"Test_Table"
+			],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "QC_HEADER_Detail"
+}

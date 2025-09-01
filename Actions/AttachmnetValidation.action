@@ -1,0 +1,9 @@
+{
+	"_Type": "Action.Type.Message",
+	"ActionResult": {
+		"_Name": "AttachmnetValidation"
+	},
+	"Message": "Only one attachment is allowed.",
+	"Title": "Attachment Limit",
+	"OKCaption": "Ok"
+}

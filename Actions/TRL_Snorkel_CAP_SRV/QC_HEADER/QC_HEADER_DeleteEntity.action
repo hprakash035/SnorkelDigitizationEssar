@@ -1,0 +1,13 @@
+{
+    "Target": {
+        "EntitySet": "QC_HEADER",
+        "Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "OnSuccess": "/TRL_RH_SnorkelApp/Actions/DeleteEntitySuccessMessage.action",
+    "OnFailure": "/TRL_RH_SnorkelApp/Actions/DeleteEntityFailureMessage.action",
+    "ActionResult": {
+        "_Name": "delete"
+    },
+    "_Type": "Action.Type.ODataService.DeleteEntity"
+}

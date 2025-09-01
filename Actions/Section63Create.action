@@ -1,0 +1,19 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section63Create"
+	},
+	"OnSuccess": "/TRL_RH_SnorkelApp/Rules/Section71Visible.js",
+	"Target": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_ITEM"
+	},
+	"Properties": {
+		"DATE_INSPECTED": "#Page:SnorkelInstallation/#Control:Section63Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation/#Control:Section63DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation/#Control:Section63InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation/#Control:Section63Method/#Value",
+		"QUESTION": "6.3 Protrusion of steel mesh in the circumference direction <20mm (0–20mm)",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section84Create"
+	},
+	"OnFailure": "/TRL_RH_SnorkelApp/Actions/CreateEntityFailureMessage.action",
+	"OnSuccess": "/TRL_RH_SnorkelApp/Rules/Section91Visible.js",
+	"Target": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_ITEM"
+	},
+	"Properties": {
+		"DATE_INSPECTED": "#Page:SnorkelInstallation2/#Control:Section84Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation2/#Control:Section84DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation2/#Control:Section84InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation2/#Control:Section84Method/#Value",
+		"QUESTION": "8.4 The gap between base plate and retainer ring",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}

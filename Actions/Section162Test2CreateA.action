@@ -1,0 +1,17 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section162Test2CreateA"
+	},
+	"Target": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_Test_Table"
+	},
+	"Properties": {
+		"actualvalue": "#Page:SnorkelInstallation/#Control:Section162TestActualGapA/#Value",
+		"method": "#Page:SnorkelInstallation/#Control:Section162TestMethodA/#Value",
+		"position": "#Page:SnorkelInstallation/#Control:Section162TestPositionGapA/#Value",
+		"tolerance": "#Page:SnorkelInstallation/#Control:Section162TestToleranceA/#Value",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}

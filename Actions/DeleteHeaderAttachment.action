@@ -1,0 +1,10 @@
+{
+	"_Type": "Action.Type.ODataService.DeleteEntity",
+	"ActionResult": {
+		"_Name": "DeleteHeaderAttachment"
+	},
+	"Target": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_HEADER_FILES"
+	}
+}

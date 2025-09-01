@@ -1,0 +1,18 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section103Create"
+	},
+	"Target": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_ITEM"
+	},
+	"Properties": {
+		"DATE_INSPECTED": "#Page:SnorkelInstallation2/#Control:Section103Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation2/#Control:Section103DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation2/#Control:Section103InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation2/#Control:Section103InspectionMethod/#Value",
+		"QUESTION": "10.3 Making the specimen for confirmation of the strength",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}

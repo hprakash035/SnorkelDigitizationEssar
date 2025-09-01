@@ -1,0 +1,18 @@
+{
+	"_Type": "Action.Type.ODataService.UpdateEntity",
+	"ActionResult": {
+		"_Name": "Section1Updat"
+	},
+	"Target": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_ITEM"
+	},
+	"Properties": {
+		"DATE_INSPECTED": "#Page:SnorkelInstallation/#Control:Section1Date1/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation/#Control:Section1DecisionTaken1/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation/#Control:Section1InspectedBy1/#Value",
+		"METHOD": "#Page:SnorkelInstallation/#Control:Section1InspectionMethod1/#Value",
+		"QUESTION": "#Page:SnorkelInstallation/#Control:Section1Question1/#Value",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}

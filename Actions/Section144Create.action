@@ -1,0 +1,19 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section144Create"
+	},
+	"OnFailure": "/TRL_RH_SnorkelApp/Actions/CreateEntityFailureMessage.action",
+	"Target": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_ITEM"
+	},
+	"Properties": {
+		"DATE_INSPECTED": "#Page:SnorkelInstallation/#Control:Section144Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation/#Control:Section144DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation/#Control:Section144InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation/#Control:Section144Method/#Value",
+		"QUESTION": "14.4 Number of gaps which is coming >0.5mm",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}

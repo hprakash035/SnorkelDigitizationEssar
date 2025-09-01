@@ -1,0 +1,181 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "Test_Table",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"Position": "Left",
+				"SystemItem": "Cancel",
+				"OnPress": "/TRL_RH_SnorkelApp/Actions/CloseModalPage_Cancel.action",
+				"_Type": "Control.Type.ActionBarItem"
+			},
+			{
+				"Position": "Right",
+				"SystemItem": "Save",
+				"OnPress": "/TRL_RH_SnorkelApp/Actions/TRL_Snorkel_CAP_SRV/Test_Table/Test_Table_UpdateEntity.action",
+				"_Type": "Control.Type.ActionBarItem"
+			}
+		],
+		"Caption": "$(L,Update_Test_Table_Detail)",
+		"_Type": "Control.Type.ActionBar"
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "sheetNo",
+							"_Name": "sheetNo",
+							"Value": "{sheetNo}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "actualvalue",
+							"_Name": "actualvalue",
+							"Value": "{actualvalue}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Mode": "Datetime",
+							"_Name": "date",
+							"Value": "{date}",
+							"Caption": "date",
+							"_Type": "Control.Type.FormCell.DatePicker"
+						},
+						{
+							"Caption": "ff",
+							"_Name": "ff",
+							"Value": "{ff}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "fluidity",
+							"_Name": "fluidity",
+							"Value": "{fluidity}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "method",
+							"_Name": "method",
+							"Value": "{method}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "no",
+							"_Name": "no",
+							"Value": "{no}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "position",
+							"_Name": "position",
+							"Value": "{position}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "powderweight",
+							"_Name": "powderweight",
+							"Value": "{powderweight}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "remark",
+							"_Name": "remark",
+							"Value": "{remark}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "settleduration",
+							"_Name": "settleduration",
+							"Value": "{settleduration}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "spec",
+							"_Name": "spec",
+							"Value": "{spec}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "specification",
+							"_Name": "specification",
+							"Value": "{specification}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "testNo",
+							"_Name": "testNo",
+							"Value": "{testNo}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "testname",
+							"_Name": "testname",
+							"Value": "{testname}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "tf",
+							"_Name": "tf",
+							"Value": "{tf}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "tolerance",
+							"_Name": "tolerance",
+							"Value": "{tolerance}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "vibration",
+							"_Name": "vibration",
+							"Value": "{vibration}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "watercasting",
+							"_Name": "watercasting",
+							"Value": "{watercasting}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "qC_HEADER_SNORKEL_NO",
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"IsPickerDismissedOnSelection": true,
+							"IsSelectedSectionEnabled": true,
+							"PickerItems": {
+								"DisplayValue": "{SNORKEL_NO}",
+								"ReturnValue": "{SNORKEL_NO}",
+								"Target": {
+									"EntitySet": "QC_HEADER",
+									"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service"
+								}
+							},
+							"Value": "{qC_HEADER_SNORKEL_NO}",
+							"_Name": "qC_HEADER_SNORKEL_NO",
+							"_Type": "Control.Type.FormCell.ListPicker"
+						},
+						{
+							"Caption": "qC_HEADER_CUSTOMER_NAME",
+							"_Name": "qC_HEADER_CUSTOMER_NAME",
+							"Value": "{qC_HEADER_CUSTOMER_NAME}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Test_Table_Edit"
+}

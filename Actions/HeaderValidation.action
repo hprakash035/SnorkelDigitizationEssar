@@ -1,0 +1,12 @@
+{
+	"_Type": "Action.Type.CheckRequiredFields",
+	"ActionResult": {
+		"_Name": "HeaderValidation"
+	},
+	"OnFailure": "/TRL_RH_SnorkelApp/Actions/ValidationFailed.action",
+	"OnSuccess": "/TRL_RH_SnorkelApp/Rules/ValidateAndConvertFile.js",
+	"RequiredFields": [
+		"Company",
+		"TypeList"
+	]
+}

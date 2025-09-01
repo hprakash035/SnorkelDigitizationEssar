@@ -1,0 +1,35 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "HeaderCreate"
+	},
+	"OnFailure": "/TRL_RH_SnorkelApp/Actions/Unauthorized.action",
+	"OnSuccess": "/TRL_RH_SnorkelApp/Rules/Section1Visible.js",
+	"OnSuccessLog": {
+		"Level": "Info",
+		"Message": "Header Configured"
+	},
+	"OnInvalidLog": {
+		"Message": "Please Fill All Fields To Proceed!",
+		"Level": "Error"
+	},
+	"OnFailureLog": {
+		"Message": "Please Fill All Fields To Proceed!",
+		"Level": "Error"
+	},
+	"ShowActivityIndicator": true,
+	"Target": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_HEADER"
+	},
+	"Properties": {
+		"CUSTOMER_NAME": "#Page:SnorkelInstallation/#Control:Company/#Value",
+		"SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value",
+		"DATE_ENDED": "#Page:SnorkelInstallation/#Control:EndDate/#Value",
+		"DATE_STARTED": "#Page:SnorkelInstallation/#Control:StartDate/#Value",
+		"DRAFT_FLAG": true,
+		"TYPE": "#Page:SnorkelInstallation/#Control:TypeList/#SelectedValue",
+		"CHECKER": "#Page:SnorkelInstallation/#Control:Checker/#SelectedValue",
+		"PRODUCTION_NO": "#Page:SnorkelInstallation/#Control:ProductionNo/#Value"
+	}
+}

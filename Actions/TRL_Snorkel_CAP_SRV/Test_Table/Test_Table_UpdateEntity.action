@@ -1,0 +1,37 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "Test_Table",
+        "Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "sheetNo": "#Page:Test_Table_Edit/#Control:sheetNo/#Value",
+        "actualvalue": "#Page:Test_Table_Edit/#Control:actualvalue/#Value",
+        "date": "#Page:Test_Table_Edit/#Control:date/#Value",
+        "ff": "#Page:Test_Table_Edit/#Control:ff/#Value",
+        "fluidity": "#Page:Test_Table_Edit/#Control:fluidity/#Value",
+        "method": "#Page:Test_Table_Edit/#Control:method/#Value",
+        "no": "#Page:Test_Table_Edit/#Control:no/#Value",
+        "position": "#Page:Test_Table_Edit/#Control:position/#Value",
+        "powderweight": "#Page:Test_Table_Edit/#Control:powderweight/#Value",
+        "remark": "#Page:Test_Table_Edit/#Control:remark/#Value",
+        "settleduration": "#Page:Test_Table_Edit/#Control:settleduration/#Value",
+        "spec": "#Page:Test_Table_Edit/#Control:spec/#Value",
+        "specification": "#Page:Test_Table_Edit/#Control:specification/#Value",
+        "testNo": "#Page:Test_Table_Edit/#Control:testNo/#Value",
+        "testname": "#Page:Test_Table_Edit/#Control:testname/#Value",
+        "tf": "#Page:Test_Table_Edit/#Control:tf/#Value",
+        "tolerance": "#Page:Test_Table_Edit/#Control:tolerance/#Value",
+        "vibration": "#Page:Test_Table_Edit/#Control:vibration/#Value",
+        "watercasting": "#Page:Test_Table_Edit/#Control:watercasting/#Value",
+        "qC_HEADER_SNORKEL_NO": "#Page:Test_Table_Edit/#Control:qC_HEADER_SNORKEL_NO/#SelectedValue",
+        "qC_HEADER_CUSTOMER_NAME": "#Page:Test_Table_Edit/#Control:qC_HEADER_CUSTOMER_NAME/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/TRL_RH_SnorkelApp/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/TRL_RH_SnorkelApp/Actions/UpdateEntityFailureMessage.action"
+}

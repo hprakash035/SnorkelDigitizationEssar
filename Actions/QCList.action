@@ -1,0 +1,13 @@
+{
+	"_Type": "Action.Type.ODataService.Read",
+	"ActionResult": {
+		"_Name": "QCHeaderList"
+	},
+	"OnSuccess": "/TRL_RH_SnorkelApp/Rules/LoadSnorkelData.js",
+	"Target": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_HEADER",
+		"QueryOptions": "$expand=qc_ATTACHMENTS,qc_ITEMS,qc_TESTS,headerFiles&$filter=SNORKEL_NO eq '{SNORKEL_NO}'",
+		"ReadLink": "{@odata.readLink}"
+	}
+}

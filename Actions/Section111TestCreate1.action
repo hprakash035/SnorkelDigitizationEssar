@@ -1,0 +1,20 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section111TestCreate1"
+	},
+	"OnFailure": "/TRL_RH_SnorkelApp/Actions/CreateEntityFailureMessage.action",
+	"OnSuccess": "/TRL_RH_SnorkelApp/Actions/CreateEntitySuccessMessage.action",
+	"Target": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_Test_Table"
+	},
+	"Properties": {
+		"actualvalue": "#Page:SnorkelInstallation3/#Control:Section111TestActualValue1/#Value",
+		"date": "#Page:SnorkelInstallation3/#Control:Section111TestDate1/#Value",
+		"method": "#Page:SnorkelInstallation3/#Control:Section111TestMethod1/#Value",
+		"specification": "#Page:SnorkelInstallation3/#Control:Section111TestSpecification1/#Value",
+		"testname": "*6 MOR test result",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}

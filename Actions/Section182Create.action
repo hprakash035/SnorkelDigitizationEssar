@@ -1,0 +1,19 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section182Create"
+	},
+	"OnFailure": "/TRL_RH_SnorkelApp/Actions/CreateEntityFailureMessage.action",
+	"Target": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_ITEM"
+	},
+	"Properties": {
+		"DATE_INSPECTED": "#Page:SnorkelInstallation/#Control:Section182Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation/#Control:Section182DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation/#Control:Section182InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation/#Control:Section182Method/#Value",
+		"QUESTION": " 18.2 Drying time (76~80 hrs)",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}

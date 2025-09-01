@@ -1,0 +1,98 @@
+{
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/TRL_RH_SnorkelApp/Actions/CloseModalPage_Cancel.action",
+				"Position": "Left",
+				"SystemItem": "Cancel",
+				"_Type": "Control.Type.ActionBarItem"
+			},
+			{
+				"OnPress": "/TRL_RH_SnorkelApp/Actions/TRL_Snorkel_CAP_SRV/QC_HEADER/QC_HEADER_CreateEntity.action",
+				"Position": "Right",
+				"SystemItem": "Save",
+				"_Type": "Control.Type.ActionBarItem"
+			}
+		],
+		"Caption": "$(L,Create_QC_HEADER_Detail)",
+		"_Type": "Control.Type.ActionBar"
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "SNORKEL_NO",
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"IsEditable": true,
+							"IsPickerDismissedOnSelection": true,
+							"IsSelectedSectionEnabled": true,
+							"PickerItems": {
+								"DisplayValue": "{name}",
+								"ReturnValue": "{SNORKEL_NO}",
+								"Target": {
+									"EntitySet": "QC_HEADER_FILES",
+									"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service"
+								}
+							},
+							"_Name": "SNORKEL_NO",
+							"_Type": "Control.Type.FormCell.ListPicker"
+						},
+						{
+							"Caption": "SHEET_NO",
+							"_Name": "SHEET_NO",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Mode": "Datetime",
+							"_Name": "DATE_ENDED",
+							"Caption": "DATE_ENDED",
+							"_Type": "Control.Type.FormCell.DatePicker"
+						},
+						{
+							"Mode": "Datetime",
+							"_Name": "DATE_STARTED",
+							"Caption": "DATE_STARTED",
+							"_Type": "Control.Type.FormCell.DatePicker"
+						},
+						{
+							"_Name": "DRAFT_FLAG",
+							"Caption": "DRAFT_FLAG",
+							"Value": false,
+							"_Type": "Control.Type.FormCell.Switch"
+						},
+						{
+							"Caption": "SECTIONCOMPLETED",
+							"_Name": "SECTIONCOMPLETED",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "TYPE",
+							"_Name": "TYPE",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "CUSTOMER_NAME",
+							"_Name": "CUSTOMER_NAME",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "PRODUCTION_NO",
+							"_Name": "PRODUCTION_NO",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "QC_HEADER_Create"
+}

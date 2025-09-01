@@ -1,0 +1,20 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section51Create"
+	},
+	"OnFailure": "/TRL_RH_SnorkelApp/Actions/CreateEntityFailureMessage.action",
+	"OnSuccess": "/TRL_RH_SnorkelApp/Rules/Section52Visible.js",
+	"Target": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_ITEM"
+	},
+	"Properties": {
+		"DATE_INSPECTED": "#Page:SnorkelInstallation/#Control:Section51Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation/#Control:Section51DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation/#Control:Section51InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation/#Control:Section51Method/#Value",
+		"QUESTION": "5.1 Were 2mm of expansion paper installed?",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}

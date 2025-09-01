@@ -1,0 +1,187 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "Test_Table",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/TRL_RH_SnorkelApp/Actions/TRL_Snorkel_CAP_SRV/Test_Table/NavToTest_Table_Edit.action",
+				"Position": "Right",
+				"SystemItem": "Edit",
+				"_Type": "Control.Type.ActionBarItem"
+			},
+			{
+				"OnPress": "/TRL_RH_SnorkelApp/Rules/TRL_Snorkel_CAP_SRV/Test_Table/Test_Table_DeleteConfirmation.js",
+				"Position": "Right",
+				"SystemItem": "Trash",
+				"_Type": "Control.Type.ActionBarItem"
+			}
+		],
+		"Caption": "$(L,Test_Table_Detail)",
+		"_Type": "Control.Type.ActionBar"
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{testname}",
+						"Subhead": "{createdAt}",
+						"BodyText": "",
+						"Footnote": "{modifiedAt}",
+						"Description": "{createdBy}",
+						"StatusText": "{modifiedBy}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{sheetNo}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "Created On",
+							"Value": "{createdAt}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "Created By",
+							"Value": "{createdBy}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "Changed On",
+							"Value": "{modifiedAt}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "Changed By",
+							"Value": "{modifiedBy}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "sheetNo",
+							"Value": "{sheetNo}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "actualvalue",
+							"Value": "{actualvalue}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "date",
+							"Value": "{date}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "ff",
+							"Value": "{ff}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "fluidity",
+							"Value": "{fluidity}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "method",
+							"Value": "{method}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "no",
+							"Value": "{no}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "position",
+							"Value": "{position}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "powderweight",
+							"Value": "{powderweight}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "remark",
+							"Value": "{remark}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "settleduration",
+							"Value": "{settleduration}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "spec",
+							"Value": "{spec}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "specification",
+							"Value": "{specification}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "testNo",
+							"Value": "{testNo}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "testname",
+							"Value": "{testname}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "tf",
+							"Value": "{tf}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "tolerance",
+							"Value": "{tolerance}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "vibration",
+							"Value": "{vibration}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "watercasting",
+							"Value": "{watercasting}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "qC_HEADER_SNORKEL_NO",
+							"Value": "{qC_HEADER_SNORKEL_NO}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "qC_HEADER_CUSTOMER_NAME",
+							"Value": "{qC_HEADER_CUSTOMER_NAME}",
+							"_Type": "KeyValue.Type.Item"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Test_Table_Detail"
+}

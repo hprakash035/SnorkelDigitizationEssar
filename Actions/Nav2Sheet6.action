@@ -1,0 +1,9 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"ActionResult": {
+		"_Name": "Nav2Sheet6"
+	},
+	"PageToOpen": "/TRL_RH_SnorkelApp/Pages/SnorkelInstallation6.page",
+	"BackStackVisible": true,
+	"ClearHistory": false
+}

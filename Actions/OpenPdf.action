@@ -1,0 +1,9 @@
+{
+  "_Type": "Action.Type.OpenDocument",
+  "ActionResult": {
+    "_Name": "OpenPdf"
+  },
+  "Path": "#Property:Path",
+  "MimeType": "#Property:MimeType",
+  "UseExternalViewer": true
+}

@@ -1,0 +1,24 @@
+{
+    "CreateLinks": [],
+    "OnFailure": "/TRL_RH_SnorkelApp/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/TRL_RH_SnorkelApp/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "SNORKEL_NO": "#Page:QC_HEADER_Create/#Control:SNORKEL_NO/#SelectedValue",
+        "SHEET_NO": "#Page:QC_HEADER_Create/#Control:SHEET_NO/#Value",
+        "DATE_ENDED": "#Page:QC_HEADER_Create/#Control:DATE_ENDED/#Value",
+        "DATE_STARTED": "#Page:QC_HEADER_Create/#Control:DATE_STARTED/#Value",
+        "DRAFT_FLAG": "#Page:QC_HEADER_Create/#Control:DRAFT_FLAG/#Value",
+        "SECTIONCOMPLETED": "#Page:QC_HEADER_Create/#Control:SECTIONCOMPLETED/#Value",
+        "TYPE": "#Page:QC_HEADER_Create/#Control:TYPE/#Value",
+        "CUSTOMER_NAME": "#Page:QC_HEADER_Create/#Control:CUSTOMER_NAME/#Value",
+        "PRODUCTION_NO": "#Page:QC_HEADER_Create/#Control:PRODUCTION_NO/#Value"
+    },
+    "Target": {
+        "EntitySet": "QC_HEADER",
+        "Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateEntity"
+}

@@ -1,0 +1,25 @@
+{
+	"_Type": "Action.Type.SetDebugSettings",
+	"ActionResult": {
+		"_Name": "Debug"
+	},
+	"DebugODataProvider": true,
+	"TracingEnabled": true,
+	"Categories": [
+		"mdk.trace.action",
+		"mdk.trace.api",
+		"mdk.trace.app",
+		"mdk.trace.binding",
+		"mdk.trace.branding",
+		"mdk.trace.i18n",
+		"mdk.trace.lcms",
+		"mdk.trace.logging",
+		"mdk.trace.odata",
+		"mdk.trace.onboarding",
+		"mdk.trace.profiling",
+		"mdk.trace.push",
+		"mdk.trace.restservice",
+		"mdk.trace.settings",
+		"mdk.trace.targetpath"
+	]
+}

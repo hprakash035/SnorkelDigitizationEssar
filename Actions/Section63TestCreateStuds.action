@@ -1,0 +1,18 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section63TestCreateStuds"
+	},
+	"OnSuccess": "/TRL_RH_SnorkelApp/Rules/Section63Visible.js",
+	"Target": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_Test_Table"
+	},
+	"Properties": {
+		"actualvalue": "#Page:SnorkelInstallation/#Control:Section63TestActualStuds/#Value",
+		"position": "#Page:SnorkelInstallation/#Control:Section63TestPositionStuds/#Value",
+		"testname": "*2 Height measurement for Steel mesh & Y studs",
+		"tolerance": "#Page:SnorkelInstallation/#Control:Section63TestToleranceStuds/#Value",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section102Test2CreateA"
+	},
+	"Target": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_Test_Table"
+	},
+	"Properties": {
+		"actualvalue": "#Page:SnorkelInstallation2/#Control:Section102TestActualGapA/#Value",
+		"method": "#Page:SnorkelInstallation2/#Control:Section102TestMethodA/#Value",
+		"position": "#Page:SnorkelInstallation2/#Control:Section102TestPositionGapA/#Value",
+		"testname": "*5 The gap between the top of casting mould and the top face of castable",
+		"tolerance": "#Page:SnorkelInstallation2/#Control:Section102TestToleranceA/#Value",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}

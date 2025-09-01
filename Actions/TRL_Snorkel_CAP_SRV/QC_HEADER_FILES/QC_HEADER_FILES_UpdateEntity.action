@@ -1,0 +1,22 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "QC_HEADER_FILES",
+        "Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "name": "#Page:QC_HEADER_FILES_Edit/#Control:name/#Value",
+        "mimeType": "#Page:QC_HEADER_FILES_Edit/#Control:mimeType/#Value",
+        "file": "#Page:QC_HEADER_FILES_Edit/#Control:file/#Value",
+        "size": "#Page:QC_HEADER_FILES_Edit/#Control:size/#Value",
+        "SNORKEL_NO": "#Page:QC_HEADER_FILES_Edit/#Control:SNORKEL_NO/#SelectedValue",
+        "CUSTOMER_NAME": "#Page:QC_HEADER_FILES_Edit/#Control:CUSTOMER_NAME/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/TRL_RH_SnorkelApp/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/TRL_RH_SnorkelApp/Actions/UpdateEntityFailureMessage.action"
+}

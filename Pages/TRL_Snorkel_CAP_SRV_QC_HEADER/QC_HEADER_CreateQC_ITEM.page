@@ -1,0 +1,138 @@
+{
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/TRL_RH_SnorkelApp/Actions/CloseModalPage_Cancel.action",
+				"Position": "Left",
+				"SystemItem": "Cancel",
+				"_Type": "Control.Type.ActionBarItem"
+			},
+			{
+				"OnPress": "/TRL_RH_SnorkelApp/Actions/TRL_Snorkel_CAP_SRV/QC_HEADER/QC_HEADER_CreateQC_ITEM.action",
+				"Position": "Right",
+				"SystemItem": "Save",
+				"_Type": "Control.Type.ActionBarItem"
+			}
+		],
+		"Caption": "$(L,Create_QC_ITEM)",
+		"_Type": "Control.Type.ActionBar"
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "ACTUAL_VALUE",
+							"_Name": "ACTUAL_VALUE",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "COMMENTS",
+							"_Name": "COMMENTS",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "CORRECTIVE_ACTION",
+							"_Name": "CORRECTIVE_ACTION",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Mode": "Datetime",
+							"_Name": "DATE_INSPECTED",
+							"Caption": "DATE_INSPECTED",
+							"_Type": "Control.Type.FormCell.DatePicker"
+						},
+						{
+							"Caption": "DECISION_TAKEN",
+							"_Name": "DECISION_TAKEN",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "INSPECTED_BY",
+							"_Name": "INSPECTED_BY",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "METHOD",
+							"_Name": "METHOD",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "POSITION",
+							"_Name": "POSITION",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "QUESTION",
+							"_Name": "QUESTION",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "SECTION_NO",
+							"_Name": "SECTION_NO",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "SUBSTEP",
+							"_Name": "SUBSTEP",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "TOLERANCE",
+							"_Name": "TOLERANCE",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"_Name": "VISIBLE",
+							"Caption": "VISIBLE",
+							"Value": false,
+							"_Type": "Control.Type.FormCell.Switch"
+						},
+						{
+							"Caption": "WORK_ITEM_DESCRIPTION",
+							"_Name": "WORK_ITEM_DESCRIPTION",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "WorkProcessStep",
+							"_Name": "WorkProcessStep",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "qC_HEADER_SNORKEL_NO",
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"IsEditable": false,
+							"IsPickerDismissedOnSelection": true,
+							"IsSelectedSectionEnabled": true,
+							"PickerItems": {
+								"DisplayValue": "{SNORKEL_NO}",
+								"ReturnValue": "{SNORKEL_NO}",
+								"Target": {
+									"EntitySet": "QC_HEADER",
+									"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service"
+								}
+							},
+							"_Name": "qC_HEADER_SNORKEL_NO",
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"Value": "{SNORKEL_NO}"
+						},
+						{
+							"Caption": "qC_HEADER_CUSTOMER_NAME",
+							"_Name": "qC_HEADER_CUSTOMER_NAME",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "QC_HEADER_CreateQC_ITEM"
+}

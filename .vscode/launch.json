@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run WebApplicationFactory",
+      "type": "node",
+      "request": "launch",
+      "program": "/home/user/projects/WebApplicationFactory/nsTRL_RH_SnorkelApp-approuter/node_modules/@sap/html5-repo-mock/index.js",
+      "args": [
+        "--standalone",
+        "/nsTRL_RH_SnorkelApp/index.html",
+        "--ui5",
+        "{\"version\":\".\"}"
+      ],
+      "cwd": "/home/user/projects/WebApplicationFactory/MDKModule",
+      "env": {
+        "PORT": "6004",
+        "MOCK_LOOKUP_DIRS": "[\"webapp\"]",
+        "run.config": "{\"handlerId\":\"ui5_run_config_handler_id\",\"runnableId\":\"/home/user/projects/WebApplicationFactory/MDKModule\"}"
+      },
+      "envFile": "/home/user/projects/WebApplicationFactory/.vscode/.envmdk"
+    }
+  ]
+}

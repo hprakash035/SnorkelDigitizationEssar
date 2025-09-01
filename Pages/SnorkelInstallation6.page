@@ -1,0 +1,2099 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "FormSectionedTable",
+			"Sections": [
+				
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"Value": " 17.1 Curing time   > 24Hr",
+							"_Type": "Control.Type.FormCell.Title",
+							"_Name": "Section171Question",
+							"IsVisible": true,
+							"Separator": true,
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": false
+						},
+						{
+							"Value": "{qc_ITEMS/DATE_INSPECTED}",
+							"_Type": "Control.Type.FormCell.DatePicker",
+							"_Name": "Section171Date",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Date",
+							"IsEditable": true,
+							"Mode": "Date"
+						},
+						{
+							"Value": [
+								"{qc_ITEMS/INSPECTED_BY}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section171InspectedBy",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Inspected By",
+							"IsSelectedSectionEnabled": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "SOUMEN JANA",
+									"ReturnValue": "SOUMEN JANA"
+								},
+								{
+									"DisplayValue": "RAHUL CHOUDHARY",
+									"ReturnValue": "RAHUL CHOUDHARY"
+								},
+								{
+									"DisplayValue": "SOURAV JAISWAL",
+									"ReturnValue": "SOURAV JAISWAL"
+								},
+								{
+									"DisplayValue": "SURYAMANI KUMAR",
+									"ReturnValue": "SURYAMANI KUMAR"
+								},
+								{
+									"DisplayValue": "JOSHABANTA SAHU",
+									"ReturnValue": "JOSHABANTA SAHU"
+								},
+								{
+									"DisplayValue": "S PRASANTH KUMAR",
+									"ReturnValue": "S PRASANTH KUMAR"
+								},
+								{
+									"DisplayValue": "ANKIT KUMAR PATRA",
+									"ReturnValue": "ANKIT KUMAR PATRA"
+								},
+								{
+									"DisplayValue": "GAUTAM KIRO",
+									"ReturnValue": "GAUTAM KIRO"
+								},
+								{
+									"DisplayValue": "TAPAS KUMAR SAHU",
+									"ReturnValue": "TAPAS KUMAR SAHU"
+								},
+								{
+									"DisplayValue": "NILACHAL NAHAK",
+									"ReturnValue": "NILACHAL NAHAK"
+								},
+								{
+									"DisplayValue": "SURESH MUNDA",
+									"ReturnValue": "SURESH MUNDA"
+								},
+								{
+									"DisplayValue": "KARTIKA BEHERA",
+									"ReturnValue": "KARTIKA BEHERA"
+								},
+								{
+									"DisplayValue": "NARENDRA NAIK",
+									"ReturnValue": "NARENDRA NAIK"
+								},
+								{
+									"DisplayValue": "HEMANTA KUMAR SINGH",
+									"ReturnValue": "HEMANTA KUMAR SINGH"
+								},
+								{
+									"DisplayValue": "KULDEEP MAHANANDA",
+									"ReturnValue": "KULDEEP MAHANANDA"
+								},
+								{
+									"DisplayValue": "SANJAY RAJ PRADHAN",
+									"ReturnValue": "SANJAY RAJ PRADHAN"
+								},
+								{
+									"DisplayValue": "BANSIDHAR SETH",
+									"ReturnValue": "BANSIDHAR SETH"
+								},
+								{
+									"DisplayValue": "TAPAN KUMAR JENA",
+									"ReturnValue": "TAPAN KUMAR JENA"
+								},
+								{
+									"DisplayValue": "SONU SETH",
+									"ReturnValue": "SONU SETH"
+								},
+								{
+									"DisplayValue": "OMPRAKASH SATNAMI",
+									"ReturnValue": "OMPRAKASH SATNAMI"
+								}
+							]
+						},
+						{
+							"Value": "Actual Measurement",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section171Method",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Method",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": false
+						},
+						{
+							"Value": [
+								"{qc_ITEMS/DECISION_TAKEN}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section171DecisionTaken",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Decision Taken",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"PlaceHolder": "PlaceHolder",
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "OK",
+									"ReturnValue": "ok"
+								},
+								{
+									"DisplayValue": "Not OK",
+									"ReturnValue": "not_ok"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "Section181NextButton",
+							"IsVisible": true,
+							"Separator": true,
+							"Title": "Next",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"Image": "sap-icon://open-command-field",
+							"ImagePosition": "Trailing",
+							"Enabled": true,
+							"OnPress": "/TRL_RH_SnorkelApp/Rules/Section171Validation.js"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "Section171Header",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "17. Curing in the room temperature"
+					},
+					"Visible": false,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "Section171Form"
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"Value": " 18.1 Drying pattern according to Process Chart",
+							"_Type": "Control.Type.FormCell.Title",
+							"_Name": "Section181Question",
+							"IsVisible": true,
+							"Separator": true,
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{qc_ITEMS/DATE_INSPECTED}",
+							"_Type": "Control.Type.FormCell.DatePicker",
+							"_Name": "Section181Date",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Date",
+							"IsEditable": true,
+							"Mode": "Date"
+						},
+						{
+							"Value": [
+								"{qc_ITEMS/INSPECTED_BY}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section181InspectedBy",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Inspected By",
+							"IsSelectedSectionEnabled": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "SOUMEN JANA",
+									"ReturnValue": "SOUMEN JANA"
+								},
+								{
+									"DisplayValue": "RAHUL CHOUDHARY",
+									"ReturnValue": "RAHUL CHOUDHARY"
+								},
+								{
+									"DisplayValue": "SOURAV JAISWAL",
+									"ReturnValue": "SOURAV JAISWAL"
+								},
+								{
+									"DisplayValue": "SURYAMANI KUMAR",
+									"ReturnValue": "SURYAMANI KUMAR"
+								},
+								{
+									"DisplayValue": "JOSHABANTA SAHU",
+									"ReturnValue": "JOSHABANTA SAHU"
+								},
+								{
+									"DisplayValue": "S PRASANTH KUMAR",
+									"ReturnValue": "S PRASANTH KUMAR"
+								},
+								{
+									"DisplayValue": "ANKIT KUMAR PATRA",
+									"ReturnValue": "ANKIT KUMAR PATRA"
+								},
+								{
+									"DisplayValue": "GAUTAM KIRO",
+									"ReturnValue": "GAUTAM KIRO"
+								},
+								{
+									"DisplayValue": "TAPAS KUMAR SAHU",
+									"ReturnValue": "TAPAS KUMAR SAHU"
+								},
+								{
+									"DisplayValue": "NILACHAL NAHAK",
+									"ReturnValue": "NILACHAL NAHAK"
+								},
+								{
+									"DisplayValue": "SURESH MUNDA",
+									"ReturnValue": "SURESH MUNDA"
+								},
+								{
+									"DisplayValue": "KARTIKA BEHERA",
+									"ReturnValue": "KARTIKA BEHERA"
+								},
+								{
+									"DisplayValue": "NARENDRA NAIK",
+									"ReturnValue": "NARENDRA NAIK"
+								},
+								{
+									"DisplayValue": "HEMANTA KUMAR SINGH",
+									"ReturnValue": "HEMANTA KUMAR SINGH"
+								},
+								{
+									"DisplayValue": "KULDEEP MAHANANDA",
+									"ReturnValue": "KULDEEP MAHANANDA"
+								},
+								{
+									"DisplayValue": "SANJAY RAJ PRADHAN",
+									"ReturnValue": "SANJAY RAJ PRADHAN"
+								},
+								{
+									"DisplayValue": "BANSIDHAR SETH",
+									"ReturnValue": "BANSIDHAR SETH"
+								},
+								{
+									"DisplayValue": "TAPAN KUMAR JENA",
+									"ReturnValue": "TAPAN KUMAR JENA"
+								},
+								{
+									"DisplayValue": "SONU SETH",
+									"ReturnValue": "SONU SETH"
+								},
+								{
+									"DisplayValue": "OMPRAKASH SATNAMI",
+									"ReturnValue": "OMPRAKASH SATNAMI"
+								}
+							]
+						},
+						{
+							"Value": "Visual confirmation",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section181Method",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Method",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": [
+								"{qc_ITEMS/DECISION_TAKEN}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section181DecisionTaken",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Decision Taken",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"PlaceHolder": "PlaceHolder",
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "OK",
+									"ReturnValue": "ok"
+								},
+								{
+									"DisplayValue": "Not OK",
+									"ReturnValue": "not_ok"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "Section182NextButton",
+							"IsVisible": true,
+							"Separator": true,
+							"Title": "Next",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"Image": "sap-icon://open-command-field",
+							"ImagePosition": "Trailing",
+							"Enabled": true,
+							"OnPress": "/TRL_RH_SnorkelApp/Rules/Section181Validation.js"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "Section181Header",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "18. Drying"
+					},
+					"Visible": false,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "Section181Form"
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"Value": "18.2 Drying time (76~80 hrs)",
+							"_Type": "Control.Type.FormCell.Title",
+							"_Name": "Section182Question",
+							"IsVisible": true,
+							"Separator": true,
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{qc_ITEMS/DATE_INSPECTED}",
+							"_Type": "Control.Type.FormCell.DatePicker",
+							"_Name": "Section182Date",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Date",
+							"IsEditable": true,
+							"Mode": "Date"
+						},
+						{
+							"Value": [
+								"{qc_ITEMS/INSPECTED_BY}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section182InspectedBy",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Inspected By",
+							"IsSelectedSectionEnabled": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "SOUMEN JANA",
+									"ReturnValue": "SOUMEN JANA"
+								},
+								{
+									"DisplayValue": "RAHUL CHOUDHARY",
+									"ReturnValue": "RAHUL CHOUDHARY"
+								},
+								{
+									"DisplayValue": "SOURAV JAISWAL",
+									"ReturnValue": "SOURAV JAISWAL"
+								},
+								{
+									"DisplayValue": "SURYAMANI KUMAR",
+									"ReturnValue": "SURYAMANI KUMAR"
+								},
+								{
+									"DisplayValue": "JOSHABANTA SAHU",
+									"ReturnValue": "JOSHABANTA SAHU"
+								},
+								{
+									"DisplayValue": "S PRASANTH KUMAR",
+									"ReturnValue": "S PRASANTH KUMAR"
+								},
+								{
+									"DisplayValue": "ANKIT KUMAR PATRA",
+									"ReturnValue": "ANKIT KUMAR PATRA"
+								},
+								{
+									"DisplayValue": "GAUTAM KIRO",
+									"ReturnValue": "GAUTAM KIRO"
+								},
+								{
+									"DisplayValue": "TAPAS KUMAR SAHU",
+									"ReturnValue": "TAPAS KUMAR SAHU"
+								},
+								{
+									"DisplayValue": "NILACHAL NAHAK",
+									"ReturnValue": "NILACHAL NAHAK"
+								},
+								{
+									"DisplayValue": "SURESH MUNDA",
+									"ReturnValue": "SURESH MUNDA"
+								},
+								{
+									"DisplayValue": "KARTIKA BEHERA",
+									"ReturnValue": "KARTIKA BEHERA"
+								},
+								{
+									"DisplayValue": "NARENDRA NAIK",
+									"ReturnValue": "NARENDRA NAIK"
+								},
+								{
+									"DisplayValue": "HEMANTA KUMAR SINGH",
+									"ReturnValue": "HEMANTA KUMAR SINGH"
+								},
+								{
+									"DisplayValue": "KULDEEP MAHANANDA",
+									"ReturnValue": "KULDEEP MAHANANDA"
+								},
+								{
+									"DisplayValue": "SANJAY RAJ PRADHAN",
+									"ReturnValue": "SANJAY RAJ PRADHAN"
+								},
+								{
+									"DisplayValue": "BANSIDHAR SETH",
+									"ReturnValue": "BANSIDHAR SETH"
+								},
+								{
+									"DisplayValue": "TAPAN KUMAR JENA",
+									"ReturnValue": "TAPAN KUMAR JENA"
+								},
+								{
+									"DisplayValue": "SONU SETH",
+									"ReturnValue": "SONU SETH"
+								},
+								{
+									"DisplayValue": "OMPRAKASH SATNAMI",
+									"ReturnValue": "OMPRAKASH SATNAMI"
+								}
+							]
+						},
+						{
+							"Value": "Visual confirmation",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section182Method",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Method",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": [
+								"{qc_ITEMS/DECISION_TAKEN}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section182DecisionTaken",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Decision Taken",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"PlaceHolder": "PlaceHolder",
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "OK",
+									"ReturnValue": "ok"
+								},
+								{
+									"DisplayValue": "Not OK",
+									"ReturnValue": "not_ok"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "Section183NextButton",
+							"IsVisible": true,
+							"Separator": true,
+							"Title": "Next",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"Image": "sap-icon://open-command-field",
+							"ImagePosition": "Trailing",
+							"Enabled": true,
+							"OnPress": "/TRL_RH_SnorkelApp/Rules/Section182Validation.js"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": false,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "Section182Form"
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"Value": "18.3 Drying temperature (350°C with 10 hrs soaking)",
+							"_Type": "Control.Type.FormCell.Title",
+							"_Name": "Section183Question",
+							"IsVisible": true,
+							"Separator": true,
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{qc_ITEMS/DATE_INSPECTED}",
+							"_Type": "Control.Type.FormCell.DatePicker",
+							"_Name": "Section183Date",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Date",
+							"IsEditable": true,
+							"Mode": "Date"
+						},
+						{
+							"Value": [
+								"{qc_ITEMS/INSPECTED_BY}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section183InspectedBy",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Inspected By",
+							"IsSelectedSectionEnabled": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "SOUMEN JANA",
+									"ReturnValue": "SOUMEN JANA"
+								},
+								{
+									"DisplayValue": "RAHUL CHOUDHARY",
+									"ReturnValue": "RAHUL CHOUDHARY"
+								},
+								{
+									"DisplayValue": "SOURAV JAISWAL",
+									"ReturnValue": "SOURAV JAISWAL"
+								},
+								{
+									"DisplayValue": "SURYAMANI KUMAR",
+									"ReturnValue": "SURYAMANI KUMAR"
+								},
+								{
+									"DisplayValue": "JOSHABANTA SAHU",
+									"ReturnValue": "JOSHABANTA SAHU"
+								},
+								{
+									"DisplayValue": "S PRASANTH KUMAR",
+									"ReturnValue": "S PRASANTH KUMAR"
+								},
+								{
+									"DisplayValue": "ANKIT KUMAR PATRA",
+									"ReturnValue": "ANKIT KUMAR PATRA"
+								},
+								{
+									"DisplayValue": "GAUTAM KIRO",
+									"ReturnValue": "GAUTAM KIRO"
+								},
+								{
+									"DisplayValue": "TAPAS KUMAR SAHU",
+									"ReturnValue": "TAPAS KUMAR SAHU"
+								},
+								{
+									"DisplayValue": "NILACHAL NAHAK",
+									"ReturnValue": "NILACHAL NAHAK"
+								},
+								{
+									"DisplayValue": "SURESH MUNDA",
+									"ReturnValue": "SURESH MUNDA"
+								},
+								{
+									"DisplayValue": "KARTIKA BEHERA",
+									"ReturnValue": "KARTIKA BEHERA"
+								},
+								{
+									"DisplayValue": "NARENDRA NAIK",
+									"ReturnValue": "NARENDRA NAIK"
+								},
+								{
+									"DisplayValue": "HEMANTA KUMAR SINGH",
+									"ReturnValue": "HEMANTA KUMAR SINGH"
+								},
+								{
+									"DisplayValue": "KULDEEP MAHANANDA",
+									"ReturnValue": "KULDEEP MAHANANDA"
+								},
+								{
+									"DisplayValue": "SANJAY RAJ PRADHAN",
+									"ReturnValue": "SANJAY RAJ PRADHAN"
+								},
+								{
+									"DisplayValue": "BANSIDHAR SETH",
+									"ReturnValue": "BANSIDHAR SETH"
+								},
+								{
+									"DisplayValue": "TAPAN KUMAR JENA",
+									"ReturnValue": "TAPAN KUMAR JENA"
+								},
+								{
+									"DisplayValue": "SONU SETH",
+									"ReturnValue": "SONU SETH"
+								},
+								{
+									"DisplayValue": "OMPRAKASH SATNAMI",
+									"ReturnValue": "OMPRAKASH SATNAMI"
+								}
+							]
+						},
+						{
+							"Value": "Check temparature with IR Gun /thermocouple",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section183Method",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Method",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": [
+								"{qc_ITEMS/DECISION_TAKEN}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section183DecisionTaken",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Decision Taken",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"PlaceHolder": "PlaceHolder",
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "OK",
+									"ReturnValue": "ok"
+								},
+								{
+									"DisplayValue": "Not OK",
+									"ReturnValue": "not_ok"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "Section184NextButton",
+							"IsVisible": true,
+							"Separator": true,
+							"Title": "Next",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"Image": "sap-icon://open-command-field",
+							"ImagePosition": "Trailing",
+							"Enabled": true,
+							"OnPress": "/TRL_RH_SnorkelApp/Rules/Section183Validation.js"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": false,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "Section183Form"
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"Value": "18.4 Installation of the removal equipment with automatically for the hanging hooks ",
+							"_Type": "Control.Type.FormCell.Title",
+							"_Name": "Section184Question",
+							"IsVisible": true,
+							"Separator": true,
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{qc_ITEMS/DATE_INSPECTED}",
+							"_Type": "Control.Type.FormCell.DatePicker",
+							"_Name": "Section184Date",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Date",
+							"IsEditable": true,
+							"Mode": "Date"
+						},
+						{
+							"Value": [
+								"{qc_ITEMS/INSPECTED_BY}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section184InspectedBy",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Inspected By",
+							"IsSelectedSectionEnabled": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "SOUMEN JANA",
+									"ReturnValue": "SOUMEN JANA"
+								},
+								{
+									"DisplayValue": "RAHUL CHOUDHARY",
+									"ReturnValue": "RAHUL CHOUDHARY"
+								},
+								{
+									"DisplayValue": "SOURAV JAISWAL",
+									"ReturnValue": "SOURAV JAISWAL"
+								},
+								{
+									"DisplayValue": "SURYAMANI KUMAR",
+									"ReturnValue": "SURYAMANI KUMAR"
+								},
+								{
+									"DisplayValue": "JOSHABANTA SAHU",
+									"ReturnValue": "JOSHABANTA SAHU"
+								},
+								{
+									"DisplayValue": "S PRASANTH KUMAR",
+									"ReturnValue": "S PRASANTH KUMAR"
+								},
+								{
+									"DisplayValue": "ANKIT KUMAR PATRA",
+									"ReturnValue": "ANKIT KUMAR PATRA"
+								},
+								{
+									"DisplayValue": "GAUTAM KIRO",
+									"ReturnValue": "GAUTAM KIRO"
+								},
+								{
+									"DisplayValue": "TAPAS KUMAR SAHU",
+									"ReturnValue": "TAPAS KUMAR SAHU"
+								},
+								{
+									"DisplayValue": "NILACHAL NAHAK",
+									"ReturnValue": "NILACHAL NAHAK"
+								},
+								{
+									"DisplayValue": "SURESH MUNDA",
+									"ReturnValue": "SURESH MUNDA"
+								},
+								{
+									"DisplayValue": "KARTIKA BEHERA",
+									"ReturnValue": "KARTIKA BEHERA"
+								},
+								{
+									"DisplayValue": "NARENDRA NAIK",
+									"ReturnValue": "NARENDRA NAIK"
+								},
+								{
+									"DisplayValue": "HEMANTA KUMAR SINGH",
+									"ReturnValue": "HEMANTA KUMAR SINGH"
+								},
+								{
+									"DisplayValue": "KULDEEP MAHANANDA",
+									"ReturnValue": "KULDEEP MAHANANDA"
+								},
+								{
+									"DisplayValue": "SANJAY RAJ PRADHAN",
+									"ReturnValue": "SANJAY RAJ PRADHAN"
+								},
+								{
+									"DisplayValue": "BANSIDHAR SETH",
+									"ReturnValue": "BANSIDHAR SETH"
+								},
+								{
+									"DisplayValue": "TAPAN KUMAR JENA",
+									"ReturnValue": "TAPAN KUMAR JENA"
+								},
+								{
+									"DisplayValue": "SONU SETH",
+									"ReturnValue": "SONU SETH"
+								},
+								{
+									"DisplayValue": "OMPRAKASH SATNAMI",
+									"ReturnValue": "OMPRAKASH SATNAMI"
+								}
+							]
+						},
+						{
+							"Value": "Visual confirmation",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section184Method",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Method",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": [
+								"{qc_ITEMS/DECISION_TAKEN}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section184DecisionTaken",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Decision Taken",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"PlaceHolder": "PlaceHolder",
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "OK",
+									"ReturnValue": "ok"
+								},
+								{
+									"DisplayValue": "Not OK",
+									"ReturnValue": "not_ok"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "Section191NextButton",
+							"IsVisible": true,
+							"Separator": true,
+							"Title": "Next",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"Image": "sap-icon://open-command-field",
+							"ImagePosition": "Trailing",
+							"Enabled": true,
+							"OnPress": "/TRL_RH_SnorkelApp/Rules/Section184Validation.js"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": false,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "Section184Form"
+				},{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"Value": " 19.1 Coating on the outer castable",
+							"_Type": "Control.Type.FormCell.Title",
+							"_Name": "Section191Question",
+							"IsVisible": true,
+							"Separator": true,
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{qc_ITEMS/DATE_INSPECTED}",
+							"_Type": "Control.Type.FormCell.DatePicker",
+							"_Name": "Section191Date",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Date",
+							"IsEditable": true,
+							"Mode": "Date"
+						},
+						{
+							"Value": [
+								"{qc_ITEMS/INSPECTED_BY}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section191InspectedBy",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Inspected By",
+							"IsSelectedSectionEnabled": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "SOUMEN JANA",
+									"ReturnValue": "SOUMEN JANA"
+								},
+								{
+									"DisplayValue": "RAHUL CHOUDHARY",
+									"ReturnValue": "RAHUL CHOUDHARY"
+								},
+								{
+									"DisplayValue": "SOURAV JAISWAL",
+									"ReturnValue": "SOURAV JAISWAL"
+								},
+								{
+									"DisplayValue": "SURYAMANI KUMAR",
+									"ReturnValue": "SURYAMANI KUMAR"
+								},
+								{
+									"DisplayValue": "JOSHABANTA SAHU",
+									"ReturnValue": "JOSHABANTA SAHU"
+								},
+								{
+									"DisplayValue": "S PRASANTH KUMAR",
+									"ReturnValue": "S PRASANTH KUMAR"
+								},
+								{
+									"DisplayValue": "ANKIT KUMAR PATRA",
+									"ReturnValue": "ANKIT KUMAR PATRA"
+								},
+								{
+									"DisplayValue": "GAUTAM KIRO",
+									"ReturnValue": "GAUTAM KIRO"
+								},
+								{
+									"DisplayValue": "TAPAS KUMAR SAHU",
+									"ReturnValue": "TAPAS KUMAR SAHU"
+								},
+								{
+									"DisplayValue": "NILACHAL NAHAK",
+									"ReturnValue": "NILACHAL NAHAK"
+								},
+								{
+									"DisplayValue": "SURESH MUNDA",
+									"ReturnValue": "SURESH MUNDA"
+								},
+								{
+									"DisplayValue": "KARTIKA BEHERA",
+									"ReturnValue": "KARTIKA BEHERA"
+								},
+								{
+									"DisplayValue": "NARENDRA NAIK",
+									"ReturnValue": "NARENDRA NAIK"
+								},
+								{
+									"DisplayValue": "HEMANTA KUMAR SINGH",
+									"ReturnValue": "HEMANTA KUMAR SINGH"
+								},
+								{
+									"DisplayValue": "KULDEEP MAHANANDA",
+									"ReturnValue": "KULDEEP MAHANANDA"
+								},
+								{
+									"DisplayValue": "SANJAY RAJ PRADHAN",
+									"ReturnValue": "SANJAY RAJ PRADHAN"
+								},
+								{
+									"DisplayValue": "BANSIDHAR SETH",
+									"ReturnValue": "BANSIDHAR SETH"
+								},
+								{
+									"DisplayValue": "TAPAN KUMAR JENA",
+									"ReturnValue": "TAPAN KUMAR JENA"
+								},
+								{
+									"DisplayValue": "SONU SETH",
+									"ReturnValue": "SONU SETH"
+								},
+								{
+									"DisplayValue": "OMPRAKASH SATNAMI",
+									"ReturnValue": "OMPRAKASH SATNAMI"
+								}
+							]
+						},
+						{
+							"Value": "Steel tape",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section191Method",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Method",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": [
+								"{qc_ITEMS/DECISION_TAKEN}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section191DecisionTaken",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Decision Taken",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"PlaceHolder": "PlaceHolder",
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "OK",
+									"ReturnValue": "ok"
+								},
+								{
+									"DisplayValue": "Not OK",
+									"ReturnValue": "not_ok"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "Section192NextButton",
+							"IsVisible": true,
+							"Separator": true,
+							"Title": "Next",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"Image": "sap-icon://open-command-field",
+							"ImagePosition": "Trailing",
+							"Enabled": true,
+							"OnPress": "/TRL_RH_SnorkelApp/Rules/Section191Validation.js"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": false,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "Section191Form"
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"Value": "19.2 Confirmation of the uneven/trace on the ring brick after removing hanging hooks",
+							"_Type": "Control.Type.FormCell.Title",
+							"_Name": "Section192Question",
+							"IsVisible": true,
+							"Separator": true,
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{qc_ITEMS/DATE_INSPECTED}",
+							"_Type": "Control.Type.FormCell.DatePicker",
+							"_Name": "Section192Date",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Date",
+							"IsEditable": true,
+							"Mode": "Date"
+						},
+						{
+							"Value": [
+								"{qc_ITEMS/INSPECTED_BY}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section192InspectedBy",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Inspected By",
+							"IsSelectedSectionEnabled": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "SOUMEN JANA",
+									"ReturnValue": "SOUMEN JANA"
+								},
+								{
+									"DisplayValue": "RAHUL CHOUDHARY",
+									"ReturnValue": "RAHUL CHOUDHARY"
+								},
+								{
+									"DisplayValue": "SOURAV JAISWAL",
+									"ReturnValue": "SOURAV JAISWAL"
+								},
+								{
+									"DisplayValue": "SURYAMANI KUMAR",
+									"ReturnValue": "SURYAMANI KUMAR"
+								},
+								{
+									"DisplayValue": "JOSHABANTA SAHU",
+									"ReturnValue": "JOSHABANTA SAHU"
+								},
+								{
+									"DisplayValue": "S PRASANTH KUMAR",
+									"ReturnValue": "S PRASANTH KUMAR"
+								},
+								{
+									"DisplayValue": "ANKIT KUMAR PATRA",
+									"ReturnValue": "ANKIT KUMAR PATRA"
+								},
+								{
+									"DisplayValue": "GAUTAM KIRO",
+									"ReturnValue": "GAUTAM KIRO"
+								},
+								{
+									"DisplayValue": "TAPAS KUMAR SAHU",
+									"ReturnValue": "TAPAS KUMAR SAHU"
+								},
+								{
+									"DisplayValue": "NILACHAL NAHAK",
+									"ReturnValue": "NILACHAL NAHAK"
+								},
+								{
+									"DisplayValue": "SURESH MUNDA",
+									"ReturnValue": "SURESH MUNDA"
+								},
+								{
+									"DisplayValue": "KARTIKA BEHERA",
+									"ReturnValue": "KARTIKA BEHERA"
+								},
+								{
+									"DisplayValue": "NARENDRA NAIK",
+									"ReturnValue": "NARENDRA NAIK"
+								},
+								{
+									"DisplayValue": "HEMANTA KUMAR SINGH",
+									"ReturnValue": "HEMANTA KUMAR SINGH"
+								},
+								{
+									"DisplayValue": "KULDEEP MAHANANDA",
+									"ReturnValue": "KULDEEP MAHANANDA"
+								},
+								{
+									"DisplayValue": "SANJAY RAJ PRADHAN",
+									"ReturnValue": "SANJAY RAJ PRADHAN"
+								},
+								{
+									"DisplayValue": "BANSIDHAR SETH",
+									"ReturnValue": "BANSIDHAR SETH"
+								},
+								{
+									"DisplayValue": "TAPAN KUMAR JENA",
+									"ReturnValue": "TAPAN KUMAR JENA"
+								},
+								{
+									"DisplayValue": "SONU SETH",
+									"ReturnValue": "SONU SETH"
+								},
+								{
+									"DisplayValue": "OMPRAKASH SATNAMI",
+									"ReturnValue": "OMPRAKASH SATNAMI"
+								}
+							]
+						},
+						{
+							"Value": "Steel tape",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section192Method",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Method",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": [
+								"{qc_ITEMS/DECISION_TAKEN}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section192DecisionTaken",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Decision Taken",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"PlaceHolder": "PlaceHolder",
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "OK",
+									"ReturnValue": "ok"
+								},
+								{
+									"DisplayValue": "Not OK",
+									"ReturnValue": "not_ok"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "Section193NextButton",
+							"IsVisible": true,
+							"Separator": true,
+							"Title": "Next",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"Image": "sap-icon://open-command-field",
+							"ImagePosition": "Trailing",
+							"Enabled": true,
+							"OnPress": "/TRL_RH_SnorkelApp/Rules/Section192Validation.js"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": false,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "Section192Form"
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"Value": "19.3 Putting the mark with clearly *12",
+							"_Type": "Control.Type.FormCell.Title",
+							"_Name": "Section193Question",
+							"IsVisible": true,
+							"Separator": true,
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{qc_ITEMS/DATE_INSPECTED}",
+							"_Type": "Control.Type.FormCell.DatePicker",
+							"_Name": "Section193Date",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Date",
+							"IsEditable": true,
+							"Mode": "Date"
+						},
+						{
+							"Value": [
+								"{qc_ITEMS/INSPECTED_BY}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section193InspectedBy",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Inspected By",
+							"IsSelectedSectionEnabled": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "SOUMEN JANA",
+									"ReturnValue": "SOUMEN JANA"
+								},
+								{
+									"DisplayValue": "RAHUL CHOUDHARY",
+									"ReturnValue": "RAHUL CHOUDHARY"
+								},
+								{
+									"DisplayValue": "SOURAV JAISWAL",
+									"ReturnValue": "SOURAV JAISWAL"
+								},
+								{
+									"DisplayValue": "SURYAMANI KUMAR",
+									"ReturnValue": "SURYAMANI KUMAR"
+								},
+								{
+									"DisplayValue": "JOSHABANTA SAHU",
+									"ReturnValue": "JOSHABANTA SAHU"
+								},
+								{
+									"DisplayValue": "S PRASANTH KUMAR",
+									"ReturnValue": "S PRASANTH KUMAR"
+								},
+								{
+									"DisplayValue": "ANKIT KUMAR PATRA",
+									"ReturnValue": "ANKIT KUMAR PATRA"
+								},
+								{
+									"DisplayValue": "GAUTAM KIRO",
+									"ReturnValue": "GAUTAM KIRO"
+								},
+								{
+									"DisplayValue": "TAPAS KUMAR SAHU",
+									"ReturnValue": "TAPAS KUMAR SAHU"
+								},
+								{
+									"DisplayValue": "NILACHAL NAHAK",
+									"ReturnValue": "NILACHAL NAHAK"
+								},
+								{
+									"DisplayValue": "SURESH MUNDA",
+									"ReturnValue": "SURESH MUNDA"
+								},
+								{
+									"DisplayValue": "KARTIKA BEHERA",
+									"ReturnValue": "KARTIKA BEHERA"
+								},
+								{
+									"DisplayValue": "NARENDRA NAIK",
+									"ReturnValue": "NARENDRA NAIK"
+								},
+								{
+									"DisplayValue": "HEMANTA KUMAR SINGH",
+									"ReturnValue": "HEMANTA KUMAR SINGH"
+								},
+								{
+									"DisplayValue": "KULDEEP MAHANANDA",
+									"ReturnValue": "KULDEEP MAHANANDA"
+								},
+								{
+									"DisplayValue": "SANJAY RAJ PRADHAN",
+									"ReturnValue": "SANJAY RAJ PRADHAN"
+								},
+								{
+									"DisplayValue": "BANSIDHAR SETH",
+									"ReturnValue": "BANSIDHAR SETH"
+								},
+								{
+									"DisplayValue": "TAPAN KUMAR JENA",
+									"ReturnValue": "TAPAN KUMAR JENA"
+								},
+								{
+									"DisplayValue": "SONU SETH",
+									"ReturnValue": "SONU SETH"
+								},
+								{
+									"DisplayValue": "OMPRAKASH SATNAMI",
+									"ReturnValue": "OMPRAKASH SATNAMI"
+								}
+							]
+						},
+						{
+							"Value": "Steel tape",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section193Method",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Method",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": [
+								"{qc_ITEMS/DECISION_TAKEN}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section193DecisionTaken",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Decision Taken",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"PlaceHolder": "PlaceHolder",
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "OK",
+									"ReturnValue": "ok"
+								},
+								{
+									"DisplayValue": "Not OK",
+									"ReturnValue": "not_ok"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "Section194NextButton",
+							"IsVisible": true,
+							"Separator": true,
+							"Title": "Next",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"Image": "sap-icon://open-command-field",
+							"ImagePosition": "Trailing",
+							"Enabled": true,
+							"OnPress": "/TRL_RH_SnorkelApp/Rules/Section193Validation.js"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": false,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "Section193Form"
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"Value": "19.4 Putting the manufacturing control numbers *12",
+							"_Type": "Control.Type.FormCell.Title",
+							"_Name": "Section194Question",
+							"IsVisible": true,
+							"Separator": true,
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{qc_ITEMS/DATE_INSPECTED}",
+							"_Type": "Control.Type.FormCell.DatePicker",
+							"_Name": "Section194Date",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Date",
+							"IsEditable": true,
+							"Mode": "Date"
+						},
+						{
+							"Value": [
+								"{qc_ITEMS/INSPECTED_BY}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section194InspectedBy",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Inspected By",
+							"IsSelectedSectionEnabled": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "SOUMEN JANA",
+									"ReturnValue": "SOUMEN JANA"
+								},
+								{
+									"DisplayValue": "RAHUL CHOUDHARY",
+									"ReturnValue": "RAHUL CHOUDHARY"
+								},
+								{
+									"DisplayValue": "SOURAV JAISWAL",
+									"ReturnValue": "SOURAV JAISWAL"
+								},
+								{
+									"DisplayValue": "SURYAMANI KUMAR",
+									"ReturnValue": "SURYAMANI KUMAR"
+								},
+								{
+									"DisplayValue": "JOSHABANTA SAHU",
+									"ReturnValue": "JOSHABANTA SAHU"
+								},
+								{
+									"DisplayValue": "S PRASANTH KUMAR",
+									"ReturnValue": "S PRASANTH KUMAR"
+								},
+								{
+									"DisplayValue": "ANKIT KUMAR PATRA",
+									"ReturnValue": "ANKIT KUMAR PATRA"
+								},
+								{
+									"DisplayValue": "GAUTAM KIRO",
+									"ReturnValue": "GAUTAM KIRO"
+								},
+								{
+									"DisplayValue": "TAPAS KUMAR SAHU",
+									"ReturnValue": "TAPAS KUMAR SAHU"
+								},
+								{
+									"DisplayValue": "NILACHAL NAHAK",
+									"ReturnValue": "NILACHAL NAHAK"
+								},
+								{
+									"DisplayValue": "SURESH MUNDA",
+									"ReturnValue": "SURESH MUNDA"
+								},
+								{
+									"DisplayValue": "KARTIKA BEHERA",
+									"ReturnValue": "KARTIKA BEHERA"
+								},
+								{
+									"DisplayValue": "NARENDRA NAIK",
+									"ReturnValue": "NARENDRA NAIK"
+								},
+								{
+									"DisplayValue": "HEMANTA KUMAR SINGH",
+									"ReturnValue": "HEMANTA KUMAR SINGH"
+								},
+								{
+									"DisplayValue": "KULDEEP MAHANANDA",
+									"ReturnValue": "KULDEEP MAHANANDA"
+								},
+								{
+									"DisplayValue": "SANJAY RAJ PRADHAN",
+									"ReturnValue": "SANJAY RAJ PRADHAN"
+								},
+								{
+									"DisplayValue": "BANSIDHAR SETH",
+									"ReturnValue": "BANSIDHAR SETH"
+								},
+								{
+									"DisplayValue": "TAPAN KUMAR JENA",
+									"ReturnValue": "TAPAN KUMAR JENA"
+								},
+								{
+									"DisplayValue": "SONU SETH",
+									"ReturnValue": "SONU SETH"
+								},
+								{
+									"DisplayValue": "OMPRAKASH SATNAMI",
+									"ReturnValue": "OMPRAKASH SATNAMI"
+								}
+							]
+						},
+						{
+							"Value": "Steel tape",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section194Method",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Method",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": [
+								"{qc_ITEMS/DECISION_TAKEN}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section194DecisionTaken",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Decision Taken",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"PlaceHolder": "PlaceHolder",
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "OK",
+									"ReturnValue": "ok"
+								},
+								{
+									"DisplayValue": "Not OK",
+									"ReturnValue": "not_ok"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "Section195NextButton",
+							"IsVisible": true,
+							"Separator": true,
+							"Title": "Next",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"Image": "sap-icon://open-command-field",
+							"ImagePosition": "Trailing",
+							"Enabled": true,
+							"OnPress": "/TRL_RH_SnorkelApp/Rules/Section194Validation.js"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": false,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "Section194Form"
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"Value": "19.5 Putting logo",
+							"_Type": "Control.Type.FormCell.Title",
+							"_Name": "Section195Question",
+							"IsVisible": true,
+							"Separator": true,
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{qc_ITEMS/DATE_INSPECTED}",
+							"_Type": "Control.Type.FormCell.DatePicker",
+							"_Name": "Section195Date",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Date",
+							"IsEditable": true,
+							"Mode": "Date"
+						},
+						{
+							"Value": [
+								"{qc_ITEMS/INSPECTED_BY}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section195InspectedBy",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Inspected By",
+							"IsSelectedSectionEnabled": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "SOUMEN JANA",
+									"ReturnValue": "SOUMEN JANA"
+								},
+								{
+									"DisplayValue": "RAHUL CHOUDHARY",
+									"ReturnValue": "RAHUL CHOUDHARY"
+								},
+								{
+									"DisplayValue": "SOURAV JAISWAL",
+									"ReturnValue": "SOURAV JAISWAL"
+								},
+								{
+									"DisplayValue": "SURYAMANI KUMAR",
+									"ReturnValue": "SURYAMANI KUMAR"
+								},
+								{
+									"DisplayValue": "JOSHABANTA SAHU",
+									"ReturnValue": "JOSHABANTA SAHU"
+								},
+								{
+									"DisplayValue": "S PRASANTH KUMAR",
+									"ReturnValue": "S PRASANTH KUMAR"
+								},
+								{
+									"DisplayValue": "ANKIT KUMAR PATRA",
+									"ReturnValue": "ANKIT KUMAR PATRA"
+								},
+								{
+									"DisplayValue": "GAUTAM KIRO",
+									"ReturnValue": "GAUTAM KIRO"
+								},
+								{
+									"DisplayValue": "TAPAS KUMAR SAHU",
+									"ReturnValue": "TAPAS KUMAR SAHU"
+								},
+								{
+									"DisplayValue": "NILACHAL NAHAK",
+									"ReturnValue": "NILACHAL NAHAK"
+								},
+								{
+									"DisplayValue": "SURESH MUNDA",
+									"ReturnValue": "SURESH MUNDA"
+								},
+								{
+									"DisplayValue": "KARTIKA BEHERA",
+									"ReturnValue": "KARTIKA BEHERA"
+								},
+								{
+									"DisplayValue": "NARENDRA NAIK",
+									"ReturnValue": "NARENDRA NAIK"
+								},
+								{
+									"DisplayValue": "HEMANTA KUMAR SINGH",
+									"ReturnValue": "HEMANTA KUMAR SINGH"
+								},
+								{
+									"DisplayValue": "KULDEEP MAHANANDA",
+									"ReturnValue": "KULDEEP MAHANANDA"
+								},
+								{
+									"DisplayValue": "SANJAY RAJ PRADHAN",
+									"ReturnValue": "SANJAY RAJ PRADHAN"
+								},
+								{
+									"DisplayValue": "BANSIDHAR SETH",
+									"ReturnValue": "BANSIDHAR SETH"
+								},
+								{
+									"DisplayValue": "TAPAN KUMAR JENA",
+									"ReturnValue": "TAPAN KUMAR JENA"
+								},
+								{
+									"DisplayValue": "SONU SETH",
+									"ReturnValue": "SONU SETH"
+								},
+								{
+									"DisplayValue": "OMPRAKASH SATNAMI",
+									"ReturnValue": "OMPRAKASH SATNAMI"
+								}
+							]
+						},
+						{
+							"Value": "Steel tape",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section195Method",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Method",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": [
+								"{qc_ITEMS/DECISION_TAKEN}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section195DecisionTaken",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Decision Taken",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"PlaceHolder": "PlaceHolder",
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "OK",
+									"ReturnValue": "ok"
+								},
+								{
+									"DisplayValue": "Not OK",
+									"ReturnValue": "not_ok"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "Section195StaticNextButton",
+							"IsVisible": true,
+							"Separator": true,
+							"Title": "Next",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"Image": "sap-icon://open-command-field",
+							"ImagePosition": "Trailing",
+							"Enabled": true,
+							"OnPress": "/TRL_RH_SnorkelApp/Rules/Section195Validation.js"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": false,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "Section195Form"
+				},
+				{
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.Image",
+					"_Name": "Section195StaticImage",
+					"Visible": false,
+					"Image": "/TRL_RH_SnorkelApp/Images/Section195Image.png",
+					"Alignment": "Center",
+					"ContentMode": "ScaleAspectFit"
+				},
+				{
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.Image",
+					"_Name": "Section195DynamicImage",
+					"Visible": false,
+					"Image": "{imageUri}",
+					"Alignment": "Center",
+					"ContentMode": "ScaleAspectFit"
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"Validation": {
+								"Visible": true
+							},
+							"_Type": "Control.Type.FormCell.Attachment",
+							"_Name": "Section195TakePhoto",
+							"IsVisible": false,
+							"Separator": true,
+							"OnValueChange": "/TRL_RH_SnorkelApp/Rules/ValidationandConvertFile195.js",
+							"AttachmentActionType": [
+								"TakePhoto"
+							],
+							"AttachmentTitle": "Take Photo",
+							"AllowedFileTypes": [
+								"pdf",
+								"jpg",
+								"jpeg",
+								"png"
+							],
+							"AttachmentAddTitle": "Click Image"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": false,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "Section195UserInputImage"
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Layout": {
+						"LayoutType": "Vertical",
+						"HorizontalAlignment": "Leading"
+					},
+					"_Type": "Section.Type.ButtonTable",
+					"_Name": "Sheet6To7NavButtonContainer",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Buttons": [
+						{
+							"_Type": "ButtonTable.Type.Button",
+							"_Name": "Sheet6To7NavButton",
+							"Title": "Next Sheet",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"Image": "sap-icon://open-command-field",
+							"ImagePosition": "Trailing",
+							"FullWidth": false,
+							"Visible": true,
+							"Enabled": true,
+							"OnPress": "/TRL_RH_SnorkelApp/Actions/Nav2Sheet7.action"
+						}
+					]
+				}
+				
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "SnorkelInstallation6",
+	"OnLoaded": "/TRL_RH_SnorkelApp/Rules/LoadSnorkelData6.js",
+	"ActionBar": {
+		"Items": [],
+		"_Name": "ActionBar6",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "{CUSTOMER_NAME} RH Snorkel Record Sheet 6"
+	}
+}

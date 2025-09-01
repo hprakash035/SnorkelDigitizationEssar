@@ -1,0 +1,19 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section123Create"
+	},
+	"OnFailure": "/TRL_RH_SnorkelApp/Actions/CreateEntityFailureMessage.action",
+	"Target": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_ITEM"
+	},
+	"Properties": {
+		"DATE_INSPECTED": "#Page:SnorkelInstallation3/#Control:Section123Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation3/#Control:Section123DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation3/#Control:Section123InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation3/#Control:Section123Method/#Value",
+		"QUESTION": "12.3 Argon pipe length from shell (outside)[255mm (±5 mm)]",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}

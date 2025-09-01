@@ -1,0 +1,13 @@
+{
+	"_Type": "Action.Type.CheckRequiredFields",
+	"ActionResult": {
+		"_Name": "Section1Validation"
+	},
+	"OnFailure": "/TRL_RH_SnorkelApp/Actions/ValidationFailed.action",
+	"OnSuccess": "/TRL_RH_SnorkelApp/Actions/Section1Create.action",
+	"RequiredFields": [
+		"Section1DecisionTaken1",
+		"Section1InspectedBy1",
+		"Section1InspectionMethod1"
+	]
+}

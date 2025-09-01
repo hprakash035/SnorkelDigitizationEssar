@@ -1,0 +1,9 @@
+{
+    "Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+    "_Type": "Action.Type.ODataService.Initialize",
+    "ShowActivityIndicator": true,
+    "OnFailure": "/TRL_RH_SnorkelApp/Actions/TRL_Snorkel_CAP_SRV/Service/InitializeOnlineFailureMessage.action",
+    "ActionResult": {
+        "_Name": "init"
+    }
+}

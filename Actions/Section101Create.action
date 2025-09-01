@@ -1,0 +1,20 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section101Create"
+	},
+	"OnFailure": "/TRL_RH_SnorkelApp/Actions/CreateEntityFailureMessage.action",
+	"OnSuccess": "/TRL_RH_SnorkelApp/Rules/Section102Visible.js",
+	"Target": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_ITEM"
+	},
+	"Properties": {
+		"DATE_INSPECTED": "#Page:SnorkelInstallation2/#Control:Section101Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation2/#Control:Section101DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation2/#Control:Section101InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation2/#Control:Section101Method/#Value",
+		"QUESTION": "10.1 Situation of Mixing for outer castable 'RH1'",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}

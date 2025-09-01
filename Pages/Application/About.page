@@ -1,0 +1,129 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"KeyAndValues": [
+						{
+							"Value": "#Application/#AppData/UserId",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue0",
+							"KeyName": "User ID",
+							"Visible": true
+						},
+						{
+							"Value": "#Application/#AppData/DeviceId",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue1",
+							"KeyName": "Device ID",
+							"Visible": true
+						},
+						{
+							"Value": "/TRL_RH_SnorkelApp/Globals/Application/ApplicationName.global",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue2",
+							"KeyName": "Application",
+							"Visible": true
+						},
+						{
+							"Value": "/TRL_RH_SnorkelApp/Globals/Application/AppDefinition_Version.global",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue3",
+							"KeyName": "Application Metadata Version",
+							"Visible": true
+						}
+					],
+					"MaxItemCount": 1,
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Layout": {
+						"NumberOfColumns": 1
+					}
+				},
+				{
+					"KeyAndValues": [
+						{
+							"Value": "/TRL_RH_SnorkelApp/Rules/Application/GetClientVersion.js",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue4",
+							"KeyName": "Client Version",
+							"Visible": "$(PLT,true,true,false)"
+						},
+						{
+							"Value": "/TRL_RH_SnorkelApp/Rules/Application/GetClientSupportVersions.js",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue5",
+							"KeyName": "Client Support Versions",
+							"Visible": true
+						}
+					],
+					"MaxItemCount": 1,
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue1",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Layout": {
+						"NumberOfColumns": 1
+					}
+				}
+			],
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			}
+		}
+	],
+	"_Type": "Page",
+	"_Name": "About",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem0",
+				"Caption": "Done",
+				"SystemItem": "Done",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/TRL_RH_SnorkelApp/Actions/CloseModalPage_Complete.action"
+			},
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem1",
+				"Caption": "Logout",
+				"Icon": "sap-icon://log",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"IconText": "LogOut",
+				"Visible": true,
+				"OnPress": "/TRL_RH_SnorkelApp/Actions/Application/Logout.action"
+			}
+		],
+		"_Name": "ActionBar1",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "About",
+		"PrefersLargeCaption": true
+	}
+}

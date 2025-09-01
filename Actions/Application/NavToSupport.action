@@ -1,0 +1,6 @@
+{
+    "ModalPage": true,
+    "NavigationType": "Cross",
+    "PageToOpen": "/TRL_RH_SnorkelApp/Pages/Application/Support.page",
+    "_Type": "Action.Type.Navigation"
+}

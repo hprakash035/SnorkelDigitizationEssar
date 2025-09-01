@@ -1,0 +1,8 @@
+{
+	"_Type": "Action.Type.ToastMessage",
+	"OnSuccess": "/TRL_RH_SnorkelApp/Rules/Section1Visible.js",
+	"Message": "Snorkel No: {SNORKEL_NO}",
+	"Duration": 10,
+	"IsIconHidden": true,
+	"Animated": true
+}

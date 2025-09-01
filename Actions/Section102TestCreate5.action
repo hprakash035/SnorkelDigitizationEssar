@@ -1,0 +1,20 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section102TestCreate3"
+	},
+	"OnSuccess": "/TRL_RH_SnorkelApp/Rules/Section102Test2FormVisible.js",
+	"Target": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_Test_Table"
+	},
+	"Properties": {
+		"fluidity": "#Page:SnorkelInstallation2/#Control:Section102FludityOfCastable5/#SelectedValue",
+		"powderweight": "#Page:SnorkelInstallation2/#Control:Section102PowerWeight5/#Value",
+		"remark": "#Page:SnorkelInstallation2/#Control:Section102Remark5/#Value",
+		"testname": "*4 Actual situation for mixing the outer castable",
+		"vibration": "#Page:SnorkelInstallation2/#Control:Section102AddingVibration5/#Value",
+		"watercasting": "#Page:SnorkelInstallation2/#Control:Section102WaterCasting5/#Value",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}

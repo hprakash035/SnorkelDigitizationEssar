@@ -1,0 +1,33 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "QC_ITEM",
+        "Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "ACTUAL_VALUE": "#Page:QC_ITEM_Edit/#Control:ACTUAL_VALUE/#Value",
+        "COMMENTS": "#Page:QC_ITEM_Edit/#Control:COMMENTS/#Value",
+        "CORRECTIVE_ACTION": "#Page:QC_ITEM_Edit/#Control:CORRECTIVE_ACTION/#Value",
+        "DATE_INSPECTED": "#Page:QC_ITEM_Edit/#Control:DATE_INSPECTED/#Value",
+        "DECISION_TAKEN": "#Page:QC_ITEM_Edit/#Control:DECISION_TAKEN/#Value",
+        "INSPECTED_BY": "#Page:QC_ITEM_Edit/#Control:INSPECTED_BY/#Value",
+        "METHOD": "#Page:QC_ITEM_Edit/#Control:METHOD/#Value",
+        "POSITION": "#Page:QC_ITEM_Edit/#Control:POSITION/#Value",
+        "QUESTION": "#Page:QC_ITEM_Edit/#Control:QUESTION/#Value",
+        "SECTION_NO": "#Page:QC_ITEM_Edit/#Control:SECTION_NO/#Value",
+        "SUBSTEP": "#Page:QC_ITEM_Edit/#Control:SUBSTEP/#Value",
+        "TOLERANCE": "#Page:QC_ITEM_Edit/#Control:TOLERANCE/#Value",
+        "VISIBLE": "#Page:QC_ITEM_Edit/#Control:VISIBLE/#Value",
+        "WORK_ITEM_DESCRIPTION": "#Page:QC_ITEM_Edit/#Control:WORK_ITEM_DESCRIPTION/#Value",
+        "WorkProcessStep": "#Page:QC_ITEM_Edit/#Control:WorkProcessStep/#Value",
+        "qC_HEADER_SNORKEL_NO": "#Page:QC_ITEM_Edit/#Control:qC_HEADER_SNORKEL_NO/#SelectedValue",
+        "qC_HEADER_CUSTOMER_NAME": "#Page:QC_ITEM_Edit/#Control:qC_HEADER_CUSTOMER_NAME/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/TRL_RH_SnorkelApp/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/TRL_RH_SnorkelApp/Actions/UpdateEntityFailureMessage.action"
+}

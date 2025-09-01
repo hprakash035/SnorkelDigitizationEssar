@@ -1,0 +1,10 @@
+{
+  "Type": "Action.Type.OpenDocument",
+  "Name": "ShowPDFDocument",
+  "Document": {
+    "Name": "QCReport.pdf",
+    "Content": "{{#Property:pdfBase64}}",
+    "ContentType": "application/pdf",
+    "Encoding": "Base64"
+  }
+}

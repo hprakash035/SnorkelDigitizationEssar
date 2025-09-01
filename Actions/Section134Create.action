@@ -1,0 +1,19 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section134Create"
+	},
+	"OnFailure": "/TRL_RH_SnorkelApp/Actions/CreateEntityFailureMessage.action",
+	"Target": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_ITEM"
+	},
+	"Properties": {
+		"DATE_INSPECTED": "#Page:SnorkelInstallation4/#Control:Section134Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation4/#Control:Section134DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation4/#Control:Section134InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation4/#Control:Section134Method/#Value",
+		"QUESTION": "13.4 Putting Ar pipe cover on the each inlet.",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}

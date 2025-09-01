@@ -1,0 +1,6 @@
+{
+    "ModalPageFullscreen": false,
+    "ModalPage": true,
+    "PageToOpen": "/TRL_RH_SnorkelApp/Pages/TRL_Snorkel_CAP_SRV_QC_ITEM/QC_ITEM_CreateTest_Table.page",
+    "_Type": "Action.Type.Navigation"
+}

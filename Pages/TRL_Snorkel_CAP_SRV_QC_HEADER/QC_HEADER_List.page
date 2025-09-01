@@ -1,0 +1,129 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable",
+			"Sections": [
+				{
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader0",
+						"AccessoryType": "None",
+						"UseTopPadding": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Grouping": {
+						"GroupingProperties": [],
+						"Header": {
+							"Items": []
+						}
+					},
+					"_Type": "Section.Type.ObjectTable",
+					"Target": {
+						"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+						"EntitySet": "QC_HEADER"
+					},
+					"_Name": "SectionObjectTable0",
+					"Visible": true,
+					"EmptySection": {
+						"Caption": "No record found!",
+						"FooterVisible": false
+					},
+					"ObjectCell": {
+						"ContextMenu": {
+							"Items": [
+								{
+									"_Name": "Item0",
+									"_Type": "ObjectCellContextMenu.Type.Item",
+									"Image": "sap-icon://action"
+								}
+							],
+							"PerformFirstActionWithFullSwipe": true,
+							"LeadingItems": [],
+							"TrailingItems": [],
+							"_Type": "ObjectCell.Type.ContextMenu"
+						},
+						"Title": "{CUSTOMER_NAME}",
+						"Subhead": "Snorkel No : {SNORKEL_NO}",
+						"DisplayDescriptionInMobile": true,
+						"StatusText": "{modifiedBy}",
+						"SubstatusText": "{modifiedAt}",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "DisclosureIndicator",
+						"Tags": [],
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": ""
+								}
+							],
+							"ImageIsCircular": false,
+							"ImageHasBorder": false
+						},
+						"AvatarGrid": {
+							"Avatars": [],
+							"ImageIsCircular": true
+						},
+						"OnPress": "/TRL_RH_SnorkelApp/Actions/NavToSnorkelInstallationForm.action",
+						"_Type": "ObjectTable.Type.ObjectCell",
+						"Selected": true
+					},
+					"Search": {
+						"Options": {
+							"CaseSensitive": false,
+							"NumberSearch": {
+								"Enabled": false
+							},
+							"UseSearchOverFilter": {
+								"Enabled": false
+							}
+						},
+						"Enabled": true,
+						"Placeholder": "Item Search",
+						"BarcodeScanner": true,
+						"Delay": 500,
+						"MinimumCharacterThreshold": 3
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": true,
+						"LoadingIndicatorText": "Loading more items, please wait...",
+						"PageSize": 50
+					},
+					"HighlightSelectedItem": true
+				}
+			],
+			"LoadingIndicator": {
+				"Enabled": true,
+				"Text": "Loading, please wait..."
+			}
+		}
+	],
+	"_Type": "Page",
+	"_Name": "QC_HEADER_List",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Add",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/TRL_RH_SnorkelApp/Actions/NavToSnorkelInstallationForm.action"
+			}
+		],
+		"_Name": "ActionBar0",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "RH Snorkel Installation Record  List"
+	}
+}

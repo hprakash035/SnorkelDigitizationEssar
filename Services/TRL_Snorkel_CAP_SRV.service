@@ -1,0 +1,11 @@
+{
+	"DestinationName": "TRL_Snorkel_CAP_SRV",
+	"OfflineEnabled": false,
+	"OnlineOptions": {
+		"CSDLOptions": [
+			"ignoreAllAnnotations",
+			"ignoreAllReferences"
+		]
+	},
+	"SourceType": "Mobile"
+}

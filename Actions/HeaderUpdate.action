@@ -1,0 +1,31 @@
+{
+	"_Type": "Action.Type.ODataService.Create",
+	"ActionResult": {
+		"_Name": "HeaderUpdate"
+	},
+	"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+	"Target": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_HEADER",
+		"ReadLink": "{@odata.readLink}"
+	},
+	"Properties": {
+		"SNORKEL_NO": "{Property:SNORKEL_NO}",
+		"DATE_STARTED": "{Property:DATE_STARTED}",
+		"DATE_ENDED":"{Property:DATE_ENDED}",
+		"TYPE":"{Property:TYPE}",
+		"PRODUCTION_NO":"{Property:PRODUCTION_NO}",
+		"CHECKER":"{Property:CHECKER}",
+		"qc_ITEMS": [
+			{
+				"ID": "{Property:qc_ITEMS/ID}",
+				"DATE_INSPECTED": "{Property:qc_ITEMS/DATE_INSPECTED}",
+				"INSPECTED_BY": "{Property:qc_ITEMS/INSPECTED_BY}",
+				"METHOD": "{Property:qc_ITEMS/METHOD}",
+				"DECISION_TAKEN": "{Property:qc_ITEMS/DECISION_TAKEN}"
+
+			}
+		]
+	},
+	"UpdateLinks": true
+}

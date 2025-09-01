@@ -1,0 +1,19 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section111Create"
+	},
+	"OnFailure": "/TRL_RH_SnorkelApp/Actions/CreateEntityFailureMessage.action",
+	"Target": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_ITEM"
+	},
+	"Properties": {
+		"DATE_INSPECTED": "#Page:SnorkelInstallation3/#Control:Section111Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation3/#Control:Section111DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation3/#Control:Section111InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation3/#Control:Section111InspectionMethod/#Value",
+		"QUESTION": "11.1 Confirmation of the MOR of specimens",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}

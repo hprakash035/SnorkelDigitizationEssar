@@ -1,0 +1,62 @@
+{
+	"Credential": "cf",
+	"ClientLibraries": [
+		{
+			"Name": "SAPCommon"
+		}
+	],
+	"Template": {
+		"Id": "@ext-mdkvsc-npm-dev/generator-mdk",
+		"Name": "CRUD",
+		"Version": "0.0.1"
+	},
+	"CF": {
+		"Target": "https://api.cf.in30.hana.ondemand.com",
+		"Organization": "4f5f4de5-f25b-4739-bf91-513b68a1dc7a",
+		"Space": "f6cea888-652b-4ac3-b14c-f85e19b7b45e",
+		"Deploy": {
+			"Destination": [
+				{
+					"CF": "TRL_Snorkel_CAP_SRV",
+					"MDK": "TRL_Snorkel_CAP_SRV",
+					"URL": ""
+				}
+			],
+			"Name": "ns.TRL_RH_SnorkelApp",
+			"Version": "1.0.0",
+			"AppRouter": "standalone",
+			"WebClient": {
+				"Runtime": "production",
+				"URL": "https://mdk-webclient-runtime.cfapps.sap.hana.ondemand.com/runtime/"
+			},
+			"Auth": true,
+			"URL": "https://trl-krosaki-refractories-limited-trl-snorkel-digitizati34e808fd.cfapps.in30.hana.ondemand.com/nsTRL_RH_SnorkelApp"
+		}
+	},
+	"MobileService": {
+		"Type": "standard",
+		"AdminAPI": "https://mobile-service-cockpit-api.cfapps.in30.hana.ondemand.com/cockpit/v1/org/4f5f4de5-f25b-4739-bf91-513b68a1dc7a/space/f6cea888-652b-4ac3-b14c-f85e19b7b45e",
+		"AppId": "Com.Trl.Snorkel",
+		"Destination": [
+			"TRL_Snorkel_CAP_SRV"
+		]
+	},
+	"Onboarding": {
+		"Schema": "sapmobilesvcs",
+		"TimeZone": "UTC",
+		"URL": "sapmobilesvcs://?AppId=Com.Trl.Snorkel&ClientId=1bfea60c-631c-4db3-80a3-e2a9facb23be&ServerUrl=https://trl-snorkel-digitization-development-subaccount-d9y94j0c-ggwtbu.cfapps.in30.hana.ondemand.com&SapCloudPlatformEndpoint=https://trl-snorkel-digitization-development-subaccount-d9y94j0c-ggwtbu.cfapps.in30.hana.ondemand.com&AuthorizationEndpointUrl=https://trl-snorkel-digitization-development-subaccount-d9y94j0c-ggwtbu.cfapps.in30.hana.ondemand.com/oauth2/api/v1/authorize&RedirectUrl=https://trl-snorkel-digitization-development-subaccount-d9y94j0c-ggwtbu.cfapps.in30.hana.ondemand.com&TokenUrl=https://trl-snorkel-digitization-development-subaccount-d9y94j0c-ggwtbu.cfapps.in30.hana.ondemand.com/oauth2/api/v1/token&multiUser=false"
+	},
+	"LCAP": {
+		"FullName": "",
+		"Service": [],
+		"sourceTemplate": {
+			"id": "html5moduletemplates.basicSAPUI5ApplicationProjectModule",
+			"version": "1.40.12"
+		}
+	},
+	"Build": {
+		"SourceMap": true,
+		"TSTarget": "es6",
+		"WMF": true
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"Application": "/home/user/projects/TRL_RH_SnorkelApp/Application.app",
+	"Target": "Cloud Foundry",
+	"OtherApps": [
+		{
+			"Application": "/home/user/projects/TRL_RH_SnorkelApp/Application.app",
+			"Target": "Cloud Foundry"
+		}
+	]
+}

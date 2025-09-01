@@ -1,0 +1,19 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section133Create"
+	},
+	"OnFailure": "/TRL_RH_SnorkelApp/Actions/CreateEntityFailureMessage.action",
+	"Target": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_ITEM"
+	},
+	"Properties": {
+		"DATE_INSPECTED": "#Page:SnorkelInstallation4/#Control:Section133Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation4/#Control:Section133DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation4/#Control:Section133InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation4/#Control:Section133Method/#Value",
+		"QUESTION": "13.3 Fixing Ar pipes and Argon pipe sockets",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}

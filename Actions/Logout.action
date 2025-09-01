@@ -1,0 +1,11 @@
+{
+	"_Type": "Action.Type.Logout",
+	"ActionResult": {
+		"_Name": "Logout"
+	},
+	"OnSuccessLog": {
+		"Message": "Logout Successfully",
+		"Level": "Off"
+	},
+	"SkipReset": true
+}

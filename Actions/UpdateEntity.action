@@ -1,0 +1,8 @@
+{
+  "_Type": "Action.Type.ODataService.UpdateEntity",
+  "Target": {
+    "Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+    "EntitySet": "{EntitySet}",
+    "ReadLink": "{ReadLink}"
+  }
+  }

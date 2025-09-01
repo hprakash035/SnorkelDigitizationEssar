@@ -1,0 +1,24 @@
+{
+    "CreateLinks": [],
+    "OnFailure": "/TRL_RH_SnorkelApp/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/TRL_RH_SnorkelApp/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "sheetNo": "#Page:ATTACHMENTS_Create/#Control:sheetNo/#Value",
+        "sectionNo": "#Page:ATTACHMENTS_Create/#Control:sectionNo/#Value",
+        "question": "#Page:ATTACHMENTS_Create/#Control:question/#Value",
+        "mimeType": "#Page:ATTACHMENTS_Create/#Control:mimeType/#Value",
+        "name": "#Page:ATTACHMENTS_Create/#Control:name/#Value",
+        "file": "#Page:ATTACHMENTS_Create/#Control:file/#Value",
+        "size": "#Page:ATTACHMENTS_Create/#Control:size/#Value",
+        "qC_HEADER_SNORKEL_NO": "#Page:ATTACHMENTS_Create/#Control:qC_HEADER_SNORKEL_NO/#SelectedValue",
+        "qC_HEADER_CUSTOMER_NAME": "#Page:ATTACHMENTS_Create/#Control:qC_HEADER_CUSTOMER_NAME/#Value"
+    },
+    "Target": {
+        "EntitySet": "ATTACHMENTS",
+        "Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateEntity"
+}

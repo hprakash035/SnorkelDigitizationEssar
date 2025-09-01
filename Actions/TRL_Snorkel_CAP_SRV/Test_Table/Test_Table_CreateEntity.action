@@ -1,0 +1,36 @@
+{
+    "CreateLinks": [],
+    "OnFailure": "/TRL_RH_SnorkelApp/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/TRL_RH_SnorkelApp/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "sheetNo": "#Page:Test_Table_Create/#Control:sheetNo/#Value",
+        "actualvalue": "#Page:Test_Table_Create/#Control:actualvalue/#Value",
+        "date": "#Page:Test_Table_Create/#Control:date/#Value",
+        "ff": "#Page:Test_Table_Create/#Control:ff/#Value",
+        "fluidity": "#Page:Test_Table_Create/#Control:fluidity/#Value",
+        "method": "#Page:Test_Table_Create/#Control:method/#Value",
+        "no": "#Page:Test_Table_Create/#Control:no/#Value",
+        "position": "#Page:Test_Table_Create/#Control:position/#Value",
+        "powderweight": "#Page:Test_Table_Create/#Control:powderweight/#Value",
+        "remark": "#Page:Test_Table_Create/#Control:remark/#Value",
+        "settleduration": "#Page:Test_Table_Create/#Control:settleduration/#Value",
+        "spec": "#Page:Test_Table_Create/#Control:spec/#Value",
+        "specification": "#Page:Test_Table_Create/#Control:specification/#Value",
+        "testNo": "#Page:Test_Table_Create/#Control:testNo/#Value",
+        "testname": "#Page:Test_Table_Create/#Control:testname/#Value",
+        "tf": "#Page:Test_Table_Create/#Control:tf/#Value",
+        "tolerance": "#Page:Test_Table_Create/#Control:tolerance/#Value",
+        "vibration": "#Page:Test_Table_Create/#Control:vibration/#Value",
+        "watercasting": "#Page:Test_Table_Create/#Control:watercasting/#Value",
+        "qC_HEADER_SNORKEL_NO": "#Page:Test_Table_Create/#Control:qC_HEADER_SNORKEL_NO/#SelectedValue",
+        "qC_HEADER_CUSTOMER_NAME": "#Page:Test_Table_Create/#Control:qC_HEADER_CUSTOMER_NAME/#Value"
+    },
+    "Target": {
+        "EntitySet": "Test_Table",
+        "Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateEntity"
+}

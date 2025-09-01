@@ -1,0 +1,32 @@
+{
+    "CreateLinks": [],
+    "OnFailure": "/TRL_RH_SnorkelApp/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/TRL_RH_SnorkelApp/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "ACTUAL_VALUE": "#Page:QC_ITEM_Create/#Control:ACTUAL_VALUE/#Value",
+        "COMMENTS": "#Page:QC_ITEM_Create/#Control:COMMENTS/#Value",
+        "CORRECTIVE_ACTION": "#Page:QC_ITEM_Create/#Control:CORRECTIVE_ACTION/#Value",
+        "DATE_INSPECTED": "#Page:QC_ITEM_Create/#Control:DATE_INSPECTED/#Value",
+        "DECISION_TAKEN": "#Page:QC_ITEM_Create/#Control:DECISION_TAKEN/#Value",
+        "INSPECTED_BY": "#Page:QC_ITEM_Create/#Control:INSPECTED_BY/#Value",
+        "METHOD": "#Page:QC_ITEM_Create/#Control:METHOD/#Value",
+        "POSITION": "#Page:QC_ITEM_Create/#Control:POSITION/#Value",
+        "QUESTION": "#Page:QC_ITEM_Create/#Control:QUESTION/#Value",
+        "SECTION_NO": "#Page:QC_ITEM_Create/#Control:SECTION_NO/#Value",
+        "SUBSTEP": "#Page:QC_ITEM_Create/#Control:SUBSTEP/#Value",
+        "TOLERANCE": "#Page:QC_ITEM_Create/#Control:TOLERANCE/#Value",
+        "VISIBLE": "#Page:QC_ITEM_Create/#Control:VISIBLE/#Value",
+        "WORK_ITEM_DESCRIPTION": "#Page:QC_ITEM_Create/#Control:WORK_ITEM_DESCRIPTION/#Value",
+        "WorkProcessStep": "#Page:QC_ITEM_Create/#Control:WorkProcessStep/#Value",
+        "qC_HEADER_SNORKEL_NO": "#Page:QC_ITEM_Create/#Control:qC_HEADER_SNORKEL_NO/#SelectedValue",
+        "qC_HEADER_CUSTOMER_NAME": "#Page:QC_ITEM_Create/#Control:qC_HEADER_CUSTOMER_NAME/#Value"
+    },
+    "Target": {
+        "EntitySet": "QC_ITEM",
+        "Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateEntity"
+}

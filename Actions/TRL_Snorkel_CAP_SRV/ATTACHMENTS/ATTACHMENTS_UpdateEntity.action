@@ -1,0 +1,25 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "ATTACHMENTS",
+        "Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "sheetNo": "#Page:ATTACHMENTS_Edit/#Control:sheetNo/#Value",
+        "sectionNo": "#Page:ATTACHMENTS_Edit/#Control:sectionNo/#Value",
+        "question": "#Page:ATTACHMENTS_Edit/#Control:question/#Value",
+        "mimeType": "#Page:ATTACHMENTS_Edit/#Control:mimeType/#Value",
+        "name": "#Page:ATTACHMENTS_Edit/#Control:name/#Value",
+        "file": "#Page:ATTACHMENTS_Edit/#Control:file/#Value",
+        "size": "#Page:ATTACHMENTS_Edit/#Control:size/#Value",
+        "qC_HEADER_SNORKEL_NO": "#Page:ATTACHMENTS_Edit/#Control:qC_HEADER_SNORKEL_NO/#SelectedValue",
+        "qC_HEADER_CUSTOMER_NAME": "#Page:ATTACHMENTS_Edit/#Control:qC_HEADER_CUSTOMER_NAME/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/TRL_RH_SnorkelApp/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/TRL_RH_SnorkelApp/Actions/UpdateEntityFailureMessage.action"
+}

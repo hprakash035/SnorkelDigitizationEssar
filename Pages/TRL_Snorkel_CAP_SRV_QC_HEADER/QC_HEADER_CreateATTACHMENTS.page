@@ -1,0 +1,97 @@
+{
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/TRL_RH_SnorkelApp/Actions/CloseModalPage_Cancel.action",
+				"Position": "Left",
+				"SystemItem": "Cancel",
+				"_Type": "Control.Type.ActionBarItem"
+			},
+			{
+				"OnPress": "/TRL_RH_SnorkelApp/Actions/TRL_Snorkel_CAP_SRV/QC_HEADER/QC_HEADER_CreateATTACHMENTS.action",
+				"Position": "Right",
+				"SystemItem": "Save",
+				"_Type": "Control.Type.ActionBarItem"
+			}
+		],
+		"Caption": "$(L,Create_ATTACHMENTS)",
+		"_Type": "Control.Type.ActionBar"
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "sheetNo",
+							"_Name": "sheetNo",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "sectionNo",
+							"_Name": "sectionNo",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "question",
+							"_Name": "question",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "mimeType",
+							"_Name": "mimeType",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "name",
+							"_Name": "name",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "file",
+							"_Name": "file",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "size",
+							"KeyboardType": "Number",
+							"_Name": "size",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "qC_HEADER_SNORKEL_NO",
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"IsEditable": false,
+							"IsPickerDismissedOnSelection": true,
+							"IsSelectedSectionEnabled": true,
+							"PickerItems": {
+								"DisplayValue": "{SNORKEL_NO}",
+								"ReturnValue": "{SNORKEL_NO}",
+								"Target": {
+									"EntitySet": "QC_HEADER",
+									"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service"
+								}
+							},
+							"_Name": "qC_HEADER_SNORKEL_NO",
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"Value": "{SNORKEL_NO}"
+						},
+						{
+							"Caption": "qC_HEADER_CUSTOMER_NAME",
+							"_Name": "qC_HEADER_CUSTOMER_NAME",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "QC_HEADER_CreateATTACHMENTS"
+}

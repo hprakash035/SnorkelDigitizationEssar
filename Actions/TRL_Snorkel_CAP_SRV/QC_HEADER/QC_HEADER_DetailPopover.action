@@ -1,0 +1,20 @@
+{
+    "PopoverItems": [{
+            "Title": "Add ATTACHMENTS",
+            "OnPress": "/TRL_RH_SnorkelApp/Actions/TRL_Snorkel_CAP_SRV/QC_HEADER/NavToQC_HEADER_CreateATTACHMENTS.action"
+        },
+        {
+            "Title": "Add QC_ITEM",
+            "OnPress": "/TRL_RH_SnorkelApp/Actions/TRL_Snorkel_CAP_SRV/QC_HEADER/NavToQC_HEADER_CreateQC_ITEM.action"
+        },
+        {
+            "Title": "Add Test_Table",
+            "OnPress": "/TRL_RH_SnorkelApp/Actions/TRL_Snorkel_CAP_SRV/QC_HEADER/NavToQC_HEADER_CreateTest_Table.action"
+        },
+        {
+            "Title": "Delete",
+            "OnPress": "/TRL_RH_SnorkelApp/Rules/TRL_Snorkel_CAP_SRV/QC_HEADER/QC_HEADER_DeleteConfirmation.js"
+        }
+    ],
+    "_Type": "Action.Type.PopoverMenu"
+}

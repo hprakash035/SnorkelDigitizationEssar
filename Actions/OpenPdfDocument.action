@@ -1,0 +1,9 @@
+{
+	"_Type": "Action.Type.OpenDocument",
+	"ActionResult": {
+		"_Name": "OpenPdfDocument"
+	},
+	"Path": "/storage/emulated/0/Download",
+	"MimeType": "application/pdf",
+	"UseExternalViewer": true
+}

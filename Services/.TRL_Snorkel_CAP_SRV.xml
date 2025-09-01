@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+        <edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="RHSnorkelQCTrackerService" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <Annotation Term="Core.Links">
+                <Collection>
+                    <Record>
+                        <PropertyValue Property="rel" String="author"/>
+                        <PropertyValue Property="href" String="https://cap.cloud.sap"/>
+                    </Record>
+                </Collection>
+            </Annotation>
+            <EntityContainer Name="EntityContainer">
+                <EntitySet Name="ATTACHMENTS" EntityType="RHSnorkelQCTrackerService.ATTACHMENTS">
+                    <NavigationPropertyBinding Path="qC_HEADER" Target="QC_HEADER"/>
+                    <NavigationPropertyBinding Path="qC_ITEM" Target="QC_ITEM"/>
+                </EntitySet>
+                <EntitySet Name="QC_HEADER" EntityType="RHSnorkelQCTrackerService.QC_HEADER">
+                    <NavigationPropertyBinding Path="qc_ATTACHMENTS" Target="ATTACHMENTS"/>
+                    <NavigationPropertyBinding Path="qc_ITEMS" Target="QC_ITEM"/>
+                    <NavigationPropertyBinding Path="qc_TESTS" Target="QC_Test_Table"/>
+                    <NavigationPropertyBinding Path="headerFiles" Target="QC_HEADER_FILES"/>
+                    <NavigationPropertyBinding Path="twentyPointFive" Target="TwentyPointFive"/>
+                    <NavigationPropertyBinding Path="qc_MEASUREMENTS" Target="QC_MEASUREMENTS"/>
+                    <NavigationPropertyBinding Path="qc_CASTING" Target="QC_ITEM"/>
+                    <NavigationPropertyBinding Path="qc_CHECK" Target="QC_ITEM"/>
+                </EntitySet>
+                <EntitySet Name="QC_HEADER_FILES" EntityType="RHSnorkelQCTrackerService.QC_HEADER_FILES">
+                    <NavigationPropertyBinding Path="qC_HEADER" Target="QC_HEADER"/>
+                </EntitySet>
+                <EntitySet Name="QC_ITEM" EntityType="RHSnorkelQCTrackerService.QC_ITEM">
+                    <NavigationPropertyBinding Path="aTTACHMENTS" Target="ATTACHMENTS"/>
+                    <NavigationPropertyBinding Path="qC_HEADER" Target="QC_HEADER"/>
+                    <NavigationPropertyBinding Path="qc_TESTS" Target="QC_Test_Table"/>
+                </EntitySet>
+                <EntitySet Name="QC_Test_Table" EntityType="RHSnorkelQCTrackerService.QC_Test_Table">
+                    <NavigationPropertyBinding Path="qC_HEADER" Target="QC_HEADER"/>
+                    <NavigationPropertyBinding Path="qC_ITEM" Target="QC_ITEM"/>
+                </EntitySet>
+                <EntitySet Name="TwentyPointFive" EntityType="RHSnorkelQCTrackerService.TwentyPointFive">
+                    <NavigationPropertyBinding Path="qC_HEADER" Target="QC_HEADER"/>
+                </EntitySet>
+                <EntitySet Name="QC_MEASUREMENTS" EntityType="RHSnorkelQCTrackerService.QC_MEASUREMENTS">
+                    <NavigationPropertyBinding Path="qC_HEADER" Target="QC_HEADER"/>
+                </EntitySet>
+                <EntitySet Name="QC_CASTING" EntityType="RHSnorkelQCTrackerService.QC_CASTING">
+                    <NavigationPropertyBinding Path="qC_HEADER" Target="QC_HEADER"/>
+                </EntitySet>
+                <EntitySet Name="QC_CHECK" EntityType="RHSnorkelQCTrackerService.QC_CHECK">
+                    <NavigationPropertyBinding Path="qC_HEADER" Target="QC_HEADER"/>
+                </EntitySet>
+                <ActionImport Name="generateQCReport" Action="RHSnorkelQCTrackerService.generateQCReport"/>
+            </EntityContainer>
+            <EntityType Name="ATTACHMENTS">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="sheetNo" Type="Edm.String" MaxLength="10"/>
+                <Property Name="sectionNo" Type="Edm.String" MaxLength="10"/>
+                <Property Name="question" Type="Edm.String" MaxLength="255"/>
+                <Property Name="mimeType" Type="Edm.String" MaxLength="100"/>
+                <Property Name="name" Type="Edm.String" MaxLength="255"/>
+                <Property Name="file" Type="Edm.String"/>
+                <Property Name="size" Type="Edm.Int32"/>
+                <NavigationProperty Name="qC_HEADER" Type="RHSnorkelQCTrackerService.QC_HEADER" Partner="qc_ATTACHMENTS">
+                    <ReferentialConstraint Property="qC_HEADER_SNORKEL_NO" ReferencedProperty="SNORKEL_NO"/>
+                </NavigationProperty>
+                <Property Name="qC_HEADER_SNORKEL_NO" Type="Edm.String" MaxLength="100"/>
+                <NavigationProperty Name="qC_ITEM" Type="RHSnorkelQCTrackerService.QC_ITEM" Partner="aTTACHMENTS">
+                    <ReferentialConstraint Property="qC_ITEM_ID" ReferencedProperty="ID"/>
+                </NavigationProperty>
+                <Property Name="qC_ITEM_ID" Type="Edm.Guid"/>
+            </EntityType>
+            <EntityType Name="QC_HEADER">
+                <Key>
+                    <PropertyRef Name="SNORKEL_NO"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="CUSTOMER_NAME" Type="Edm.String" MaxLength="50"/>
+                <Property Name="SNORKEL_NO" Type="Edm.String" MaxLength="100" Nullable="false"/>
+                <Property Name="SHEET_NO" Type="Edm.String" MaxLength="10"/>
+                <Property Name="DATE_ENDED" Type="Edm.DateTimeOffset"/>
+                <Property Name="DATE_STARTED" Type="Edm.DateTimeOffset"/>
+                <Property Name="DRAFT_FLAG" Type="Edm.Boolean"/>
+                <Property Name="SECTIONCOMPLETED" Type="Edm.String" MaxLength="50"/>
+                <Property Name="TYPE" Type="Edm.String"/>
+                <Property Name="CHECKER" Type="Edm.String"/>
+                <Property Name="PRODUCTION_NO" Type="Edm.String" MaxLength="25"/>
+                <NavigationProperty Name="qc_ATTACHMENTS" Type="Collection(RHSnorkelQCTrackerService.ATTACHMENTS)" Partner="qC_HEADER">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+                <NavigationProperty Name="qc_ITEMS" Type="Collection(RHSnorkelQCTrackerService.QC_ITEM)" Partner="qC_HEADER">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+                <NavigationProperty Name="qc_TESTS" Type="Collection(RHSnorkelQCTrackerService.QC_Test_Table)" Partner="qC_HEADER">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+                <NavigationProperty Name="headerFiles" Type="Collection(RHSnorkelQCTrackerService.QC_HEADER_FILES)">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+                <NavigationProperty Name="twentyPointFive" Type="Collection(RHSnorkelQCTrackerService.TwentyPointFive)" Partner="qC_HEADER">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+                <NavigationProperty Name="qc_MEASUREMENTS" Type="Collection(RHSnorkelQCTrackerService.QC_MEASUREMENTS)" Partner="qC_HEADER">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+                <NavigationProperty Name="qc_CASTING" Type="Collection(RHSnorkelQCTrackerService.QC_ITEM)">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+                <NavigationProperty Name="qc_CHECK" Type="Collection(RHSnorkelQCTrackerService.QC_ITEM)">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="QC_HEADER_FILES">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="mimeType" Type="Edm.String" MaxLength="100"/>
+                <Property Name="name" Type="Edm.String" MaxLength="255"/>
+                <Property Name="file" Type="Edm.String"/>
+                <Property Name="SNORKEL_NO" Type="Edm.String" MaxLength="100"/>
+                <Property Name="CUSTOMER_NAME" Type="Edm.String" MaxLength="50"/>
+                <NavigationProperty Name="qC_HEADER" Type="RHSnorkelQCTrackerService.QC_HEADER"/>
+            </EntityType>
+            <EntityType Name="QC_ITEM">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="ACTUAL_VALUE" Type="Edm.String" MaxLength="100"/>
+                <Property Name="COMMENTS" Type="Edm.String" MaxLength="100"/>
+                <Property Name="CORRECTIVE_ACTION" Type="Edm.String" MaxLength="100"/>
+                <Property Name="DATE_INSPECTED" Type="Edm.DateTimeOffset"/>
+                <Property Name="DECISION_TAKEN" Type="Edm.String" MaxLength="10"/>
+                <Property Name="HEADER_ID" Type="Edm.Guid"/>
+                <Property Name="INSPECTED_BY" Type="Edm.String" MaxLength="100"/>
+                <Property Name="METHOD" Type="Edm.String" MaxLength="100"/>
+                <Property Name="POSITION" Type="Edm.String" MaxLength="100"/>
+                <Property Name="QUESTION" Type="Edm.String" MaxLength="200"/>
+                <Property Name="SECTION_NO" Type="Edm.String" MaxLength="100"/>
+                <Property Name="SUBSTEP" Type="Edm.String" MaxLength="100"/>
+                <Property Name="TOLERANCE" Type="Edm.String" MaxLength="100"/>
+                <Property Name="VISIBLE" Type="Edm.Boolean"/>
+                <Property Name="WORK_ITEM_DESCRIPTION" Type="Edm.String" MaxLength="100"/>
+                <Property Name="WorkProcessStep" Type="Edm.String" MaxLength="100"/>
+                <NavigationProperty Name="aTTACHMENTS" Type="Collection(RHSnorkelQCTrackerService.ATTACHMENTS)" Partner="qC_ITEM">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+                <NavigationProperty Name="qC_HEADER" Type="RHSnorkelQCTrackerService.QC_HEADER">
+                    <ReferentialConstraint Property="qC_HEADER_SNORKEL_NO" ReferencedProperty="SNORKEL_NO"/>
+                </NavigationProperty>
+                <Property Name="qC_HEADER_SNORKEL_NO" Type="Edm.String" MaxLength="100"/>
+                <NavigationProperty Name="qc_TESTS" Type="Collection(RHSnorkelQCTrackerService.QC_Test_Table)" Partner="qC_ITEM">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="QC_Test_Table">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="sheetNo" Type="Edm.String" MaxLength="10"/>
+                <Property Name="actualvalue" Type="Edm.String" MaxLength="100"/>
+                <Property Name="date" Type="Edm.DateTimeOffset"/>
+                <Property Name="ff" Type="Edm.String" MaxLength="100"/>
+                <Property Name="fluidity" Type="Edm.String" MaxLength="100"/>
+                <Property Name="method" Type="Edm.String" MaxLength="100"/>
+                <Property Name="no" Type="Edm.String" MaxLength="100"/>
+                <Property Name="position" Type="Edm.String" MaxLength="100"/>
+                <Property Name="powderweight" Type="Edm.String" MaxLength="100"/>
+                <Property Name="remark" Type="Edm.String" MaxLength="100"/>
+                <Property Name="settleduration" Type="Edm.String" MaxLength="100"/>
+                <Property Name="spec" Type="Edm.String" MaxLength="100"/>
+                <Property Name="specification" Type="Edm.String" MaxLength="100"/>
+                <Property Name="testNo" Type="Edm.String" MaxLength="100"/>
+                <Property Name="testname" Type="Edm.String" MaxLength="100"/>
+                <Property Name="tf" Type="Edm.String" MaxLength="100"/>
+                <Property Name="tolerance" Type="Edm.String" MaxLength="100"/>
+                <Property Name="vibration" Type="Edm.String" MaxLength="100"/>
+                <Property Name="watercasting" Type="Edm.String" MaxLength="100"/>
+                <NavigationProperty Name="qC_HEADER" Type="RHSnorkelQCTrackerService.QC_HEADER" Partner="qc_TESTS">
+                    <ReferentialConstraint Property="qC_HEADER_SNORKEL_NO" ReferencedProperty="SNORKEL_NO"/>
+                </NavigationProperty>
+                <Property Name="qC_HEADER_SNORKEL_NO" Type="Edm.String" MaxLength="100"/>
+                <NavigationProperty Name="qC_ITEM" Type="RHSnorkelQCTrackerService.QC_ITEM" Partner="qc_TESTS">
+                    <ReferentialConstraint Property="qC_ITEM_ID" ReferencedProperty="ID"/>
+                </NavigationProperty>
+                <Property Name="qC_ITEM_ID" Type="Edm.Guid"/>
+            </EntityType>
+            <EntityType Name="TwentyPointFive">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="shop" Type="Edm.String"/>
+                <Property Name="InspectionDate" Type="Edm.DateTimeOffset"/>
+                <Property Name="Approve1" Type="Edm.String"/>
+                <Property Name="Approve2" Type="Edm.String"/>
+                <Property Name="Checked" Type="Edm.String"/>
+                <Property Name="Inspection1" Type="Edm.String"/>
+                <Property Name="Inspection2" Type="Edm.String"/>
+                <Property Name="type" Type="Edm.String"/>
+                <NavigationProperty Name="qC_HEADER" Type="RHSnorkelQCTrackerService.QC_HEADER" Partner="twentyPointFive">
+                    <ReferentialConstraint Property="qC_HEADER_SNORKEL_NO" ReferencedProperty="SNORKEL_NO"/>
+                </NavigationProperty>
+                <Property Name="qC_HEADER_SNORKEL_NO" Type="Edm.String" MaxLength="100"/>
+            </EntityType>
+            <EntityType Name="QC_MEASUREMENTS">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <NavigationProperty Name="qC_HEADER" Type="RHSnorkelQCTrackerService.QC_HEADER" Partner="qc_MEASUREMENTS">
+                    <ReferentialConstraint Property="qC_HEADER_SNORKEL_NO" ReferencedProperty="SNORKEL_NO"/>
+                </NavigationProperty>
+                <Property Name="qC_HEADER_SNORKEL_NO" Type="Edm.String" MaxLength="100"/>
+                <Property Name="measurementItem" Type="Edm.String" MaxLength="100"/>
+                <Property Name="sign" Type="Edm.String" MaxLength="10"/>
+                <Property Name="standard" Type="Edm.String" MaxLength="50"/>
+                <Property Name="mp1" Type="Edm.Decimal" Precision="10" Scale="2"/>
+                <Property Name="mp2" Type="Edm.Decimal" Precision="10" Scale="2"/>
+                <Property Name="mp3" Type="Edm.Decimal" Precision="10" Scale="2"/>
+                <Property Name="mp4" Type="Edm.Decimal" Precision="10" Scale="2"/>
+                <Property Name="mp5" Type="Edm.Decimal" Precision="10" Scale="2"/>
+                <Property Name="checkStatus" Type="Edm.String" MaxLength="20"/>
+                <Property Name="remarks" Type="Edm.String" MaxLength="255"/>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="50"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="50"/>
+            </EntityType>
+            <EntityType Name="QC_CASTING">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="brickBrandName" Type="Edm.String" MaxLength="100"/>
+                <Property Name="brickLotNo" Type="Edm.String" MaxLength="50"/>
+                <Property Name="castableBrandName" Type="Edm.String" MaxLength="100"/>
+                <Property Name="castableLotNo" Type="Edm.String" MaxLength="50"/>
+                <Property Name="addedWaterPercent" Type="Edm.Decimal" Precision="5" Scale="2"/>
+                <Property Name="mixingTimeMin" Type="Edm.Decimal" Precision="5" Scale="2"/>
+                <Property Name="argonPipeFlowLPM" Type="Edm.Decimal" Precision="5" Scale="2"/>
+                <Property Name="remarks" Type="Edm.String" MaxLength="255"/>
+                <Property Name="checkStatus" Type="Edm.String" MaxLength="20"/>
+                <Property Name="type" Type="Edm.String"/>
+                <NavigationProperty Name="qC_HEADER" Type="RHSnorkelQCTrackerService.QC_HEADER">
+                    <ReferentialConstraint Property="qC_HEADER_SNORKEL_NO" ReferencedProperty="SNORKEL_NO"/>
+                </NavigationProperty>
+                <Property Name="qC_HEADER_SNORKEL_NO" Type="Edm.String" MaxLength="100"/>
+            </EntityType>
+            <EntityType Name="QC_CHECK">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="curingTimeHr" Type="Edm.Decimal" Precision="5" Scale="2"/>
+                <Property Name="dryingTimeHr" Type="Edm.Decimal" Precision="5" Scale="2"/>
+                <Property Name="dryingFurnace" Type="Edm.String" MaxLength="50"/>
+                <Property Name="afterDrying" Type="Edm.String" MaxLength="100"/>
+                <Property Name="preAssembly" Type="Edm.String" MaxLength="100"/>
+                <Property Name="argonPipeWelding" Type="Edm.String" MaxLength="20"/>
+                <Property Name="snorkelLotNo" Type="Edm.String" MaxLength="50"/>
+                <Property Name="stencilingMarking" Type="Edm.String" MaxLength="100"/>
+                <Property Name="type" Type="Edm.String"/>
+                <Property Name="remarks" Type="Edm.String" MaxLength="255"/>
+                <Property Name="checkStatus" Type="Edm.String" MaxLength="20"/>
+                <NavigationProperty Name="qC_HEADER" Type="RHSnorkelQCTrackerService.QC_HEADER">
+                    <ReferentialConstraint Property="qC_HEADER_SNORKEL_NO" ReferencedProperty="SNORKEL_NO"/>
+                </NavigationProperty>
+                <Property Name="qC_HEADER_SNORKEL_NO" Type="Edm.String" MaxLength="100"/>
+            </EntityType>
+            <ComplexType Name="return_RHSnorkelQCTrackerService_generateQCReport">
+                <Property Name="content" Type="Edm.Binary"/>
+                <Property Name="filename" Type="Edm.String"/>
+                <Property Name="mimeType" Type="Edm.String"/>
+            </ComplexType>
+            <Action Name="generateQCReport" IsBound="false">
+                <Parameter Name="SNORKEL_NO" Type="Edm.String"/>
+                <ReturnType Type="RHSnorkelQCTrackerService.return_RHSnorkelQCTrackerService_generateQCReport"/>
+            </Action>
+            <Annotations Target="RHSnorkelQCTrackerService.ATTACHMENTS/ID">
+                <Annotation Term="Core.ComputedDefaultValue" Bool="true"/>
+            </Annotations>
+            <Annotations Target="RHSnorkelQCTrackerService.ATTACHMENTS/createdAt">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="UI.ExcludeFromNavigationContext" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Created On"/>
+            </Annotations>
+            <Annotations Target="RHSnorkelQCTrackerService.ATTACHMENTS/createdBy">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="UI.ExcludeFromNavigationContext" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="User's unique ID"/>
+                <Annotation Term="Common.Label" String="Created By"/>
+            </Annotations>
+            <Annotations Target="RHSnorkelQCTrackerService.ATTACHMENTS/modifiedAt">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="UI.ExcludeFromNavigationContext" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Changed On"/>
+            </Annotations>
+            <Annotations Target="RHSnorkelQCTrackerService.ATTACHMENTS/modifiedBy">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="UI.ExcludeFromNavigationContext" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="User's unique ID"/>
+                <Annotation Term="Common.Label" String="Changed By"/>
+            </Annotations>
+            <Annotations Target="RHSnorkelQCTrackerService.QC_HEADER/createdAt">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="UI.ExcludeFromNavigationContext" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Created On"/>
+            </Annotations>
+            <Annotations Target="RHSnorkelQCTrackerService.QC_HEADER/createdBy">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="UI.ExcludeFromNavigationContext" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="User's unique ID"/>
+                <Annotation Term="Common.Label" String="Created By"/>
+            </Annotations>
+            <Annotations Target="RHSnorkelQCTrackerService.QC_HEADER/modifiedAt">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="UI.ExcludeFromNavigationContext" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Changed On"/>
+            </Annotations>
+            <Annotations Target="RHSnorkelQCTrackerService.QC_HEADER/modifiedBy">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="UI.ExcludeFromNavigationContext" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="User's unique ID"/>
+                <Annotation Term="Common.Label" String="Changed By"/>
+            </Annotations>
+            <Annotations Target="RHSnorkelQCTrackerService.QC_HEADER_FILES/ID">
+                <Annotation Term="Core.ComputedDefaultValue" Bool="true"/>
+            </Annotations>
+            <Annotations Target="RHSnorkelQCTrackerService.QC_HEADER_FILES/createdAt">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="UI.ExcludeFromNavigationContext" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Created On"/>
+            </Annotations>
+            <Annotations Target="RHSnorkelQCTrackerService.QC_HEADER_FILES/createdBy">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="UI.ExcludeFromNavigationContext" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="User's unique ID"/>
+                <Annotation Term="Common.Label" String="Created By"/>
+            </Annotations>
+            <Annotations Target="RHSnorkelQCTrackerService.QC_HEADER_FILES/modifiedAt">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="UI.ExcludeFromNavigationContext" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Changed On"/>
+            </Annotations>
+            <Annotations Target="RHSnorkelQCTrackerService.QC_HEADER_FILES/modifiedBy">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="UI.ExcludeFromNavigationContext" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="User's unique ID"/>
+                <Annotation Term="Common.Label" String="Changed By"/>
+            </Annotations>
+            <Annotations Target="RHSnorkelQCTrackerService.QC_ITEM/ID">
+                <Annotation Term="Core.ComputedDefaultValue" Bool="true"/>
+            </Annotations>
+            <Annotations Target="RHSnorkelQCTrackerService.QC_Test_Table/ID">
+                <Annotation Term="Core.ComputedDefaultValue" Bool="true"/>
+            </Annotations>
+            <Annotations Target="RHSnorkelQCTrackerService.QC_Test_Table/createdAt">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="UI.ExcludeFromNavigationContext" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Created On"/>
+            </Annotations>
+            <Annotations Target="RHSnorkelQCTrackerService.QC_Test_Table/createdBy">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="UI.ExcludeFromNavigationContext" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="User's unique ID"/>
+                <Annotation Term="Common.Label" String="Created By"/>
+            </Annotations>
+            <Annotations Target="RHSnorkelQCTrackerService.QC_Test_Table/modifiedAt">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="UI.ExcludeFromNavigationContext" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Changed On"/>
+            </Annotations>
+            <Annotations Target="RHSnorkelQCTrackerService.QC_Test_Table/modifiedBy">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="UI.ExcludeFromNavigationContext" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="User's unique ID"/>
+                <Annotation Term="Common.Label" String="Changed By"/>
+            </Annotations>
+            <Annotations Target="RHSnorkelQCTrackerService.TwentyPointFive/ID">
+                <Annotation Term="Core.ComputedDefaultValue" Bool="true"/>
+            </Annotations>
+            <Annotations Target="RHSnorkelQCTrackerService.QC_MEASUREMENTS/ID">
+                <Annotation Term="Core.ComputedDefaultValue" Bool="true"/>
+            </Annotations>
+            <Annotations Target="RHSnorkelQCTrackerService.QC_CASTING/ID">
+                <Annotation Term="Core.ComputedDefaultValue" Bool="true"/>
+            </Annotations>
+            <Annotations Target="RHSnorkelQCTrackerService.QC_CHECK/ID">
+                <Annotation Term="Core.ComputedDefaultValue" Bool="true"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
