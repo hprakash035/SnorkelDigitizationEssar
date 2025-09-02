@@ -6,15 +6,15 @@ export default function Section161Validation(clientAPI) {
     try {
         const pageProxy = clientAPI.getPageProxy();
         const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
-         const headerSection = FormSectionedTable.getSection('HeaderSection');
-        const snorkelNoControl = headerSection.getControl('SnorkelNo');
-        const snorkelNo = snorkelNoControl.getValue();
+        // //  const headerSection = FormSectionedTable.getSection('HeaderSection');
+        // // const snorkelNoControl = headerSection.getControl('SnorkelNo');
+        // const snorkelNo = snorkelNoControl.getValue();
 
-        if (!snorkelNo) {
-            return clientAPI.executeAction({
-                Name: '/TRL_RH_SnorkelApp/Actions/ValidationFailed.action',
-            });
-        }
+        // if (!snorkelNo) {
+        //     return clientAPI.executeAction({
+        //         Name: '/TRL_RH_SnorkelApp/Actions/ValidationFailed.action',
+        //     });
+        // }
 
         const Section161 = FormSectionedTable.getSection('Section161Form');
         const decisionTakenCtrl = Section161.getControl('Section161DecisionTaken');
@@ -29,7 +29,7 @@ export default function Section161Validation(clientAPI) {
     const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
     const Section161UserInputImage1 =FormSectionedTable.getSection('Section162Form');
     Section161UserInputImage1.setVisible('true');
-    FormSectionedTable.getSection('Section161Form').getControl('Section162NextButton').setVisible(false);
+    // FormSectionedTable.getSection('Section161Form').getControl('Section162NextButton').setVisible(false);
             return clientAPI.executeAction({
                 Name: '/TRL_RH_SnorkelApp/Actions/Section161Create.action'
             });

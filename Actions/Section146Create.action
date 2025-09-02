@@ -9,10 +9,10 @@
 		"EntitySet": "QC_ITEM"
 	},
 	"Properties": {
-		"DATE_INSPECTED": "#Page:SnorkelInstallation/#Control:Section146Date/#Value",
-		"DECISION_TAKEN": "#Page:SnorkelInstallation/#Control:Section146DecisionTaken/#SelectedValue",
-		"INSPECTED_BY": "#Page:SnorkelInstallation/#Control:Section146InspectedBy/#SelectedValue",
-		"METHOD": "#Page:SnorkelInstallation/#Control:Section146Method/#Value",
+		"DATE_INSPECTED": "#Page:SnorkelInstallation5/#Control:Section146Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation5/#Control:Section146DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation5/#Control:Section146InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation5/#Control:Section146Method/#Value",
 		"QUESTION": "14.6 Put Adhesive in alternate bricks and fixing the ring",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}

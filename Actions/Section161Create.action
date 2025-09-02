@@ -9,10 +9,10 @@
 		"EntitySet": "QC_ITEM"
 	},
 	"Properties": {
-		"DATE_INSPECTED": "#Page:SnorkelInstallation/#Control:Section161Date/#Value",
-		"DECISION_TAKEN": "#Page:SnorkelInstallation/#Control:Section161DecisionTaken/#SelectedValue",
-		"INSPECTED_BY": "#Page:SnorkelInstallation/#Control:Section161InspectedBy/#SelectedValue",
-		"METHOD": "#Page:SnorkelInstallation/#Control:Section161Method/#Value",
+		"DATE_INSPECTED": "#Page:SnorkelInstallation5/#Control:Section161Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation5/#Control:Section161DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation5/#Control:Section161InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation5/#Control:Section161Method/#Value",
 		"QUESTION": " 16.1 Situation of Mixing for gap filling castable 'HC-H111B'  *10",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}

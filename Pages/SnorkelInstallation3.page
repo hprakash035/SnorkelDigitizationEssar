@@ -211,7 +211,7 @@
 					},
 					"Controls": [
 						{
-							"Value": " *More than 2 MPa is required for two samples.   If it is below than 2MPa, the curing time   should be prolonged.",
+							"Value": " *More than 2 MPa is required for two samples.If it is below than 2MPa, the curing time should be prolonged.",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section111TestNameInfor",
 							"IsVisible": true,
@@ -257,6 +257,7 @@
 							"Mode": "Date"
 						},
 						{
+							"Value": ">2Mpa",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section111TestSpecification1",
 							"IsVisible": true,
@@ -264,7 +265,7 @@
 							"Caption": "1.Specification",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"Value": "Standard Testing Method",
@@ -297,14 +298,15 @@
 							"Mode": "Date"
 						},
 						{
+							"Value": ">2Mpa",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section111TestSpecification2",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "2.Specification",
+							"Caption": "1.Specification",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"Value": "Standard Testing Method",
@@ -337,14 +339,15 @@
 							"Mode": "Date"
 						},
 						{
+							"Value": ">2Mpa",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section111TestSpecification3",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "3.Specification",
+							"Caption": "1.Specification",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"Value": "Standard Testing Method",
@@ -377,14 +380,15 @@
 							"Mode": "Date"
 						},
 						{
+							"Value": ">2Mpa",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section111TestSpecification4",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "4.Specification",
+							"Caption": "1.Specification",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"Value": "Standard Testing Method",

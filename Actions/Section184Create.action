@@ -9,10 +9,10 @@
 		"EntitySet": "QC_ITEM"
 	},
 	"Properties": {
-		"DATE_INSPECTED": "#Page:SnorkelInstallation/#Control:Section184Date/#Value",
-		"DECISION_TAKEN": "#Page:SnorkelInstallation/#Control:Section184DecisionTaken/#SelectedValue",
-		"INSPECTED_BY": "#Page:SnorkelInstallation/#Control:Section184InspectedBy/#SelectedValue",
-		"METHOD": "#Page:SnorkelInstallation/#Control:Section184Method/#Value",
+		"DATE_INSPECTED": "#Page:SnorkelInstallation6/#Control:Section184Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation6/#Control:Section184DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation6/#Control:Section184InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation6/#Control:Section184Method/#Value",
 		"QUESTION": " 18.4 Installation of the removal equipment with automatically for the hanging hooks ",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}

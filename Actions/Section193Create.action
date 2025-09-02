@@ -9,10 +9,10 @@
 		"EntitySet": "QC_ITEM"
 	},
 	"Properties": {
-		"DATE_INSPECTED": "#Page:SnorkelInstallation/#Control:Section193Date/#Value",
-		"DECISION_TAKEN": "#Page:SnorkelInstallation/#Control:Section193DecisionTaken/#SelectedValue",
-		"INSPECTED_BY": "#Page:SnorkelInstallation/#Control:Section193InspectedBy/#SelectedValue",
-		"METHOD": "#Page:SnorkelInstallation/#Control:Section193Method/#Value",
+		"DATE_INSPECTED": "#Page:SnorkelInstallation6/#Control:Section193Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation6/#Control:Section193DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation6/#Control:Section193InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation6/#Control:Section193Method/#Value",
 		"QUESTION": "19.3 Putting the mark with clearly *12",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}

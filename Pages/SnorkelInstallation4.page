@@ -588,6 +588,7 @@
 					},
 					"Controls": [
 						{
+							"Value": "Gap-A",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section132Position1",
 							"IsVisible": true,
@@ -595,9 +596,10 @@
 							"Caption": "1.Position",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
+							"Value": "25±2mm",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section132Tolerence1",
 							"IsVisible": true,
@@ -605,7 +607,7 @@
 							"Caption": "1.Tolerence",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"Value": "Steel tape",
@@ -629,24 +631,26 @@
 							"IsEditable": true
 						},
 						{
+							"Value": "Gap-B",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section132Position2",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "2.Position",
+							"Caption": "1.Position",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
+							"Value": "25±2mm",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section132Tolerence2",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "2.Tolerance",
+							"Caption": "2.Tolerence",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"Value": "Steel tape",
@@ -670,6 +674,7 @@
 							"IsEditable": true
 						},
 						{
+							"Value": "Gap-C",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section132Position3",
 							"IsVisible": true,
@@ -677,9 +682,10 @@
 							"Caption": "3.Position",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
+							"Value": "25±2mm",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section132Tolerence3",
 							"IsVisible": true,
@@ -687,7 +693,7 @@
 							"Caption": "3.Tolerence",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"Value": "Steel tape",
@@ -711,6 +717,7 @@
 							"IsEditable": true
 						},
 						{
+							"Value": "Gap-D",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section132Position4",
 							"IsVisible": true,
@@ -718,9 +725,10 @@
 							"Caption": "4.Position",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
+							"Value": "25±2mm",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section132Tolerence4",
 							"IsVisible": true,
@@ -728,7 +736,7 @@
 							"Caption": "4.Tolerence",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"Value": "Steel tape",
@@ -1446,32 +1454,192 @@
 						"FooterSeparator": true,
 						"ControlSeparator": true
 					},
-					"Layout": {
-						"LayoutType": "Vertical",
-						"HorizontalAlignment": "Leading"
-					},
-					"_Type": "Section.Type.ButtonTable",
-					"_Name": "Sheet4To5NavButtonContainer",
-					"Visible": true,
-					"EmptySection": {
-						"FooterVisible": false
-					},
-					"Buttons": [
+					"Controls": [
 						{
-							"_Type": "ButtonTable.Type.Button",
-							"_Name": "Sheet4To5NavButton",
+							"Value": "13.6 Confirmation of uneven on the brick surface",
+							"_Type": "Control.Type.FormCell.Title",
+							"_Name": "Section136Question",
+							"IsVisible": true,
+							"Separator": true,
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": false
+						},
+						{
+							"Value": "{qc_ITEMS/DATE_INSPECTED}",
+							"_Type": "Control.Type.FormCell.DatePicker",
+							"_Name": "Section136Date",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Date",
+							"IsEditable": true,
+							"Mode": "Date"
+						},
+						{
+							"Value": [
+								"{qc_ITEMS/INSPECTED_BY}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section136InspectedBy",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Inspected By",
+							"IsSelectedSectionEnabled": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "SOUMEN JANA",
+									"ReturnValue": "SOUMEN JANA"
+								},
+								{
+									"DisplayValue": "RAHUL CHOUDHARY",
+									"ReturnValue": "RAHUL CHOUDHARY"
+								},
+								{
+									"DisplayValue": "SOURAV JAISWAL",
+									"ReturnValue": "SOURAV JAISWAL"
+								},
+								{
+									"DisplayValue": "SURYAMANI KUMAR",
+									"ReturnValue": "SURYAMANI KUMAR"
+								},
+								{
+									"DisplayValue": "JOSHABANTA SAHU",
+									"ReturnValue": "JOSHABANTA SAHU"
+								},
+								{
+									"DisplayValue": "S PRASANTH KUMAR",
+									"ReturnValue": "S PRASANTH KUMAR"
+								},
+								{
+									"DisplayValue": "ANKIT KUMAR PATRA",
+									"ReturnValue": "ANKIT KUMAR PATRA"
+								},
+								{
+									"DisplayValue": "GAUTAM KIRO",
+									"ReturnValue": "GAUTAM KIRO"
+								},
+								{
+									"DisplayValue": "TAPAS KUMAR SAHU",
+									"ReturnValue": "TAPAS KUMAR SAHU"
+								},
+								{
+									"DisplayValue": "NILACHAL NAHAK",
+									"ReturnValue": "NILACHAL NAHAK"
+								},
+								{
+									"DisplayValue": "SURESH MUNDA",
+									"ReturnValue": "SURESH MUNDA"
+								},
+								{
+									"DisplayValue": "KARTIKA BEHERA",
+									"ReturnValue": "KARTIKA BEHERA"
+								},
+								{
+									"DisplayValue": "NARENDRA NAIK",
+									"ReturnValue": "NARENDRA NAIK"
+								},
+								{
+									"DisplayValue": "HEMANTA KUMAR SINGH",
+									"ReturnValue": "HEMANTA KUMAR SINGH"
+								},
+								{
+									"DisplayValue": "KULDEEP MAHANANDA",
+									"ReturnValue": "KULDEEP MAHANANDA"
+								},
+								{
+									"DisplayValue": "SANJAY RAJ PRADHAN",
+									"ReturnValue": "SANJAY RAJ PRADHAN"
+								},
+								{
+									"DisplayValue": "BANSIDHAR SETH",
+									"ReturnValue": "BANSIDHAR SETH"
+								},
+								{
+									"DisplayValue": "TAPAN KUMAR JENA",
+									"ReturnValue": "TAPAN KUMAR JENA"
+								},
+								{
+									"DisplayValue": "SONU SETH",
+									"ReturnValue": "SONU SETH"
+								},
+								{
+									"DisplayValue": "OMPRAKASH SATNAMI",
+									"ReturnValue": "OMPRAKASH SATNAMI"
+								}
+							]
+						},
+						{
+							"Value": "Visual confirmation",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section136Method",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Method",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": false
+						},
+						{
+							"Value": [
+								"{qc_ITEMS/DECISION_TAKEN}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section136DecisionTaken",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Decision Taken",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"PlaceHolder": "PlaceHolder",
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "OK",
+									"ReturnValue": "ok"
+								},
+								{
+									"DisplayValue": "Not OK",
+									"ReturnValue": "not_ok"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "Section136NextPageButton",
+							"IsVisible": true,
+							"Separator": true,
 							"Title": "Next Sheet",
 							"Alignment": "Center",
 							"ButtonType": "Text",
 							"Semantic": "Tint",
 							"Image": "sap-icon://open-command-field",
 							"ImagePosition": "Trailing",
-							"FullWidth": false,
-							"Visible": true,
 							"Enabled": true,
-							"OnPress": "/TRL_RH_SnorkelApp/Actions/Nav2Sheet5.action"
+							"OnPress": "/TRL_RH_SnorkelApp/Rules/Section136Validation.js"
 						}
-					]
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": false,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "Section136Form"
 				}
 			]
 		}
@@ -1480,9 +1648,33 @@
 	"_Name": "SnorkelInstallation4",
 	"OnLoaded": "/TRL_RH_SnorkelApp/Rules/LoadSnorkelData4.js",
 	"ActionBar": {
-		"Items": [],
-		"_Name": "ActionBar4",
+		"Items": [
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "UpdateButton",
+				"Caption": "Update",
+				"Icon": "sap-icon://save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/TRL_RH_SnorkelApp/Rules/UpdateSnorkelData_Sheet4.js"
+			},
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem0",
+				"Caption": "User Menu",
+				"Icon": "sap-icon://customer",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/TRL_RH_SnorkelApp/Actions/Application/UserMenuPopover.action"
+			}
+		],
+		"_Name": "ActionBar0",
 		"_Type": "Control.Type.ActionBar",
-		"Caption": "{CUSTOMER_NAME} RH Snorkel Record Sheet 4"
+		"Caption": " {CUSTOMER_NAME} RH Snorkel Record Sheet 4",
+		"CaptionAlignment": "Center",
+		"PrefersLargeCaption": true,
+		"Logo": "/TRL_RH_SnorkelApp/Images/image.png"
 	}
 }

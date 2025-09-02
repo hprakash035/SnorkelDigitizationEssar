@@ -4,15 +4,13 @@ export async function loadSection111Data(pageProxy, qcItem111, FormSectionedTabl
         if (!Section111) {
             throw new Error("Section111Form not found in FormSectionedTable.");
         }
-
         await Section111.setVisible(true);
 
         const nextButton = Section111.getControl('Section111TestNextButton');
         if (nextButton) {
             await nextButton.setVisible(false);
-            
+
             if (flags?.next === false) {
-              
                 const Section111TestFormName = FormSectionedTable.getSection('Section111TestFormName');
                 if (Section111TestFormName) {
                     await Section111TestFormName.setVisible(true);
@@ -22,12 +20,11 @@ export async function loadSection111Data(pageProxy, qcItem111, FormSectionedTabl
                     await Section41Form.setVisible(true);
                 }
             }
-           
         }
 
         const Section111Date31Control = Section111.getControl('Section111Date');
         if (Section111Date31Control && qcItem111.DATE_INSPECTED) {
-            await Section111Date31Control.setValue(qcItem111.DATE_INSPECTED); 
+            await Section111Date31Control.setValue(qcItem111.DATE_INSPECTED);
         }
 
         const Section111InspectedBy31Control = Section111.getControl('Section111InspectedBy');
@@ -44,11 +41,29 @@ export async function loadSection111Data(pageProxy, qcItem111, FormSectionedTabl
         if (Section111DecisionTaken31Control && qcItem111.DECISION_TAKEN) {
             await Section111DecisionTaken31Control.setValue([qcItem111.DECISION_TAKEN]);
         }
- // --- Map MOR Test Result values ---
+
+        // --- Map MOR Test Result values ---
         const testForm = FormSectionedTable.getSection('Section111TestForm');
         if (testForm && testdataArray.length > 0) {
-            // Only take MOR tests (like "*6 MOR test result")
-            const morTests = testdataArray.filter(t => t.testname?.includes("MOR test result"));
+            let morTests = testdataArray.filter(t => t.testname?.includes("MOR test result"));
+
+            // Sort by specification (numeric or alphabetic)
+            morTests = morTests.sort((a, b) => {
+                const specA = a.specification;
+                const specB = b.specification;
+
+                const numA = parseFloat(specA);
+                const numB = parseFloat(specB);
+
+                const isNumA = !isNaN(numA);
+                const isNumB = !isNaN(numB);
+
+                if (isNumA && isNumB) {
+                    return numA - numB;
+                }
+
+                return String(specA).localeCompare(String(specB));
+            });
 
             for (let i = 0; i < Math.min(morTests.length, 4); i++) {
                 const test = morTests[i];
@@ -66,17 +81,12 @@ export async function loadSection111Data(pageProxy, qcItem111, FormSectionedTabl
                 await setFormValue(`Section111TestMethod${suffix}`, test.method);
                 await setFormValue(`Section111TestActualValue${suffix}`, test.actualvalue);
             }
-             const Section112Form = FormSectionedTable.getSection('Section112Form');
+
+            const Section112Form = FormSectionedTable.getSection('Section112Form');
             if (Section112Form) {
                 await Section112Form.setVisible(true);
             }
-
-            // const Section112NextButton = Section112Form?.getControl('Section112NextButton');
-            // if (Section112NextButton) {
-            //     await Section112NextButton.setVisible(false);
-            // }
         }
-
 
     } catch (error) {
         console.error("Error in loadSection111Data:", error);

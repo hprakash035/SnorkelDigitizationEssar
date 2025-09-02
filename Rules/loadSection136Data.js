@@ -6,10 +6,10 @@ export async function loadSection136Data(pageProxy, qcItem136, FormSectionedTabl
             throw new Error("Section136Form not found.");
         }
 
-        const nextButton = section136.getControl('SectionNextButton');
-        if (nextButton) {
-            await nextButton.setVisible(false);
-        }
+        // const nextButton = section136.getControl('SectionNextButton');
+        // if (nextButton) {
+        //     await nextButton.setVisible(false);
+        // }
 
         await section136.setVisible(true);
 

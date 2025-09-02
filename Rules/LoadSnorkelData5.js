@@ -17,7 +17,7 @@ export default async function LoadSnorkelDataPage5(clientAPI) {
         const readLink = binding['@odata.readLink'];
         const service = '/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service';
         const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
-        const headerSection = FormSectionedTable.getSection('HeaderSection');
+        // const headerSection = FormSectionedTable.getSection('HeaderSection');
 
         // --- Header Setup ---
        

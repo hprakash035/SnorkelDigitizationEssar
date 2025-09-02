@@ -3,14 +3,12 @@
  * @param {IClientAPI} clientAPI
  */
 export default async function ValidateAndConvertFile195(clientAPI) {
-    const pageProxy = clientAPI.getPageProxy();
+   const pageProxy = clientAPI.getPageProxy();
+const binding = pageProxy.getBindingObject();
 
     try {
         const sectionedTable = pageProxy.getControl('FormSectionedTable');
-        const snorkelNo = sectionedTable
-            .getSection('HeaderSection')
-            ?.getControl('SnorkelNo')
-            ?.getValue();
+        const snorkelNo =clientAPI.binding.SNORKEL_NO;
 
         const photoSection = sectionedTable.getSection('Section195UserInputImage');
         const photoControl = photoSection?.getControl('Section195TakePhoto');
@@ -76,7 +74,7 @@ export default async function ValidateAndConvertFile195(clientAPI) {
         });
 
         // ✅ Show next section
-        sectionedTable.getSection('Section201Form').setVisible(true);
+        // sectionedTable.getSection('Section201Form').setVisible(true);
 
     } catch (error) {
         await clientAPI.executeAction({

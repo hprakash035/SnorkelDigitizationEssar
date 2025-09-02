@@ -17,29 +17,27 @@ export default async function Section111TestFormValidation(clientAPI) {
             const testspecification = section111.getControl(`Section111TestSpecification${i}`)?.getValue();
             const method = section111.getControl(`Section111TestMethod${i}`)?.getValue();
             const actual_value = section111.getControl(`Section111TestActualValue${i}`)?.getValue();
-           
 
-            if (!testspecification) missingFields.push("Power Weight");
-            if (!method) missingFields.push("Water Casting");
-         
-            if (!actual_value) missingFields.push("Adding actual value");
-            // Optional: if remark is mandatory, uncomment below
-            // if (!remark) missingFields.push("Remark");
+            // ✅ Only validate for Test 1 and 2
+            if (i <= 2) {
+                if (!testspecification) missingFields.push("Power Weight");
+                if (!method) missingFields.push("Water Casting");
+                if (!actual_value) missingFields.push("Adding actual value");
 
-            if (missingFields.length > 0) {
-                return clientAPI.executeAction({
-                    Name: '/TRL_RH_SnorkelApp/Actions/ValidationFailed.action',
-                    Properties: {
-                        Message: `Please enter ${missingFields.join(', ')} for Test ${i}.`
-                    }
-                });
+                if (missingFields.length > 0) {
+                    return clientAPI.executeAction({
+                        Name: '/TRL_RH_SnorkelApp/Actions/ValidationFailed.action',
+                        Properties: {
+                            Message: `Please enter ${missingFields.join(', ')} for Test ${i}.`
+                        }
+                    });
+                }
             }
 
-            // Proceed with save if all fields are valid
+            // Proceed with save for all 4 tests
             await clientAPI.executeAction({ Name: actionNames[i - 1] });
         }
 
-        // All 5 test validations passed
         const nextButton = section111.getControl('Section112NextButton');
         if (nextButton) {
             nextButton.setVisible(false);

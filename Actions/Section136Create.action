@@ -1,0 +1,18 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section136Create"
+	},
+	"Target": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_ITEM"
+	},
+	"Properties": {
+		"DATE_INSPECTED": "#Page:SnorkelInstallation4/#Control:Section136Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation4/#Control:Section136DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation4/#Control:Section136InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation4/#Control:Section136Method/#Value",
+		"QUESTION": "13.6 Confirmation of uneven on the brick surface",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}

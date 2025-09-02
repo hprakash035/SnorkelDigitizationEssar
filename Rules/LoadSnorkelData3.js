@@ -7,7 +7,7 @@ import { loadSection123Data } from './loadSection123Data';
 
 export default async function LoadSnorkelDataPage3(clientAPI) {
     try {
-        console.log('🚀 LoadSnorkelDataPage3 started');
+        // console.log('🚀 LoadSnorkelDataPage3 started');
         clientAPI.showActivityIndicator("Loading data...");
 
         const pageProxy = clientAPI.getPageProxy();
@@ -17,33 +17,33 @@ export default async function LoadSnorkelDataPage3(clientAPI) {
         const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
         const headerSection = FormSectionedTable.getSection('HeaderSection');
 
-        console.log('🔗 Read link:', readLink);
+        // console.log('🔗 Read link:', readLink);
 
         // --- Read Data ---
-        console.log('📡 Reading data from backend...');
+        // console.log('📡 Reading data from backend...');
         const [itemsResult, headerFiles, attachmentsResult, testdata] = await Promise.all([
             clientAPI.read(service, `${readLink}/qc_ITEMS`, [], ''),
             clientAPI.read(service, `${readLink}/headerFiles`, [], ''),
             clientAPI.read(service, `${readLink}/qc_ATTACHMENTS`, [], ''),
             clientAPI.read(service, `${readLink}/qc_TESTS`, [], ''),
         ]);
-        console.log('✅ Data read complete');
+        // console.log('✅ Data read complete');
 
         const items = itemsResult._array;
         const attachments = attachmentsResult._array;
         const attachmentGroups = groupAttachmentsByQuestion(attachments);
         const flags = { next: false };
 
-        console.log(`📦 Items loaded: ${items.length}`);
-        console.log(`📎 Attachments loaded: ${attachments.length}`);
-        console.log(`🧪 Test data loaded: ${testdata._array.length}`);
+        // console.log(`📦 Items loaded: ${items.length}`);
+        // console.log(`📎 Attachments loaded: ${attachments.length}`);
+        // console.log(`🧪 Test data loaded: ${testdata._array.length}`);
 
         // --- Process Header Files ---
         if (clientAPI.binding.SNORKEL_NO) {
-            console.log(`📋 SNORKEL_NO found: ${clientAPI.binding.SNORKEL_NO}`);
+            // console.log(`📋 SNORKEL_NO found: ${clientAPI.binding.SNORKEL_NO}`);
             FormSectionedTable.getSection('Section111Form').setVisible(true);
         } else {
-            console.warn('⚠️ SNORKEL_NO not found in binding');
+            // console.warn('⚠️ SNORKEL_NO not found in binding');
         }
 
         // --- Section Keys (Page 3 only) ---
@@ -52,13 +52,13 @@ export default async function LoadSnorkelDataPage3(clientAPI) {
             '12.1', '12.2', '12.3'
         ];
 
-        console.log('🔁 Beginning section data loading...');
+        // console.log('🔁 Beginning section data loading...');
 
         for (const sectionKey of orderedSectionKeys) {
-            console.log(`➡️ Processing section ${sectionKey}`);
+            // console.log(`➡️ Processing section ${sectionKey}`);
             const loader = getSectionLoader(sectionKey);
             if (!loader) {
-                console.warn(`⚠️ No loader found for section ${sectionKey}`);
+                // console.warn(`⚠️ No loader found for section ${sectionKey}`);
                 continue;
             }
 
@@ -72,7 +72,7 @@ export default async function LoadSnorkelDataPage3(clientAPI) {
                 const normalize = str => str?.replace(/\s+/g, ' ')?.trim();
                 const matchingAttachments = attachmentGroups[normalize(question)] || [];
 
-                console.log(`📄 Found item for section ${sectionKey} with ${matchingAttachments.length} attachments`);
+                // console.log(`📄 Found item for section ${sectionKey} with ${matchingAttachments.length} attachments`);
 
                 try {
                     await loader(
@@ -83,20 +83,20 @@ export default async function LoadSnorkelDataPage3(clientAPI) {
                         flags,
                         testdata._array
                     );
-                    console.log(`✅ Loader for ${sectionKey} executed successfully`);
+                    // console.log(`✅ Loader for ${sectionKey} executed successfully`);
                 } catch (err) {
-                    console.error(`❌ Error running loader for section ${sectionKey}:`, err);
+                    // console.error(`❌ Error running loader for section ${sectionKey}:`, err);
                 }
             } else {
-                console.log(`ℹ️ Skipping section ${sectionKey}: item not found or missing DATE_INSPECTED / INSPECTED_BY`);
+                // console.log(`ℹ️ Skipping section ${sectionKey}: item not found or missing DATE_INSPECTED / INSPECTED_BY`);
             }
         }
 
         clientAPI.dismissActivityIndicator();
-        console.log('✅ LoadSnorkelDataPage3 completed successfully');
+        // console.log('✅ LoadSnorkelDataPage3 completed successfully');
     } catch (error) {
         clientAPI.dismissActivityIndicator();
-        console.error('❌ Fatal error in LoadSnorkelDataPage3:', error);
+        // console.error('❌ Fatal error in LoadSnorkelDataPage3:', error);
     }
 }
 
@@ -109,7 +109,7 @@ function groupAttachmentsByQuestion(attachments = []) {
         if (!grouped[key]) grouped[key] = [];
         grouped[key].push(attachment);
     }
-    console.log(`📎 Grouped attachments by question. Total groups: ${Object.keys(grouped).length}`);
+    // console.log(`📎 Grouped attachments by question. Total groups: ${Object.keys(grouped).length}`);
     return grouped;
 }
 

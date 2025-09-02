@@ -8,11 +8,11 @@
 		"EntitySet": "QC_Test_Table"
 	},
 	"Properties": {
-		"fluidity": "#Page:SnorkelInstallation/#Control:Section162FludityOfCastable1/#SelectedValue",
-		"powderweight": "#Page:SnorkelInstallation/#Control:Section162PowerWeight1/#Value",
+		"fluidity": "#Page:SnorkelInstallation5/#Control:Section162FludityOfCastable1/#SelectedValue",
+		"powderweight": "#Page:SnorkelInstallation5/#Control:Section162PowerWeight1/#Value",
 		"testname": "*10 Actual situation for mixing the outer castable",
-		"vibration": "#Page:SnorkelInstallation/#Control:Section162AddingVibration1/#Value",
-		"watercasting": "#Page:SnorkelInstallation/#Control:Section162WaterCasting1/#Value",
+		"vibration": "#Page:SnorkelInstallation5/#Control:Section162AddingVibration1/#Value",
+		"watercasting": "#Page:SnorkelInstallation5/#Control:Section162WaterCasting1/#Value",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}
 }

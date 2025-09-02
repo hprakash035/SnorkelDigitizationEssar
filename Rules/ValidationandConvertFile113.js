@@ -3,15 +3,12 @@
  * @param {IClientAPI} clientAPI
  */
 export default async function ValidateAndConvertFile113(clientAPI) {
-    const pageProxy = clientAPI.getPageProxy();
+  const pageProxy = clientAPI.getPageProxy();
+const binding = pageProxy.getBindingObject();
 
     try {
         const sectionedTable = pageProxy.getControl('FormSectionedTable');
-
-        const snorkelNo = sectionedTable
-            .getSection('HeaderSection')
-            ?.getControl('SnorkelNo')
-            ?.getValue();
+        const snorkelNo =clientAPI.binding.SNORKEL_NO;
 
         const photoSection = sectionedTable.getSection('Section113UserInputImage');
 

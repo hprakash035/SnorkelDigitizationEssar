@@ -9,10 +9,10 @@
 		"EntitySet": "QC_ITEM"
 	},
 	"Properties": {
-		"DATE_INSPECTED": "#Page:SnorkelInstallation/#Control:Section151Date/#Value",
-		"DECISION_TAKEN": "#Page:SnorkelInstallation/#Control:Section151DecisionTaken/#SelectedValue",
-		"INSPECTED_BY": "#Page:SnorkelInstallation/#Control:Section151InspectedBy/#SelectedValue",
-		"METHOD": "#Page:SnorkelInstallation/#Control:Section151Method/#Value",
+		"DATE_INSPECTED": "#Page:SnorkelInstallation5/#Control:Section151Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation5/#Control:Section151DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation5/#Control:Section151InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation5/#Control:Section151Method/#Value",
 		"QUESTION": "15.1 Confirmation of the workability for gap filling castable 'HC-H111B' *9",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}

@@ -8,10 +8,11 @@
 		"EntitySet": "QC_Test_Table"
 	},
 	"Properties": {
-		"actualvalue": "#Page:SnorkelInstallation/#Control:Section162TestActualGapB/#Value",
-		"method": "#Page:SnorkelInstallation/#Control:Section162TestMethodB/#Value",
-		"position": "#Page:SnorkelInstallation/#Control:Section162TestPositionGapB/#Value",
-		"tolerance": "#Page:SnorkelInstallation/#Control:Section162TestToleranceB/#Value",
-		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+		"actualvalue": "#Page:SnorkelInstallation5/#Control:Section162TestActualGapB/#Value",
+		"method": "#Page:SnorkelInstallation5/#Control:Section162TestMethodB/#Value",
+		"position": "#Page:SnorkelInstallation5/#Control:Section162TestPositionGapB/#Value",
+		"tolerance": "#Page:SnorkelInstallation5/#Control:Section162TestToleranceB/#Value",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value",
+		"testname": "*11 The gap between the top of brick surface to the top face of castable"
 	}
 }

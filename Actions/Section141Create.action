@@ -9,10 +9,10 @@
 		"EntitySet": "QC_ITEM"
 	},
 	"Properties": {
-		"DATE_INSPECTED": "#Page:SnorkelInstallation/#Control:Section141Date/#Value",
-		"DECISION_TAKEN": "#Page:SnorkelInstallation/#Control:Section141DecisionTaken/#SelectedValue",
-		"INSPECTED_BY": "#Page:SnorkelInstallation/#Control:Section141InspectedBy/#SelectedValue",
-		"METHOD": "#Page:SnorkelInstallation/#Control:Section141Method/#Value",
+		"DATE_INSPECTED": "#Page:SnorkelInstallation5/#Control:Section141Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation5/#Control:Section141DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation5/#Control:Section141InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation5/#Control:Section141Method/#Value",
 		"QUESTION": "14.1 Clean the brick gaps & bricks with compressed air before installing 3rd ring bricks",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}

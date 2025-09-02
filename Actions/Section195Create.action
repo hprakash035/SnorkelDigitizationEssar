@@ -9,10 +9,10 @@
 		"EntitySet": "QC_ITEM"
 	},
 	"Properties": {
-		"DATE_INSPECTED": "#Page:SnorkelInstallation/#Control:Section195Date/#Value",
-		"DECISION_TAKEN": "#Page:SnorkelInstallation/#Control:Section195DecisionTaken/#SelectedValue",
-		"INSPECTED_BY": "#Page:SnorkelInstallation/#Control:Section195InspectedBy/#SelectedValue",
-		"METHOD": "#Page:SnorkelInstallation/#Control:Section195Method/#Value",
+		"DATE_INSPECTED": "#Page:SnorkelInstallation6/#Control:Section195Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation6/#Control:Section195DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation6/#Control:Section195InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation6/#Control:Section195Method/#Value",
 		"QUESTION": "19.5 Putting logo",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}

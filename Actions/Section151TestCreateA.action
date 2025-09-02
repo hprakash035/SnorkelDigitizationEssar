@@ -8,12 +8,12 @@
 		"EntitySet": "QC_Test_Table"
 	},
 	"Properties": {
-		"ff": "#Page:SnorkelInstallation/#Control:Section151FF1/#Value",
-		"remark": "#Page:SnorkelInstallation/#Control:Section151Remark1/#Value",
-		"settleduration": "#Page:SnorkelInstallation/#Control:Section151SettingTime1/#Value",
+		"ff": "#Page:SnorkelInstallation5/#Control:Section151FF1/#Value",
+		"remark": "#Page:SnorkelInstallation5/#Control:Section151Remark1/#Value",
+		"settleduration": "#Page:SnorkelInstallation5/#Control:Section151SettingTime1/#Value",
 		"testname": "*9 Inspection result of outer castable workablity",
-		"tf": "#Page:SnorkelInstallation/#Control:Section151TF1/#Value",
-		"watercasting": "#Page:SnorkelInstallation/#Control:Section151WaterCasting1/#Value",
+		"tf": "#Page:SnorkelInstallation5/#Control:Section151TF1/#Value",
+		"watercasting": "#Page:SnorkelInstallation5/#Control:Section151WaterCasting1/#Value",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}
 }

@@ -9,10 +9,10 @@
 		"EntitySet": "QC_ITEM"
 	},
 	"Properties": {
-		"DATE_INSPECTED": "#Page:SnorkelInstallation/#Control:Section171Date/#Value",
-		"DECISION_TAKEN": "#Page:SnorkelInstallation/#Control:Section171DecisionTaken/#SelectedValue",
-		"INSPECTED_BY": "#Page:SnorkelInstallation/#Control:Section171InspectedBy/#SelectedValue",
-		"METHOD": "#Page:SnorkelInstallation/#Control:Section171Method/#Value",
+		"DATE_INSPECTED": "#Page:SnorkelInstallation6/#Control:Section171Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation6/#Control:Section171DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation6/#Control:Section171InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation6/#Control:Section171Method/#Value",
 		"QUESTION": " 17.1 Curing time   > 24Hr",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}

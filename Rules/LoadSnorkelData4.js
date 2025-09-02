@@ -66,7 +66,7 @@ export default async function LoadSnorkelDataPage4(clientAPI) {
                         flags,
                         testdata._array
                     );
-                    console.log(`✅ Loader for ${sectionKey} executed successfully`);
+                    // console.log(`✅ Loader for ${sectionKey} executed successfully`);
                 } catch (err) {
                     console.error(`❌ Error running loader for section ${sectionKey}:`, err);
                 }
@@ -77,7 +77,7 @@ export default async function LoadSnorkelDataPage4(clientAPI) {
 
     } catch (error) {
         clientAPI.dismissActivityIndicator();
-        console.error('❌ Fatal error in LoadSnorkelDataPage4:', error);
+        // console.error('❌ Fatal error in LoadSnorkelDataPage4:', error);
     }
 }
 

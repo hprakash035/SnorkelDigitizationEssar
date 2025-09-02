@@ -9,10 +9,10 @@
 		"EntitySet": "QC_ITEM"
 	},
 	"Properties": {
-		"DATE_INSPECTED": "#Page:SnorkelInstallation/#Control:Section144Date/#Value",
-		"DECISION_TAKEN": "#Page:SnorkelInstallation/#Control:Section144DecisionTaken/#SelectedValue",
-		"INSPECTED_BY": "#Page:SnorkelInstallation/#Control:Section144InspectedBy/#SelectedValue",
-		"METHOD": "#Page:SnorkelInstallation/#Control:Section144Method/#Value",
+		"DATE_INSPECTED": "#Page:SnorkelInstallation5/#Control:Section144Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation5/#Control:Section144DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation5/#Control:Section144InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation5/#Control:Section144Method/#Value",
 		"QUESTION": "14.4 Number of gaps which is coming >0.5mm",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}

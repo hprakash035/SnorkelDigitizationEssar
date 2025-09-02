@@ -9,10 +9,10 @@
 		"EntitySet": "QC_ITEM"
 	},
 	"Properties": {
-		"DATE_INSPECTED": "#Page:SnorkelInstallation/#Control:Section194Date/#Value",
-		"DECISION_TAKEN": "#Page:SnorkelInstallation/#Control:Section194DecisionTaken/#SelectedValue",
-		"INSPECTED_BY": "#Page:SnorkelInstallation/#Control:Section194InspectedBy/#SelectedValue",
-		"METHOD": "#Page:SnorkelInstallation/#Control:Section194Method/#Value",
+		"DATE_INSPECTED": "#Page:SnorkelInstallation6/#Control:Section194Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation6/#Control:Section194DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation6/#Control:Section194InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation6/#Control:Section194Method/#Value",
 		"QUESTION": "19.4 Putting the manufacturing control numbers *12",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}

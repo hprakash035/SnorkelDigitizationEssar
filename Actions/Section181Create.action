@@ -9,10 +9,10 @@
 		"EntitySet": "QC_ITEM"
 	},
 	"Properties": {
-		"DATE_INSPECTED": "#Page:SnorkelInstallation/#Control:Section181Date/#Value",
-		"DECISION_TAKEN": "#Page:SnorkelInstallation/#Control:Section181DecisionTaken/#SelectedValue",
-		"INSPECTED_BY": "#Page:SnorkelInstallation/#Control:Section181InspectedBy/#SelectedValue",
-		"METHOD": "#Page:SnorkelInstallation/#Control:Section181Method/#Value",
+		"DATE_INSPECTED": "#Page:SnorkelInstallation6/#Control:Section181Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation6/#Control:Section181DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation6/#Control:Section181InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation6/#Control:Section181Method/#Value",
 		"QUESTION": "18.1 Drying pattern according to Process Chart",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}

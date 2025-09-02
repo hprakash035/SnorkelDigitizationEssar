@@ -6,15 +6,15 @@ export default function Section141Validation(clientAPI) {
     try {
         const pageProxy = clientAPI.getPageProxy();
         const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
-         const headerSection = FormSectionedTable.getSection('HeaderSection');
-        const snorkelNoControl = headerSection.getControl('SnorkelNo');
-        const snorkelNo = snorkelNoControl.getValue();
+        //  const headerSection = FormSectionedTable.getSection('HeaderSection');
+        // const snorkelNoControl = headerSection.getControl('SnorkelNo');
+        // const snorkelNo = snorkelNoControl.getValue();
 
-        if (!snorkelNo) {
-            return clientAPI.executeAction({
-                Name: '/TRL_RH_SnorkelApp/Actions/ValidationFailed.action',
-            });
-        }
+        // if (!snorkelNo) {
+        //     return clientAPI.executeAction({
+        //         Name: '/TRL_RH_SnorkelApp/Actions/ValidationFailed.action',
+        //     });
+        // }
 
         const Section141 = FormSectionedTable.getSection('Section141Form');
         const decisionTakenCtrl = Section141.getControl('Section141DecisionTaken');

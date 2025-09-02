@@ -9,10 +9,10 @@
 		"EntitySet": "QC_ITEM"
 	},
 	"Properties": {
-		"DATE_INSPECTED": "#Page:SnorkelInstallation/#Control:Section145Date/#Value",
-		"DECISION_TAKEN": "#Page:SnorkelInstallation/#Control:Section145DecisionTaken/#SelectedValue",
-		"INSPECTED_BY": "#Page:SnorkelInstallation/#Control:Section145InspectedBy/#SelectedValue",
-		"METHOD": "#Page:SnorkelInstallation/#Control:Section145Method/#Value",
+		"DATE_INSPECTED": "#Page:SnorkelInstallation5/#Control:Section145Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation5/#Control:Section145DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation5/#Control:Section145InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation5/#Control:Section145Method/#Value",
 		"QUESTION": "14.5 Maximum gap between two bricks",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}

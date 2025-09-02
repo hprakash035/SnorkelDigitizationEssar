@@ -8,7 +8,6 @@
 			"_Type": "Control.Type.SectionedTable",
 			"_Name": "FormSectionedTable",
 			"Sections": [
-				
 				{
 					"Separators": {
 						"TopSectionSeparator": false,
@@ -610,7 +609,7 @@
 					},
 					"Controls": [
 						{
-							"Value": "14.4 Number of gaps which is coming >0.5mm\t\t\t",
+							"Value": "14.3. a) Number of gaps which is coming >0.5mm(no)\t\t\t",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section144Question",
 							"IsVisible": true,
@@ -805,7 +804,7 @@
 					},
 					"Controls": [
 						{
-							"Value": "14.5 Maximum gap between two bricks",
+							"Value": "14.3. b) Maximum gap between two bricks (mm)",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section145Question",
 							"IsVisible": true,
@@ -1000,7 +999,7 @@
 					},
 					"Controls": [
 						{
-							"Value": "14.6 Put Adhesive in alternate bricks and fixing the ring",
+							"Value": "14.4 Put Adhesive in alternate bricks and fixing the ring",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section146Question",
 							"IsVisible": true,
@@ -1926,7 +1925,7 @@
 							]
 						},
 						{
-							"Value": "\"Steel tape or  measurement Gauge\"",
+							"Value": "Steel tape or  measurement Gauge",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section162Method",
 							"IsVisible": true,
@@ -1934,7 +1933,7 @@
 							"Caption": "Method",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"Value": [
@@ -2417,7 +2416,7 @@
 						"_Name": "SectionCommonTypeHeader13",
 						"AccessoryType": "None",
 						"UseTopPadding": true,
-						"Caption": "*11 The gap between the top of brick surface to the top face of castable"
+						"Caption": "*11 The gap between the top of brick surface to the top face of castable (*12, 3, 6, and 9 oclock-wise direction should be inspected)"
 					},
 					"Visible": false,
 					"EmptySection": {
@@ -2444,7 +2443,7 @@
 							"Caption": "1.Position",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"Value": "100 ± 3 mm",
@@ -2455,7 +2454,7 @@
 							"Caption": "1.Tolerance",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"Value": "Steel tape or measurement Gauge",
@@ -2466,7 +2465,7 @@
 							"Caption": "1.Method",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
@@ -2487,7 +2486,7 @@
 							"Caption": "2.Position",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"Value": "100 ± 3 mm",
@@ -2498,7 +2497,7 @@
 							"Caption": "2.Tolerance",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"Value": "Steel tape or measurement Gauge",
@@ -2509,7 +2508,7 @@
 							"Caption": "2.Method",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
@@ -2530,7 +2529,7 @@
 							"Caption": "3.Position",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"Value": "100 ± 3 mm",
@@ -2541,7 +2540,7 @@
 							"Caption": "3.Tolerance",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"Value": "Steel tape or measurement Gauge",
@@ -2552,7 +2551,7 @@
 							"Caption": "3.Method",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
@@ -2573,7 +2572,7 @@
 							"Caption": "4.Position",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"Value": "100 ± 3 mm",
@@ -2584,7 +2583,7 @@
 							"Caption": "4.Tolerance",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"Value": "Steel tape or measurement Gauge",
@@ -2595,7 +2594,7 @@
 							"Caption": "4.Method",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
@@ -2683,7 +2682,7 @@
 							},
 							"_Type": "Control.Type.FormCell.Attachment",
 							"_Name": "Section162TakePhoto",
-							"IsVisible": false,
+							"IsVisible": true,
 							"Separator": true,
 							"OnValueChange": "/TRL_RH_SnorkelApp/Rules/ValidationandConvertFile162.js",
 							"AttachmentActionType": [
@@ -2751,9 +2750,33 @@
 	"_Name": "SnorkelInstallation5",
 	"OnLoaded": "/TRL_RH_SnorkelApp/Rules/LoadSnorkelData5.js",
 	"ActionBar": {
-		"Items": [],
-		"_Name": "ActionBar5",
+		"Items": [
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "UpdateButton",
+				"Caption": "Update",
+				"Icon": "sap-icon://save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/TRL_RH_SnorkelApp/Rules/UpdateSnorkelData_Sheet5.js"
+			},
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem0",
+				"Caption": "User Menu",
+				"Icon": "sap-icon://customer",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/TRL_RH_SnorkelApp/Actions/Application/UserMenuPopover.action"
+			}
+		],
+		"_Name": "ActionBar0",
 		"_Type": "Control.Type.ActionBar",
-		"Caption": "{CUSTOMER_NAME} RH Snorkel Record Sheet 5"
+		"Caption": " {CUSTOMER_NAME} RH Snorkel Record Sheet 5",
+		"CaptionAlignment": "Center",
+		"PrefersLargeCaption": true,
+		"Logo": "/TRL_RH_SnorkelApp/Images/image.png"
 	}
 }

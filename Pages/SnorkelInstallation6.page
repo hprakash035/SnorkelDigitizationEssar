@@ -8,7 +8,6 @@
 			"_Type": "Control.Type.SectionedTable",
 			"_Name": "FormSectionedTable",
 			"Sections": [
-				
 				{
 					"Separators": {
 						"TopSectionSeparator": false,
@@ -997,7 +996,8 @@
 					},
 					"_Type": "Section.Type.FormCell",
 					"_Name": "Section184Form"
-				},{
+				},
+				{
 					"Separators": {
 						"TopSectionSeparator": false,
 						"BottomSectionSeparator": true,
@@ -2022,7 +2022,7 @@
 							},
 							"_Type": "Control.Type.FormCell.Attachment",
 							"_Name": "Section195TakePhoto",
-							"IsVisible": false,
+							"IsVisible": true,
 							"Separator": true,
 							"OnValueChange": "/TRL_RH_SnorkelApp/Rules/ValidationandConvertFile195.js",
 							"AttachmentActionType": [
@@ -2083,7 +2083,6 @@
 						}
 					]
 				}
-				
 			]
 		}
 	],
@@ -2091,9 +2090,33 @@
 	"_Name": "SnorkelInstallation6",
 	"OnLoaded": "/TRL_RH_SnorkelApp/Rules/LoadSnorkelData6.js",
 	"ActionBar": {
-		"Items": [],
-		"_Name": "ActionBar6",
+		"Items": [
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "UpdateButton",
+				"Caption": "Update",
+				"Icon": "sap-icon://save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/TRL_RH_SnorkelApp/Rules/UpdateSnorkelData_Sheet6.js"
+			},
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem0",
+				"Caption": "User Menu",
+				"Icon": "sap-icon://customer",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/TRL_RH_SnorkelApp/Actions/Application/UserMenuPopover.action"
+			}
+		],
+		"_Name": "ActionBar0",
 		"_Type": "Control.Type.ActionBar",
-		"Caption": "{CUSTOMER_NAME} RH Snorkel Record Sheet 6"
+		"Caption": " {CUSTOMER_NAME} RH Snorkel Record Sheet 6",
+		"CaptionAlignment": "Center",
+		"PrefersLargeCaption": true,
+		"Logo": "/TRL_RH_SnorkelApp/Images/image.png"
 	}
 }
