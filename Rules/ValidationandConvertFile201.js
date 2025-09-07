@@ -10,7 +10,7 @@ const binding = pageProxy.getBindingObject();
         const sectionedTable = pageProxy.getControl('FormSectionedTable');
         const snorkelNo =clientAPI.binding.SNORKEL_NO;
 
-        const photoSection = sectionedTable.getSection('Section201UserInputImage');
+        const photoSection = sectionedTable.getSection('Section201UserInputForm');
         const photoControl = photoSection?.getControl('Section201TakePhoto');
         const attachments = photoControl?.getValue();
 

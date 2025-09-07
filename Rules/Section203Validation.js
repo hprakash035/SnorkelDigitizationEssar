@@ -29,7 +29,7 @@ export default function Section203Validation(clientAPI) {
     const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
     const Section203UserInputImage1 =FormSectionedTable.getSection('Section203StaticImage');
     Section203UserInputImage1.setVisible('true');
-    const Section203TakePhoto =FormSectionedTable.getSection('Section203TakePhoto');
+    const Section203TakePhoto =FormSectionedTable.getSection('Section203UserInputForm');
     Section203TakePhoto.setVisible('true');
     FormSectionedTable.getSection('Section203Form').getControl('Section203StaticNextButton').setVisible(false);
             return clientAPI.executeAction({

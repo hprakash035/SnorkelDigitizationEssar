@@ -51,6 +51,34 @@ export async function loadSection195Data(pageProxy, qcItem195, FormSectionedTabl
             }
         }
 
+
+        
+    // --- Dynamic image logic ---
+    const dynamicImageSection = FormSectionedTable.getSection('Section195DynamicImage');
+    const staticImageSection = FormSectionedTable.getSection('Section195StaticImage');
+    const userInputImageSection = FormSectionedTable.getSection('Section195UserInputImage123');
+    const binding = pageProxy.getBindingObject();
+
+    if (staticImageSection) await staticImageSection.setVisible(true);
+
+    if (dynamicImageSection && attachments?.length > 0) {
+      const first = attachments[0];
+      const base64 = first?.file;
+      const mime = first?.mimeType || 'image/png';
+
+      if (base64 && base64.length > 100) {
+        binding.imageUri = `data:${mime};base64,${base64}`;
+
+        await dynamicImageSection.setVisible(true);
+        await dynamicImageSection.redraw();
+        await userInputImageSection?.setVisible(false);
+      } else {
+        await userInputImageSection?.setVisible(true);
+      }
+    } else {
+      await userInputImageSection?.setVisible(true);
+    }
+
     } catch (error) {
         console.error("Error loading Section195 data:", error);
     }

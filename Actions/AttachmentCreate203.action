@@ -1,0 +1,18 @@
+{
+  "_Type": "Action.Type.ODataService.CreateEntity",
+  "ActionResult": {
+    "_Name": "AttachmentCreate203"
+  },
+  "Target": {
+    "Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+    "EntitySet": "ATTACHMENTS"
+  },
+  "Properties": {
+    "question": "{question}",
+    "mimeType": "{mimeType}",
+    "name": "{name}",
+    "file": "{file}",
+    "size": "{size}",
+    "qC_HEADER_SNORKEL_NO": "{qC_HEADER_SNORKEL_NO}"
+  }
+}

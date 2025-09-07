@@ -1,0 +1,34 @@
+{
+  "_Type": "Action.Type.ODataService.CreateEntity",
+  "ActionResult": {
+    "_Name": "QCCastingCreate"
+  },
+  "Target": {
+    "Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+    "EntitySet": "QC_CASTING"
+  },
+  "Properties": {
+    "qC_HEADER_SNORKEL_NO": "{qC_HEADER_ID}",
+    "brickBrandName": "{brickBrandName}",
+    "brickLotNo": "{brickLotNo}",
+    "castableBrandName": "{castableBrandName}",
+    "castableLotNo": "{castableLotNo}",
+    "addedWaterPercent": "{addedWaterPercent}",
+    "mixingTimeMin": "{mixingTimeMin}",
+    "argonPipeFlowA": "{argonPipeFlowA}",
+    "argonPipeFlowB": "{argonPipeFlowB}",
+    "argonPipeFlowC": "{argonPipeFlowC}",
+    "argonPipeFlowD": "{argonPipeFlowD}",
+    "argonPipeFlowE": "{argonPipeFlowE}",
+    "argonPipeFlowF": "{argonPipeFlowF}",
+    "argonPipeFlowG": "{argonPipeFlowG}",
+    "argonPipeFlowH": "{argonPipeFlowH}",
+    "argonPipeFlowI": "{argonPipeFlowI}",
+    "argonPipeFlowJ": "{argonPipeFlowJ}",
+    "argonPipeFlowK": "{argonPipeFlowK}",
+    "argonPipeFlowL": "{argonPipeFlowL}",
+    "remarks": "{remarks}",
+    "checkStatus": "{checkStatus}",
+    "type": "{type}"
+  }
+}

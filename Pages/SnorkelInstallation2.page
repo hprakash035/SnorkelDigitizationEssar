@@ -2801,8 +2801,28 @@
 		"Items": [
 			{
 				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "Home",
+				"Caption": "",
+				"Icon": "sap-icon://home",
+				"Position": "Left",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/TRL_RH_SnorkelApp/Actions/Nav2Home.action"
+			},
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "NextPage",
+				"Caption": "",
+				"Icon": "sap-icon://navigation-right-arrow",
+				"Position": "Left",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/TRL_RH_SnorkelApp/Actions/Nav2Sheet3.action"
+			},
+			{
+				"_Type": "Control.Type.ActionBarItem",
 				"_Name": "UpdateButton",
-				"Caption": "Update",
+				"Caption": "",
 				"Icon": "sap-icon://save",
 				"Position": "Right",
 				"IsIconCircular": false,
@@ -2812,7 +2832,7 @@
 			{
 				"_Type": "Control.Type.ActionBarItem",
 				"_Name": "ActionBarItem0",
-				"Caption": "User Menu",
+				"Caption": "",
 				"Icon": "sap-icon://customer",
 				"Position": "Right",
 				"IsIconCircular": false,

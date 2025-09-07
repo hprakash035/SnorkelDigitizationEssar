@@ -1,4 +1,4 @@
-/**
+ /**
  * Describe this function...
  * @param {IClientAPI} clientAPI
  */
@@ -27,9 +27,12 @@ export default function Section202Validation(clientAPI) {
 
         if (decisionTaken && inspectedBy && inspectionMethod && decisionTaken != "") {
     const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
+    const Section203Form =FormSectionedTable.getSection('Section203Form');
+    Section203Form.setVisible('true');
     // const Section202UserInputImage1 =FormSectionedTable.getSection('Section202StaticImage');
     // Section202UserInputImage1.setVisible('true');
     FormSectionedTable.getSection('Section202Form').getControl('Section203NextButton').setVisible(false);
+
             return clientAPI.executeAction({
                 Name: '/TRL_RH_SnorkelApp/Actions/Section202Create.action'
             });

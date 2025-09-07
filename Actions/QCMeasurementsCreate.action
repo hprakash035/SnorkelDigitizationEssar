@@ -1,0 +1,23 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "QCMeasurementsCreate"
+	},
+	"Target": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_MEASUREMENTS"
+	},
+	"Properties": {
+		"qC_HEADER_SNORKEL_NO": "{qC_HEADER_ID}",
+		"measurementItem": "{measurementItem}",
+		"sign": "{sign}",
+		"standard": "{standard}",
+		"mp1": "{mp1}",
+		"mp2": "{mp2}",
+		"mp3": "{mp3}",
+		"mp4": "{mp4}",
+		"mp5": "{mp5}",
+		"checkStatus": "{checkStatus}",
+		"remarks": "{remarks}"
+	}
+}

@@ -1,0 +1,24 @@
+{
+  "_Type": "Action.Type.ODataService.CreateEntity",
+  "ActionResult": {
+    "_Name": "QCCheckCreate"
+  },
+  "Target": {
+    "Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+    "EntitySet": "QC_CHECK"
+  },
+  "Properties": {
+    "qC_HEADER_SNORKEL_NO": "{qC_HEADER_ID}",
+    "curingTimeHr": "{curingTimeHr}",
+    "dryingTimeHr": "{dryingTimeHr}",
+    "dryingFurnace": "{dryingFurnace}",
+    "afterDrying": "{afterDrying}",
+    "preAssembly": "{preAssembly}",
+    "argonPipeWelding": "{argonPipeWelding}",
+    "snorkelLotNo": "{snorkelLotNo}",
+    "stencilingMarking": "{stencilingMarking}",
+    "remarks": "{remarks}",
+    "checkStatus": "{checkStatus}",
+    "type": "{type}"
+  }
+}

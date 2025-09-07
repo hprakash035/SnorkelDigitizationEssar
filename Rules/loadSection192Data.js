@@ -24,7 +24,7 @@ export async function loadSection192Data(pageProxy, qcItem192, FormSectionedTabl
         await Section192.setVisible(true);
 
         if (qcItem192?.DATE_INSPECTED) {
-            const dateControl = Section192.getControl('Section192InspectionDate');
+            const dateControl = Section192.getControl('Section192Date');
             if (dateControl) {
                 await dateControl.setValue(qcItem192.DATE_INSPECTED);
             }
@@ -38,7 +38,7 @@ export async function loadSection192Data(pageProxy, qcItem192, FormSectionedTabl
         }
 
         if (qcItem192?.METHOD) {
-            const methodControl = Section192.getControl('Section192InspectionMethod');
+            const methodControl = Section192.getControl('Section192Method');
             if (methodControl) {
                 await methodControl.setValue(qcItem192.METHOD);
             }

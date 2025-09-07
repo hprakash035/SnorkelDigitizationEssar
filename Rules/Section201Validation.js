@@ -29,6 +29,9 @@ export default function Section201Validation(clientAPI) {
     const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
     const Section201UserInputImage1 =FormSectionedTable.getSection('Section201StaticImage');
     Section201UserInputImage1.setVisible('true');
+    
+     const Section201UserInputForm =FormSectionedTable.getSection('Section201UserInputForm');
+    Section201UserInputForm.setVisible('true');
     FormSectionedTable.getSection('Section201Form').getControl('Section201StaticNextButton').setVisible(false);
             return clientAPI.executeAction({
                 Name: '/TRL_RH_SnorkelApp/Actions/Section201Create.action'

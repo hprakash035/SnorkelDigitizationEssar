@@ -243,11 +243,11 @@
                 <Property Name="measurementItem" Type="Edm.String" MaxLength="100"/>
                 <Property Name="sign" Type="Edm.String" MaxLength="10"/>
                 <Property Name="standard" Type="Edm.String" MaxLength="50"/>
-                <Property Name="mp1" Type="Edm.Decimal" Precision="10" Scale="2"/>
-                <Property Name="mp2" Type="Edm.Decimal" Precision="10" Scale="2"/>
-                <Property Name="mp3" Type="Edm.Decimal" Precision="10" Scale="2"/>
-                <Property Name="mp4" Type="Edm.Decimal" Precision="10" Scale="2"/>
-                <Property Name="mp5" Type="Edm.Decimal" Precision="10" Scale="2"/>
+                <Property Name="mp1" Type="Edm.String"/>
+                <Property Name="mp2" Type="Edm.String"/>
+                <Property Name="mp3" Type="Edm.String"/>
+                <Property Name="mp4" Type="Edm.String"/>
+                <Property Name="mp5" Type="Edm.String"/>
                 <Property Name="checkStatus" Type="Edm.String" MaxLength="20"/>
                 <Property Name="remarks" Type="Edm.String" MaxLength="255"/>
                 <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
@@ -264,9 +264,21 @@
                 <Property Name="brickLotNo" Type="Edm.String" MaxLength="50"/>
                 <Property Name="castableBrandName" Type="Edm.String" MaxLength="100"/>
                 <Property Name="castableLotNo" Type="Edm.String" MaxLength="50"/>
-                <Property Name="addedWaterPercent" Type="Edm.Decimal" Precision="5" Scale="2"/>
-                <Property Name="mixingTimeMin" Type="Edm.Decimal" Precision="5" Scale="2"/>
-                <Property Name="argonPipeFlowLPM" Type="Edm.Decimal" Precision="5" Scale="2"/>
+                <Property Name="addedWaterPercent" Type="Edm.String"/>
+                <Property Name="mixingTimeMin" Type="Edm.String"/>
+                <Property Name="argonPipeFlowLPM" Type="Edm.String"/>
+                <Property Name="argonPipeFlowA" Type="Edm.String"/>
+                <Property Name="argonPipeFlowB" Type="Edm.String"/>
+                <Property Name="argonPipeFlowC" Type="Edm.String"/>
+                <Property Name="argonPipeFlowD" Type="Edm.String"/>
+                <Property Name="argonPipeFlowE" Type="Edm.String"/>
+                <Property Name="argonPipeFlowF" Type="Edm.String"/>
+                <Property Name="argonPipeFlowG" Type="Edm.String"/>
+                <Property Name="argonPipeFlowH" Type="Edm.String"/>
+                <Property Name="argonPipeFlowI" Type="Edm.String"/>
+                <Property Name="argonPipeFlowJ" Type="Edm.String"/>
+                <Property Name="argonPipeFlowK" Type="Edm.String"/>
+                <Property Name="argonPipeFlowL" Type="Edm.String"/>
                 <Property Name="remarks" Type="Edm.String" MaxLength="255"/>
                 <Property Name="checkStatus" Type="Edm.String" MaxLength="20"/>
                 <Property Name="type" Type="Edm.String"/>
@@ -280,8 +292,8 @@
                     <PropertyRef Name="ID"/>
                 </Key>
                 <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
-                <Property Name="curingTimeHr" Type="Edm.Decimal" Precision="5" Scale="2"/>
-                <Property Name="dryingTimeHr" Type="Edm.Decimal" Precision="5" Scale="2"/>
+                <Property Name="curingTimeHr" Type="Edm.String"/>
+                <Property Name="dryingTimeHr" Type="Edm.String"/>
                 <Property Name="dryingFurnace" Type="Edm.String" MaxLength="50"/>
                 <Property Name="afterDrying" Type="Edm.String" MaxLength="100"/>
                 <Property Name="preAssembly" Type="Edm.String" MaxLength="100"/>

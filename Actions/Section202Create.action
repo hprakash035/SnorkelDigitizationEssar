@@ -1,0 +1,19 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section202Create"
+	},
+	"OnFailure": "/TRL_RH_SnorkelApp/Actions/CreateEntityFailureMessage.action",
+	"Target": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_ITEM"
+	},
+	"Properties": {
+		"DATE_INSPECTED": "#Page:SnorkelInstallation7/#Control:Section202Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation7/#Control:Section202DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation7/#Control:Section202InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation7/#Control:Section202Method/#Value",
+		"QUESTION": "20.2 Appearance",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}
