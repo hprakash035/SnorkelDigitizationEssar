@@ -3,7 +3,6 @@
 	"ActionResult": {
 		"_Name": "Section41TestCreateB"
 	},
-	"OnSuccess": "/TRL_RH_SnorkelApp/Actions/CreateEntitySuccessMessage.action",
 	"Target": {
 		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
 		"EntitySet": "QC_Test_Table"

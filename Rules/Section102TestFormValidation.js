@@ -48,11 +48,11 @@ export default async function Section102TestFormValidation(clientAPI) {
         }
     const Section102TestFormName2 = form.getSection('Section102TestFormName2');
                 if (Section102TestFormName2) {
-                    await Section102TestFormName2.setVisible(true);
+                    // await Section102TestFormName2.setVisible(true);
                 }
         const nextSection = form.getSection('Section102Test2Form');
         if (nextSection) {
-            nextSection.setVisible(true);
+            // nextSection.setVisible(true);
         }
          const Section102StaticImage = form.getSection('Section102StaticImage');
                 if (Section102StaticImage) {

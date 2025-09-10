@@ -22,13 +22,28 @@
 					"Controls": [
 						{
 							"Value": "{CUSTOMER_NAME}",
-							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Company",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "Company ",
-							"Enabled": true,
-							"IsEditable": true
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Company:",
+							"PlaceHolder": "Select Type",
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": true,
+							"AllowDefaultValueIfOneItem": true,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "ESSAR A",
+									"ReturnValue": "ESSAR A"
+								},
+								{
+									"DisplayValue": "ESSAR B",
+									"ReturnValue": "ESSAR B"
+								}
+							]
 						},
 						{
 							"Value": "{SNORKEL_NO}",
@@ -83,6 +98,10 @@
 								{
 									"DisplayValue": "SOUMEN JANA",
 									"ReturnValue": "SOUMEN JANA"
+								},
+								{
+									"DisplayValue": "RAHUL CHOUDHARY",
+									"ReturnValue": "RAHUL CHOUDHARY"
 								},
 								{
 									"DisplayValue": "SOURAV JAISWAL",
@@ -2126,7 +2145,7 @@
 							]
 						},
 						{
-							"Value": "Test hammer all Y studs",
+							"Value": "Test hammer",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section53Method",
 							"IsVisible": true,
@@ -2980,16 +2999,6 @@
 			},
 			{
 				"_Type": "Control.Type.ActionBarItem",
-				"_Name": "NextPage",
-				"Caption": "",
-				"Icon": "sap-icon://navigation-right-arrow",
-				"Position": "Left",
-				"IsIconCircular": false,
-				"Visible": true,
-				"OnPress": "/TRL_RH_SnorkelApp/Actions/Nav2Sheet2.action"
-			},
-			{
-				"_Type": "Control.Type.ActionBarItem",
 				"_Name": "UpdateButton",
 				"Caption": "",
 				"Icon": "sap-icon://save",
@@ -2997,6 +3006,16 @@
 				"IsIconCircular": false,
 				"Visible": true,
 				"OnPress": "/TRL_RH_SnorkelApp/Rules/UpdateSnorkelData_Sheet1.js"
+			},
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "NextPage",
+				"Caption": "",
+				"Icon": "sap-icon://navigation-right-arrow",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/TRL_RH_SnorkelApp/Actions/Nav2Sheet2.action"
 			},
 			{
 				"_Type": "Control.Type.ActionBarItem",

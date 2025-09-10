@@ -31,7 +31,8 @@
 					"_Type": "Section.Type.ObjectTable",
 					"Target": {
 						"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
-						"EntitySet": "QC_HEADER"
+						"EntitySet": "QC_HEADER",
+						"QueryOptions": "$filter=startswith(CUSTOMER_NAME, 'ESSAR')"
 					},
 					"_Name": "SectionObjectTable0",
 					"Visible": true,

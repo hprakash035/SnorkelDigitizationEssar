@@ -9,8 +9,9 @@
         },
         "right": {
             "visible": true,
-            "width": 268
-        }
+            "width": 468
+        },
+        "device": "tablet"
     },
     "mdk.platform": "Web",
     "mdk.defaultEditor": "Text Editor",

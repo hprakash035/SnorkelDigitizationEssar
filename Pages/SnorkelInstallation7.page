@@ -3170,7 +3170,7 @@
 				"Icon": "sap-icon://save",
 				"Position": "Right",
 				"IsIconCircular": false,
-				"Visible": true,
+				"Visible": false,
 				"OnPress": "/TRL_RH_SnorkelApp/Rules/UpdateSnorkelData_Sheet7.js"
 			},
 			{

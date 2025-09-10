@@ -2760,25 +2760,16 @@
 				"IsIconCircular": false,
 				"Visible": true,
 				"OnPress": "/TRL_RH_SnorkelApp/Actions/Nav2Home.action"
-			},{
+			},
+			{
 				"_Type": "Control.Type.ActionBarItem",
 				"_Name": "NextPage",
 				"Caption": "",
 				"Icon": "sap-icon://navigation-right-arrow",
-				"Position": "Left",
-				"IsIconCircular": false,
-				"Visible": true,
-				"OnPress": "/TRL_RH_SnorkelApp/Actions/Nav2Sheet6.action"
-			},
-			{
-				"_Type": "Control.Type.ActionBarItem",
-				"_Name": "UpdateButton",
-				"Caption": "",
-				"Icon": "sap-icon://save",
 				"Position": "Right",
 				"IsIconCircular": false,
 				"Visible": true,
-				"OnPress": "/TRL_RH_SnorkelApp/Rules/UpdateSnorkelData_Sheet5.js"
+				"OnPress": "/TRL_RH_SnorkelApp/Actions/Nav2Sheet6.action"
 			},
 			{
 				"_Type": "Control.Type.ActionBarItem",
@@ -2789,6 +2780,16 @@
 				"IsIconCircular": false,
 				"Visible": true,
 				"OnPress": "/TRL_RH_SnorkelApp/Actions/Application/UserMenuPopover.action"
+			},
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "UpdateButton",
+				"Caption": "",
+				"Icon": "sap-icon://save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": false,
+				"OnPress": "/TRL_RH_SnorkelApp/Rules/UpdateSnorkelData_Sheet5.js"
 			}
 		],
 		"_Name": "ActionBar0",

@@ -3,7 +3,7 @@
 	"ActionResult": {
 		"_Name": "Section41TestCreateD"
 	},
-	"OnSuccess": "/TRL_RH_SnorkelApp/Rules/Section42Visible.js",
+	
 	"Target": {
 		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
 		"EntitySet": "QC_Test_Table"

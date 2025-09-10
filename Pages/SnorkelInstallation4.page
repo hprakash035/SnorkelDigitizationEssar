@@ -1658,15 +1658,6 @@
 				"IsIconCircular": false,
 				"Visible": true,
 				"OnPress": "/TRL_RH_SnorkelApp/Actions/Nav2Home.action"
-			},{
-				"_Type": "Control.Type.ActionBarItem",
-				"_Name": "NextPage",
-				"Caption": "",
-				"Icon": "sap-icon://navigation-right-arrow",
-				"Position": "Left",
-				"IsIconCircular": false,
-				"Visible": true,
-				"OnPress": "/TRL_RH_SnorkelApp/Actions/Nav2Sheet5.action"
 			},
 			{
 				"_Type": "Control.Type.ActionBarItem",
@@ -1675,8 +1666,18 @@
 				"Icon": "sap-icon://save",
 				"Position": "Right",
 				"IsIconCircular": false,
-				"Visible": true,
+				"Visible": false,
 				"OnPress": "/TRL_RH_SnorkelApp/Rules/UpdateSnorkelData_Sheet4.js"
+			},
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "NextPage",
+				"Caption": "",
+				"Icon": "sap-icon://navigation-right-arrow",
+				"Position": "Left",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/TRL_RH_SnorkelApp/Actions/Nav2Sheet5.action"
 			},
 			{
 				"_Type": "Control.Type.ActionBarItem",

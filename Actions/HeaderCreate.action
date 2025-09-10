@@ -23,7 +23,7 @@
 		"EntitySet": "QC_HEADER"
 	},
 	"Properties": {
-		"CUSTOMER_NAME": "#Page:SnorkelInstallation/#Control:Company/#Value",
+		"CUSTOMER_NAME": "#Page:SnorkelInstallation/#Control:Company/#SelectedValue",
 		"SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value",
 		"DATE_ENDED": "#Page:SnorkelInstallation/#Control:EndDate/#Value",
 		"DATE_STARTED": "#Page:SnorkelInstallation/#Control:StartDate/#Value",
