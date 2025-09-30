@@ -72,6 +72,9 @@ const binding = pageProxy.getBindingObject();
                 }
             }
         });
+         return clientAPI.executeAction({
+                Name: '/TRL_RH_SnorkelApp/Actions/Nav2Sheet4.action'
+            });
 
         // ✅ Show next section
         // sectionedTable.getSection('Section131Form').setVisible(true);

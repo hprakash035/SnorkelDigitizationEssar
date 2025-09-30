@@ -7,22 +7,20 @@ export async function loadSection202Data(pageProxy, qcItem202, FormSectionedTabl
 
         await Section202.setVisible(true);
 
-        const nextButton = Section202.getControl('Section202NextButton');
+        const nextButton = Section202.getControl('Section203NextButton');
         if (nextButton) {
             await nextButton.setVisible(false);
-            
-            if (flags?.next === false) {
-              
-                const Section41Form = FormSectionedTable.getSection('Section202Form');
-                if (Section41Form) {
-                    await Section41Form.setVisible(true);
-                }
-            }
-           
         }
 
-        await Section202.setVisible(true);
+        if (flags?.next === false) {
+            // Optionally show the next section if flag requires it
+            const SectionNext = FormSectionedTable.getSection('Section203Form');
+            if (SectionNext) {
+                await SectionNext.setVisible(true);
+            }
+        }
 
+        // Populate metadata fields
         if (qcItem202?.DATE_INSPECTED) {
             const dateControl = Section202.getControl('Section202Date');
             if (dateControl) {
@@ -51,33 +49,47 @@ export async function loadSection202Data(pageProxy, qcItem202, FormSectionedTabl
             }
         }
 
+        // --- Image section handling ---
+        const dynamicImageSection = FormSectionedTable.getSection('Section202DynamicImage');
+        const staticImageSection = FormSectionedTable.getSection('Section202StaticImage');
+        const userInputImageSection = FormSectionedTable.getSection('Section202UserInputImage');
+        const binding = pageProxy.getBindingObject();
 
-        
-    // --- Dynamic image logic ---
-    const dynamicImageSection = FormSectionedTable.getSection('Section202DynamicImage');
-    const staticImageSection = FormSectionedTable.getSection('Section202StaticImage');
-    const userInputImageSection = FormSectionedTable.getSection('Section202UserInputImage');
-    const binding = pageProxy.getBindingObject();
+        await staticImageSection?.setVisible(true);
+        await userInputImageSection?.setVisible(true); // Default visible
 
-    if (staticImageSection) await staticImageSection.setVisible(true);
+        if (dynamicImageSection && attachments?.length > 0) {
+            const firstAttachment = attachments[0];
+            const base64 = firstAttachment?.file;
+            const mimeType = firstAttachment?.mimeType || 'image/png';
 
-    if (dynamicImageSection && attachments?.length > 0) {
-      const first = attachments[0];
-      const base64 = first?.file;
-      const mime = first?.mimeType || 'image/png';
+            if (base64 && base64.length > 100) {
+                binding.imageUri = `data:${mimeType};base64,${base64}`;
+                await dynamicImageSection.setVisible(true);
+                await dynamicImageSection.redraw();
 
-      if (base64 && base64.length > 100) {
-        binding.imageUri = `data:${mime};base64,${base64}`;
+                await userInputImageSection?.setVisible(false);
+            } else {
+                binding.imageUri = '/TRL_Snorkel_Digitization_TSL/Images/NoImageAvailable.png';
+                await dynamicImageSection.setVisible(false);
+                await dynamicImageSection.redraw();
 
-        await dynamicImageSection.setVisible(true);
-        await dynamicImageSection.redraw();
-        await userInputImageSection?.setVisible(false);
-      } else {
-        await userInputImageSection?.setVisible(true);
-      }
-    } else {
-      await userInputImageSection?.setVisible(true);
-    }
+                await userInputImageSection?.setVisible(true);
+            }
+
+            // If you want to show next form (e.g., Section203) like in Section211 logic
+            const nextSection = FormSectionedTable.getSection('Section203Form');
+            if (nextSection) {
+                await nextSection.setVisible(true);
+            }
+
+        } else {
+            binding.imageUri = '/TRL_Snorkel_Digitization_TSL/Images/NoImageAvailable.png';
+            await dynamicImageSection?.setVisible(false);
+            await dynamicImageSection?.redraw();
+
+            await userInputImageSection?.setVisible(true);
+        }
 
     } catch (error) {
         console.error("Error loading Section202 data:", error);

@@ -22,6 +22,7 @@ export default function Section132Validation(clientAPI) {
         const inspectionMethod = inspectionMethodCtrl?.getValue();
 
         if (decisionTaken && inspectedBy && inspectionMethod && decisionTaken !== "") {
+            FormSectionedTable.getSection('Section132Form').getSection(Section132StaticNextButton).setVisible(false);
             const Section132UserInputImage = FormSectionedTable.getSection('Section132UserInputImage123');
             Section132UserInputImage.setVisible(true);
             const takePhotoControl = Section132UserInputImage.getControl('Section132TakePhoto123');
@@ -42,7 +43,7 @@ export default function Section132Validation(clientAPI) {
         return clientAPI.executeAction({
             Name: '/TRL_RH_SnorkelApp/Actions/ErrorMessage.action',
             Properties: {
-                Message: 'Unexpected error during Section 13.1 validation. Please try again.'
+                Message: 'Unexpected error during Section 13.2 validation. Please try again.'
             }
         });
     }

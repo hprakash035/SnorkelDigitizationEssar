@@ -25,6 +25,8 @@ export default function Section111Validation(clientAPI) {
         if (decisionTaken && inspectedBy && inspectionMethod && decisionTaken != "") {
            
             FormSectionedTable.getSection('Section111Form').getControl('Section111TestNextButton').setVisible(false);
+            const Section111TestFormName =FormSectionedTable.getSection('Section111TestFormName');
+            Section111TestFormName.setVisible('true');
             const Section111Form =FormSectionedTable.getSection('Section111TestForm');
             Section111Form.setVisible('true');
             return clientAPI.executeAction({

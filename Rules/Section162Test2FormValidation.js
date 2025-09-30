@@ -42,14 +42,18 @@ export default async function Section162Test2FormValidation(clientAPI) {
         });
 
 
-     
-    const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
+       const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
     FormSectionedTable.getSection('Section162Test2Form').getControl('Section162StaticNextButton').setVisible(false);
-    const Section162Form =FormSectionedTable.getSection('Section162StaticImage');
-    const Section162Form1 =FormSectionedTable.getSection('Section162UserInputImage');
+    // const Section162Form =FormSectionedTable.getSection('Section162StaticImage');
+    // const Section162Form1 =FormSectionedTable.getSection('Section162UserInputImage');
   
-    Section162Form.setVisible('true');
-    Section162Form1.setVisible('true');
+    // Section162Form.setVisible('true');
+    // Section162Form1.setVisible('true');
+
+    return clientAPI.executeAction({
+                Name: '/TRL_Snorkel_Digitization/Actions/Nav2Sheet6.action',
+            });
+     
 
     } catch (e) {
         console.error("❌ Error in Section162Test2FormValidation:", e);

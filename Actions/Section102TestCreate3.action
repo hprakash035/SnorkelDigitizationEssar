@@ -12,8 +12,10 @@
 		"powderweight": "#Page:SnorkelInstallation2/#Control:Section102PowerWeight3/#Value",
 		"remark": "#Page:SnorkelInstallation2/#Control:Section102Remark3/#Value",
 		"testname": "*4 Actual situation for mixing the outer castable",
-		"vibration": "#Page:SnorkelInstallation2/#Control:Section102AddingVibration3/#Value",
+		"vibration": "#Page:SnorkelInstallation2/#Control:Section102AddingVibration3/#SelectedValue",
 		"watercasting": "#Page:SnorkelInstallation2/#Control:Section102WaterCasting3/#Value",
+		"batchNo": "#Page:SnorkelInstallation2/#Control:Section102TestBatchNo3/#Value",
+		"QUESTION": "10.2 The gap between the top of the casting mould to the top face of casting    *5",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}
 }

@@ -19,15 +19,15 @@ export default function Section103Validation(clientAPI) {
 
         if (decisionTaken && inspectedBy && inspectionMethod && decisionTaken != "") {
            
-            // FormSectionedTable.getSection('Section103Form').getControl('Section111NextButton').setVisible(false);
+             FormSectionedTable.getSection('Section103Form').getControl('Section111NextButton').setVisible(false);
            
             clientAPI.executeAction({
                 Name: '/TRL_RH_SnorkelApp/Actions/Section103Create.action'
             });
             
-         return  clientAPI.executeAction({
-                Name: '/TRL_RH_SnorkelApp/Actions/Nav2Sheet3.action'
-            });
+        //  return  clientAPI.executeAction({
+        //         Name: '/TRL_RH_SnorkelApp/Actions/Nav2Sheet3.action'
+        //     });
             
           
         } else {

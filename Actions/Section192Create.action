@@ -14,6 +14,6 @@
 		"INSPECTED_BY": "#Page:SnorkelInstallation6/#Control:Section192InspectedBy/#SelectedValue",
 		"METHOD": "#Page:SnorkelInstallation6/#Control:Section192Method/#Value",
 		"QUESTION": "19.2 Confirmation of the uneven/trace on the ring brick after removing hanging hooks",
-		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation6/#Control:SnorkelNo/#Value"
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}
 }

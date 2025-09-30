@@ -1,0 +1,21 @@
+{
+  "_Type": "Action.Type.ODataService.CreateEntity",
+  "ActionResult": { "_Name": "QCMeasurementsCreateRow_E" },
+  "Target": {
+    "Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+    "EntitySet": "QC_MEASUREMENTS"
+  },
+  "Properties": {
+    "qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value",
+    "measurementItem": "Shell~ Ar pipe opening",
+    "sign": "#Page:FinalInspection/#Control:Sign_E/#Value",
+    "standard": "#Page:FinalInspection/#Control:Std_E/#Value",
+    "mp1": "#Page:FinalInspection/#Control:MeasurePoint_E1/#Value",
+    "mp2": "#Page:FinalInspection/#Control:MeasurePoint_E2/#Value",
+    "mp3": "#Page:FinalInspection/#Control:MeasurePoint_E3/#Value",
+    "mp4": "#Page:FinalInspection/#Control:MeasurePoint_E4/#Value",
+    "mp5": "#Page:FinalInspection/#Control:MeasurePoint_E5/#Value",
+    "checkStatus": "#Page:FinalInspection/#Control:Check_E/#SelectedValue",
+    "remarks": ""
+  }
+}

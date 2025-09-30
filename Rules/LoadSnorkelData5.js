@@ -70,7 +70,7 @@ export default async function LoadSnorkelDataPage5(clientAPI) {
                         flags,
                         testdata._array
                     );
-                    console.log(`✅ Loader for ${sectionKey} executed successfully`);
+                    // console.log(`✅ Loader for ${sectionKey} executed successfully`);
                 } catch (err) {
                     console.error(`❌ Error running loader for section ${sectionKey}:`, err);
                 }

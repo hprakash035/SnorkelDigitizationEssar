@@ -404,16 +404,6 @@
 							"Mode": "Date"
 						},
 						{
-							"Value": "Visual confirmation",
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section81Method",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "Method",
-							"Enabled": true,
-							"IsEditable": false
-						},
-						{
 							"Value": [
 								"{qc_ITEMS/INSPECTED_BY}"
 							],
@@ -509,6 +499,16 @@
 									"ReturnValue": "OMPRAKASH SATNAMI"
 								}
 							]
+						},
+						{
+							"Value": "Visual confirmation",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section81Method",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Method",
+							"Enabled": true,
+							"IsEditable": false
 						},
 						{
 							"_Type": "Control.Type.FormCell.ListPicker",
@@ -1340,10 +1340,20 @@
 					"Controls": [
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section91TestBatchNo1",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "1.Batch No",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section91TestWaterCasteing1",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "1.Water of casting(%) (5.0 ± 0.5)",
+							"Caption": "Water of casting(%) (5.0 ± 0.5)",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -1353,7 +1363,17 @@
 							"_Name": "Section91FF1",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "FF\t",
+							"Caption": "FF1\t",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section91FF12",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "FF2\t",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -1363,7 +1383,17 @@
 							"_Name": "Section91TF1",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "TF(>170mm)\t",
+							"Caption": "TF1(>180mm)\t",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section91TF12",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "TF2(>180mm)\t",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -1390,10 +1420,20 @@
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section91TestBatchNo2",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "2.Batch No",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section91TestWaterCasteing2",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "2. Water of casting(%) (5.0 ± 0.5)",
+							"Caption": " Water of casting(%) (5.0 ± 0.5)",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -1403,7 +1443,17 @@
 							"_Name": "Section91FF2",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "FF",
+							"Caption": "FF1",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section91FF22",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "FF2\t",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -1413,7 +1463,17 @@
 							"_Name": "Section91TF2",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "TF(>170mm)",
+							"Caption": "TF1(>180mm)",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section91TF22",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "TF2(>180mm)",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -1440,10 +1500,20 @@
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section91TestBatchNo3",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "3.Batch No",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section91TestWaterCasteing3",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "3.Water of casting(%) (5.0 ± 0.5)",
+							"Caption": "Water of casting(%) (5.0 ± 0.5)",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -1453,7 +1523,17 @@
 							"_Name": "Section91FF3",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "FF",
+							"Caption": "FF1",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section91FF32",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "FF2\t",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -1463,7 +1543,17 @@
 							"_Name": "Section91TF3",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "TF(>170mm)",
+							"Caption": "TF1(>180mm)",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section91TF32",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "TF2(>180mm)",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -1504,7 +1594,7 @@
 						}
 					],
 					"Layout": {
-						"NumberOfColumns": 5
+						"NumberOfColumns": 8
 					},
 					"Visible": false,
 					"EmptySection": {
@@ -1930,10 +2020,20 @@
 					"Controls": [
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section102TestBatchNo1",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "1.Batch No",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section102PowerWeight1",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "1.Powder Weight",
+							"Caption": "Powder Weight",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -1943,7 +2043,7 @@
 							"_Name": "Section102WaterCasting1",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "Water Casting(4.80% - 5.25%)",
+							"Caption": "Water Casting(5.25 ± 0.5)",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -1979,14 +2079,28 @@
 							]
 						},
 						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section102AddingVibration1",
 							"IsVisible": true,
 							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
 							"Caption": "Adding Vibration",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
+							"PickerPrompt": "Please select Yes or No",
+							"PlaceHolder": "Select",
+							"IsSelectedSectionEnabled": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "Yes",
+									"ReturnValue": "yes"
+								},
+								{
+									"DisplayValue": "No",
+									"ReturnValue": "no"
+								}
+							]
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
@@ -2000,10 +2114,20 @@
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section102TestBatchNo2",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "2.Batch No",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section102PowerWeight2",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "2.Powder Weight",
+							"Caption": "Powder Weight",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -2013,7 +2137,7 @@
 							"_Name": "Section102WaterCasting2",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "Water Casting(4.80% - 5.25%)",
+							"Caption": "Water Casting(5.25 ± 0.5)",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -2049,14 +2173,28 @@
 							]
 						},
 						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section102AddingVibration2",
 							"IsVisible": true,
 							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
 							"Caption": "Adding Vibration",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
+							"PickerPrompt": "Please select Yes or No",
+							"PlaceHolder": "Select",
+							"IsSelectedSectionEnabled": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "Yes",
+									"ReturnValue": "yes"
+								},
+								{
+									"DisplayValue": "No",
+									"ReturnValue": "no"
+								}
+							]
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
@@ -2070,10 +2208,20 @@
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section102TestBatchNo3",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "3.Batch No",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section102PowerWeight3",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "3.Powder Weight",
+							"Caption": "Powder Weight",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -2083,7 +2231,7 @@
 							"_Name": "Section102WaterCasting3",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "Water Casting(4.80% - 5.25%)",
+							"Caption": "Water Casting(5.25 ± 0.5)",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -2117,14 +2265,28 @@
 							]
 						},
 						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section102AddingVibration3",
 							"IsVisible": true,
 							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
 							"Caption": "Adding Vibration",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
+							"PickerPrompt": "Please select Yes or No",
+							"PlaceHolder": "Select",
+							"IsSelectedSectionEnabled": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "Yes",
+									"ReturnValue": "yes"
+								},
+								{
+									"DisplayValue": "No",
+									"ReturnValue": "no"
+								}
+							]
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
@@ -2138,10 +2300,20 @@
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section102TestBatchNo4",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "4.Batch No",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section102PowerWeight4",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "4.Powder Weight",
+							"Caption": "Powder Weight",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -2151,7 +2323,7 @@
 							"_Name": "Section102WaterCasting4",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "Water Casting(4.80% - 5.25%)",
+							"Caption": "Water Casting(5.25 ± 0.5)",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -2185,14 +2357,28 @@
 							]
 						},
 						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section102AddingVibration4",
 							"IsVisible": true,
 							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
 							"Caption": "Adding Vibration",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
+							"PickerPrompt": "Please select Yes or No",
+							"PlaceHolder": "Select",
+							"IsSelectedSectionEnabled": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "Yes",
+									"ReturnValue": "yes"
+								},
+								{
+									"DisplayValue": "No",
+									"ReturnValue": "no"
+								}
+							]
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
@@ -2206,10 +2392,20 @@
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section102TestBatchNo5",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "5.Batch No",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section102PowerWeight5",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "5.Powder Weight",
+							"Caption": "Powder Weight",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -2219,7 +2415,7 @@
 							"_Name": "Section102WaterCasting5",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "Water Casting(4.80% - 5.25%)",
+							"Caption": "Water Casting(5.25 ± 0.5)",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -2255,14 +2451,28 @@
 							]
 						},
 						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section102AddingVibration5",
 							"IsVisible": true,
 							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
 							"Caption": "Adding Vibration",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
+							"PickerPrompt": "Please select Yes or No",
+							"PlaceHolder": "Select",
+							"IsSelectedSectionEnabled": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "Yes",
+									"ReturnValue": "yes"
+								},
+								{
+									"DisplayValue": "No",
+									"ReturnValue": "no"
+								}
+							]
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
@@ -2290,7 +2500,7 @@
 						}
 					],
 					"Layout": {
-						"NumberOfColumns": 5
+						"NumberOfColumns": 6
 					},
 					"Visible": false,
 					"EmptySection": {
@@ -2298,6 +2508,80 @@
 					},
 					"_Type": "Section.Type.FormCell",
 					"_Name": "Section102TestForm"
+				},
+				{
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.Image",
+					"_Name": "Section102StaticImage",
+					"Visible": false,
+					"Image": "/TRL_RH_SnorkelApp/Images/Section10Image.png",
+					"Alignment": "Center",
+					"ContentMode": "ScaleAspectFit"
+				},
+				{
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Styles": {
+						"Image": ""
+					},
+					"_Type": "Section.Type.Image",
+					"_Name": "Section102DynamicImage",
+					"Visible": false,
+					"Image": "{imageUri}",
+					"Alignment": "Center",
+					"ContentMode": "ScaleAspectFit"
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"Validation": {
+								"Visible": true
+							},
+							"_Type": "Control.Type.FormCell.Attachment",
+							"_Name": "Section102TakePhoto",
+							"IsVisible": true,
+							"Separator": true,
+							"OnValueChange": "/TRL_RH_SnorkelApp/Rules/ValidationandConvertFile102.js",
+							"AttachmentActionType": [
+								"TakePhoto",
+								"AddPhoto"
+							],
+							"AttachmentTitle": "Take Photo"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": false,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "Section102UserInputImage"
 				},
 				{
 					"Separators": {
@@ -2532,80 +2816,6 @@
 					"_Name": "Section102Test2Form"
 				},
 				{
-					"EmptySection": {
-						"FooterVisible": false
-					},
-					"Separators": {
-						"TopSectionSeparator": false,
-						"BottomSectionSeparator": true,
-						"HeaderSeparator": true,
-						"FooterSeparator": true,
-						"ControlSeparator": true
-					},
-					"_Type": "Section.Type.Image",
-					"_Name": "Section102StaticImage",
-					"Visible": false,
-					"Image": "/TRL_RH_SnorkelApp/Images/Section10Image.png",
-					"Alignment": "Center",
-					"ContentMode": "ScaleAspectFit"
-				},
-				{
-					"EmptySection": {
-						"FooterVisible": false
-					},
-					"Separators": {
-						"TopSectionSeparator": false,
-						"BottomSectionSeparator": true,
-						"HeaderSeparator": true,
-						"FooterSeparator": true,
-						"ControlSeparator": true
-					},
-					"Styles": {
-						"Image": ""
-					},
-					"_Type": "Section.Type.Image",
-					"_Name": "Section102DynamicImage",
-					"Visible": false,
-					"Image": "{imageUri}",
-					"Alignment": "Center",
-					"ContentMode": "ScaleAspectFit"
-				},
-				{
-					"Separators": {
-						"TopSectionSeparator": false,
-						"BottomSectionSeparator": true,
-						"HeaderSeparator": true,
-						"FooterSeparator": true,
-						"ControlSeparator": true
-					},
-					"Controls": [
-						{
-							"Validation": {
-								"Visible": true
-							},
-							"_Type": "Control.Type.FormCell.Attachment",
-							"_Name": "Section102TakePhoto",
-							"IsVisible": true,
-							"Separator": true,
-							"OnValueChange": "/TRL_RH_SnorkelApp/Rules/ValidationandConvertFile102.js",
-							"AttachmentActionType": [
-								"TakePhoto",
-								"AddPhoto"
-							],
-							"AttachmentTitle": "Take Photo"
-						}
-					],
-					"Layout": {
-						"NumberOfColumns": 1
-					},
-					"Visible": false,
-					"EmptySection": {
-						"FooterVisible": false
-					},
-					"_Type": "Section.Type.FormCell",
-					"_Name": "Section102UserInputImage"
-				},
-				{
 					"Separators": {
 						"TopSectionSeparator": false,
 						"BottomSectionSeparator": true,
@@ -2622,7 +2832,7 @@
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"Value": "{qc_ITEMS/DATE_INSPECTED}",
@@ -2771,7 +2981,7 @@
 							"_Name": "Section111NextButton",
 							"IsVisible": true,
 							"Separator": true,
-							"Title": "Next Sheet",
+							"Title": "Next ",
 							"Alignment": "Center",
 							"ButtonType": "Text",
 							"Semantic": "Tint",
@@ -2814,7 +3024,7 @@
 				"_Name": "NextPage",
 				"Caption": "",
 				"Icon": "sap-icon://navigation-right-arrow",
-				"Position": "Right",
+				"Position": "Left",
 				"IsIconCircular": false,
 				"Visible": true,
 				"OnPress": "/TRL_RH_SnorkelApp/Actions/Nav2Sheet3.action"

@@ -1,85 +1,98 @@
 export async function loadSection201Data(pageProxy, qcItem201, FormSectionedTable, attachments, flags, testdataArray) {
     try {
-        const Section201 = FormSectionedTable.getSection('Section201Form');
-        if (!Section201) {
-            throw new Error("Section201Form not found in FormSectionedTable.");
+        const section201 = FormSectionedTable.getSection('Section201Form');
+        if (!section201) {
+            throw new Error("Section201Form not found.");
         }
 
-        await Section201.setVisible(true);
+        const nextButton = section201.getControl('Section202NextButton');
 
-        const nextButton = Section201.getControl('Section202NextButton');
+        // ✅ Determine if metadata is available (you can customize this condition)
+        // const hasMetaData = qcItem201?.DATE_INSPECTED || qcItem201?.INSPECTED_BY || qcItem201?.METHOD || qcItem201?.DECISION_TAKEN;
+
         if (nextButton) {
-            await nextButton.setVisible(false);
-            
-            if (flags?.next === false) {
-              
-                const Section41Form = FormSectionedTable.getSection('Section202Form');
-                if (Section41Form) {
-                    await Section41Form.setVisible(true);
-                }
-            }
-           
+            await nextButton.setVisible(false); // Hide if metadata is available
         }
 
-        await Section201.setVisible(true);
+        await section201.setVisible(true);
 
         if (qcItem201?.DATE_INSPECTED) {
-            const dateControl = Section201.getControl('Section201Date');
+            const dateControl = section201.getControl('Section201Date');
             if (dateControl) {
                 await dateControl.setValue(qcItem201.DATE_INSPECTED);
             }
         }
 
         if (qcItem201?.INSPECTED_BY) {
-            const inspectedByControl = Section201.getControl('Section201InspectedBy');
+            const inspectedByControl = section201.getControl('Section201InspectedBy');
             if (inspectedByControl) {
                 await inspectedByControl.setValue(qcItem201.INSPECTED_BY);
             }
+            
+      
+            await nextButton.setVisible(false); // Hide if metadata is available
+        
         }
 
         if (qcItem201?.METHOD) {
-            const methodControl = Section201.getControl('Section201Method');
+            const methodControl = section201.getControl('Section201Method');
             if (methodControl) {
                 await methodControl.setValue(qcItem201.METHOD);
             }
         }
 
         if (qcItem201?.DECISION_TAKEN) {
-            const decisionControl = Section201.getControl('Section201DecisionTaken');
+            const decisionControl = section201.getControl('Section201DecisionTaken');
             if (decisionControl) {
                 await decisionControl.setValue(qcItem201.DECISION_TAKEN);
             }
         }
 
+        const dynamicImageSection = FormSectionedTable.getSection('Section201DynamicImage');
+        const userInputImageSection = FormSectionedTable.getSection('Section201UserInputForm');
+        const staticImageSection = FormSectionedTable.getSection('Section201StaticImage');
 
-        
-    // --- Dynamic image logic ---
-    const dynamicImageSection = FormSectionedTable.getSection('Section201DynamicImage');
-    const staticImageSection = FormSectionedTable.getSection('Section201StaticImage');
-    const userInputImageSection = FormSectionedTable.getSection('Section201UserInputImage');
-    const binding = pageProxy.getBindingObject();
-
-    if (staticImageSection) await staticImageSection.setVisible(true);
-
-    if (dynamicImageSection && attachments?.length > 0) {
-      const first = attachments[0];
-      const base64 = first?.file;
-      const mime = first?.mimeType || 'image/png';
-
-      if (base64 && base64.length > 100) {
-        binding.imageUri = `data:${mime};base64,${base64}`;
-
-        await dynamicImageSection.setVisible(true);
-        await dynamicImageSection.redraw();
-        await userInputImageSection?.setVisible(false);
-      } else {
         await userInputImageSection?.setVisible(true);
-      }
-    } else {
-      await userInputImageSection?.setVisible(true);
-    }
+        await staticImageSection?.setVisible(true);
+
+        const binding = pageProxy.getBindingObject();
+
+        if (dynamicImageSection && attachments.length > 0) {
+            const firstAttachment = attachments[0];
+            const base64 = firstAttachment?.file;
+            const mimeType = firstAttachment?.mimeType || 'image/png';
+
+            if (base64 && base64.length > 100) {
+                binding.imageUri = `data:${mimeType};base64,${base64}`;
+                await dynamicImageSection.setVisible(true);
+                await dynamicImageSection.redraw();
+
+                if (userInputImageSection) {
+                    await userInputImageSection.setVisible(false);
+                }
+            } else {
+                binding.imageUri = 'TRL_RH_SnorkelApp/Images/NoImageAvailable.png';
+                await dynamicImageSection.setVisible(false);
+                await dynamicImageSection.redraw();
+
+                if (userInputImageSection) {
+                    await userInputImageSection.setVisible(true);
+                }
+            }
+
+            FormSectionedTable.getSection('Section202Form').setVisible(true);
+        } else {
+            binding.imageUri = 'TRL_RH_SnorkelApp/Images/NoImageAvailable.png';
+            await dynamicImageSection?.setVisible(false);
+            await dynamicImageSection?.redraw();
+
+            if (userInputImageSection) {
+                await userInputImageSection.setVisible(true);
+            }
+        }
 
     } catch (error) {
+        // Handle errors appropriately
         console.error("Error loading Section201 data:", error);
     }
 }

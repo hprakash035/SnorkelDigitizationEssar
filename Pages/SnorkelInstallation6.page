@@ -937,7 +937,7 @@
 							"Caption": "Method",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"Value": [
@@ -1131,7 +1131,7 @@
 							"Caption": "Method",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"Value": [
@@ -2026,15 +2026,10 @@
 							"Separator": true,
 							"OnValueChange": "/TRL_RH_SnorkelApp/Rules/ValidationandConvertFile195.js",
 							"AttachmentActionType": [
-								"TakePhoto"
+								"TakePhoto",
+								"AddPhoto"
 							],
 							"AttachmentTitle": "Take Photo",
-							"AllowedFileTypes": [
-								"pdf",
-								"jpg",
-								"jpeg",
-								"png"
-							],
 							"AttachmentAddTitle": "Click Image"
 						}
 					],
@@ -2047,41 +2042,6 @@
 					},
 					"_Type": "Section.Type.FormCell",
 					"_Name": "Section195UserInputImage"
-				},
-				{
-					"Separators": {
-						"TopSectionSeparator": false,
-						"BottomSectionSeparator": true,
-						"HeaderSeparator": true,
-						"FooterSeparator": true,
-						"ControlSeparator": true
-					},
-					"Layout": {
-						"LayoutType": "Vertical",
-						"HorizontalAlignment": "Leading"
-					},
-					"_Type": "Section.Type.ButtonTable",
-					"_Name": "Sheet6To7NavButtonContainer",
-					"Visible": true,
-					"EmptySection": {
-						"FooterVisible": false
-					},
-					"Buttons": [
-						{
-							"_Type": "ButtonTable.Type.Button",
-							"_Name": "Sheet6To7NavButton",
-							"Title": "Next Sheet",
-							"Alignment": "Center",
-							"ButtonType": "Text",
-							"Semantic": "Tint",
-							"Image": "sap-icon://open-command-field",
-							"ImagePosition": "Trailing",
-							"FullWidth": false,
-							"Visible": true,
-							"Enabled": true,
-							"OnPress": "/TRL_RH_SnorkelApp/Actions/Nav2Sheet7.action"
-						}
-					]
 				}
 			]
 		}
@@ -2103,15 +2063,6 @@
 			},
 			{
 				"_Type": "Control.Type.ActionBarItem",
-				"_Name": "UpdateButton",
-				"Caption": "",
-				"Icon": "sap-icon://save",
-				"Position": "Right",
-				"IsIconCircular": false,
-				"Visible": false,
-				"OnPress": "/TRL_RH_SnorkelApp/Rules/UpdateSnorkelData_Sheet6.js"
-			},{
-				"_Type": "Control.Type.ActionBarItem",
 				"_Name": "NextPage",
 				"Caption": "",
 				"Icon": "sap-icon://navigation-right-arrow",
@@ -2119,6 +2070,16 @@
 				"IsIconCircular": false,
 				"Visible": true,
 				"OnPress": "/TRL_RH_SnorkelApp/Actions/Nav2Sheet7.action"
+			},
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "UpdateButton",
+				"Caption": "",
+				"Icon": "sap-icon://save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": false,
+				"OnPress": "/TRL_RH_SnorkelApp/Rules/UpdateSnorkelData_Sheet6.js"
 			},
 			{
 				"_Type": "Control.Type.ActionBarItem",

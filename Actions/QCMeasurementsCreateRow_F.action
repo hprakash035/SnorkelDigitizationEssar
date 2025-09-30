@@ -1,0 +1,21 @@
+{
+  "_Type": "Action.Type.ODataService.CreateEntity",
+  "ActionResult": { "_Name": "QCMeasurementsCreateRow_F" },
+  "Target": {
+    "Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+    "EntitySet": "QC_MEASUREMENTS"
+  },
+  "Properties": {
+    "qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value",
+    "measurementItem": "Flange~ Ar pipe Height",
+    "sign": "#Page:FinalInspection/#Control:Sign_F/#Value",
+    "standard": "#Page:FinalInspection/#Control:Std_F/#Value",
+    "mp1": "#Page:FinalInspection/#Control:MeasurePoint_F1/#Value",
+    "mp2": "#Page:FinalInspection/#Control:MeasurePoint_F2/#Value",
+    "mp3": "#Page:FinalInspection/#Control:MeasurePoint_F3/#Value",
+    "mp4": "#Page:FinalInspection/#Control:MeasurePoint_F4/#Value",
+    "mp5": "#Page:FinalInspection/#Control:MeasurePoint_F5/#Value",
+    "checkStatus": "#Page:FinalInspection/#Control:Check_F/#SelectedValue",
+    "remarks": ""
+  }
+}

@@ -9,7 +9,7 @@ import { loadSection193Data } from './loadSection193Data';
 import { loadSection194Data } from './loadSection194Data';
 import { loadSection195Data } from './loadSection195Data';
 
-export default async function LoadSnorkelDataPage5(clientAPI) {
+export default async function LoadSnorkelDataPage6(clientAPI) {
     try {
         clientAPI.showActivityIndicator("Loading data...");
 
@@ -70,7 +70,7 @@ export default async function LoadSnorkelDataPage5(clientAPI) {
                         flags,
                         testdata._array
                     );
-                    console.log(`✅ Loader for ${sectionKey} executed successfully`);
+                    // console.log(`✅ Loader for ${sectionKey} executed successfully`);
                 } catch (err) {
                     console.error(`❌ Error running loader for section ${sectionKey}:`, err);
                 }

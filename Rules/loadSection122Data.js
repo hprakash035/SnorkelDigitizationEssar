@@ -12,13 +12,13 @@ export async function loadSection122Data(pageProxy, qcItem122, FormSectionedTabl
             await nextButton.setVisible(false);
             
             if (flags?.next === false) {
-              
                 const Section41Form = FormSectionedTable.getSection('Section123Form');
                 if (Section41Form) {
                     await Section41Form.setVisible(true);
+                } else {
+                    throw new Error("Section123Form not found.");
                 }
             }
-           
         }
 
         const Section122Date31Control = Section122.getControl('Section122Date');
@@ -40,8 +40,7 @@ export async function loadSection122Data(pageProxy, qcItem122, FormSectionedTabl
         if (Section122DecisionTaken31Control && qcItem122.DECISION_TAKEN) {
             await Section122DecisionTaken31Control.setValue([qcItem122.DECISION_TAKEN]);
         }
-  
-    
+
     } catch (error) {
         console.error("Error in loadSection122Data:", error);
     }

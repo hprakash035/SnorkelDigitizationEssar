@@ -76,6 +76,12 @@ const binding = pageProxy.getBindingObject();
         // ✅ Show next section
         // sectionedTable.getSection('Section201Form').setVisible(true);
 
+        
+         return clientAPI.executeAction({
+                Name: '/TRL_RH_SnorkelApp/Actions/Nav2Sheet7.action'
+            });
+
+
     } catch (error) {
         await clientAPI.executeAction({
             Name: "/TRL_RH_SnorkelApp/Actions/AttachmnetValidation.action",

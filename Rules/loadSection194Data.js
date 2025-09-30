@@ -1,28 +1,35 @@
-export async function loadSection194Data(pageProxy, qcItem194, FormSectionedTable, attachments, flags, testdataArray) {
+export async function loadSection194Data(
+    pageProxy,
+    qcItem194,
+    FormSectionedTable,
+    attachments,
+    flags,
+    testdataArray
+) {
     try {
         const Section194 = FormSectionedTable.getSection('Section194Form');
         if (!Section194) {
             throw new Error("Section194Form not found in FormSectionedTable.");
         }
 
+        // Always make Section194 visible
         await Section194.setVisible(true);
 
+        // --- Hide Next button after loading ---
         const nextButton = Section194.getControl('Section195NextButton');
         if (nextButton) {
             await nextButton.setVisible(false);
-            
-            if (flags?.next === false) {
-              
-                const Section41Form = FormSectionedTable.getSection('Section195Form');
-                if (Section41Form) {
-                    await Section41Form.setVisible(true);
-                }
-            }
-           
         }
 
-        await Section194.setVisible(true);
+        // --- Conditionally open Section194 if next flag is false ---
+        if (flags?.next === false) {
+            const Section194Form = FormSectionedTable.getSection('Section195Form');
+            if (Section194Form) {
+                await Section194Form.setVisible(true);
+            }
+        }
 
+        // --- Populate fields if values exist ---
         if (qcItem194?.DATE_INSPECTED) {
             const dateControl = Section194.getControl('Section194Date');
             if (dateControl) {

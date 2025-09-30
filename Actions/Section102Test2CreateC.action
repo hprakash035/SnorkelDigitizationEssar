@@ -13,6 +13,7 @@
 		"position": "#Page:SnorkelInstallation2/#Control:Section102TestPositionGapC/#Value",
 		"testname": "*5 The gap between the top of casting mould and the top face of castable",
 		"tolerance": "#Page:SnorkelInstallation2/#Control:Section102TestToleranceC/#Value",
+		"QUESTION": "10.2 The gap between the top of the casting mould to the top face of casting    *5",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}
 }

@@ -7,21 +7,17 @@ export async function loadSection195Data(pageProxy, qcItem195, FormSectionedTabl
 
         await Section195.setVisible(true);
 
-        const nextButton = Section195.getControl('Section201NextButton');
+        const nextButton = Section195.getControl('Section195StaticNextButton');
         if (nextButton) {
             await nextButton.setVisible(false);
-            
+
             if (flags?.next === false) {
-              
                 const Section41Form = FormSectionedTable.getSection('Section201Form');
                 if (Section41Form) {
                     await Section41Form.setVisible(true);
                 }
             }
-           
         }
-
-        await Section195.setVisible(true);
 
         if (qcItem195?.DATE_INSPECTED) {
             const dateControl = Section195.getControl('Section195Date');
@@ -51,35 +47,33 @@ export async function loadSection195Data(pageProxy, qcItem195, FormSectionedTabl
             }
         }
 
+        const dynamicImageSection = FormSectionedTable.getSection('Section195DynamicImage');
+        const staticImageSection = FormSectionedTable.getSection('Section195StaticImage');
+        const userInputImageSection = FormSectionedTable.getSection('Section195UserInputImage123');
+        const binding = pageProxy.getBindingObject();
 
-        
-    // --- Dynamic image logic ---
-    const dynamicImageSection = FormSectionedTable.getSection('Section195DynamicImage');
-    const staticImageSection = FormSectionedTable.getSection('Section195StaticImage');
-    const userInputImageSection = FormSectionedTable.getSection('Section195UserInputImage123');
-    const binding = pageProxy.getBindingObject();
+        if (staticImageSection) {
+            await staticImageSection.setVisible(true);
+        }
 
-    if (staticImageSection) await staticImageSection.setVisible(true);
+        if (dynamicImageSection && attachments?.length > 0) {
+            const first = attachments[0];
+            const base64 = first?.file;
+            const mime = first?.mimeType || 'image/png';
 
-    if (dynamicImageSection && attachments?.length > 0) {
-      const first = attachments[0];
-      const base64 = first?.file;
-      const mime = first?.mimeType || 'image/png';
+            if (base64 && base64.length > 100) {
+                binding.imageUri = `data:${mime};base64,${base64}`;
 
-      if (base64 && base64.length > 100) {
-        binding.imageUri = `data:${mime};base64,${base64}`;
-
-        await dynamicImageSection.setVisible(true);
-        await dynamicImageSection.redraw();
-        await userInputImageSection?.setVisible(false);
-      } else {
-        await userInputImageSection?.setVisible(true);
-      }
-    } else {
-      await userInputImageSection?.setVisible(true);
-    }
-
+                await dynamicImageSection.setVisible(true);
+                await dynamicImageSection.redraw();
+                await userInputImageSection?.setVisible(false);
+            } else {
+                await userInputImageSection?.setVisible(true);
+            }
+        } else {
+            await userInputImageSection?.setVisible(true);
+        }
     } catch (error) {
-        console.error("Error loading Section195 data:", error);
+        // Error handling can be added here if needed
     }
 }

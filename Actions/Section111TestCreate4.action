@@ -3,8 +3,6 @@
 	"ActionResult": {
 		"_Name": "Section111TestCreate1"
 	},
-	"OnFailure": "/TRL_RH_SnorkelApp/Actions/CreateEntityFailureMessage.action",
-	"OnSuccess": "/TRL_RH_SnorkelApp/Actions/CreateEntitySuccessMessage.action",
 	"Target": {
 		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
 		"EntitySet": "QC_Test_Table"
@@ -15,6 +13,7 @@
 		"method": "#Page:SnorkelInstallation3/#Control:Section111TestMethod4/#Value",
 		"specification": "#Page:SnorkelInstallation3/#Control:Section111TestSpecification4/#Value",
 		"testname": "*6 MOR test result",
+		"QUESTION": "11.1 Confirmation of the MOR of specimens  *6",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}
 }

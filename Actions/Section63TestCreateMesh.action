@@ -12,6 +12,7 @@
 		"position": "#Page:SnorkelInstallation/#Control:Section63TestPositionMesh/#Value",
 		"testname": "*2 Height measurement for Steel mesh & Y studs",
 		"tolerance": "#Page:SnorkelInstallation/#Control:Section63TestToleranceMesh/#Value",
+		"QUESTION": " 6.2 height of steel mesh & Y studs highest point *2",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}
 }

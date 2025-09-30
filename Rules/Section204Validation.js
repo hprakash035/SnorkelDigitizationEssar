@@ -18,33 +18,11 @@ export default function Section204Validation(clientAPI) {
 
         if (decisionTaken && inspectedBy && inspectionMethod && decisionTaken !== "") {
 
-            // ✅ Make Section 205 parts visible
-            const sectionIDs = [
-                'Section205AStaticImageInlet',
-                'Section205BStaticImageInlet',
-                'Section205MeasureName',
-                'Section205QCMeasurements',
-                'Section205Casting',
-                'Section205CastingForm',
-                'Section205CastingRemarkStatusFormA',
-                'Section205CastingRemarkStatusFormB',
-                'Section205Check',
-                'Section205CheckForm',
-                'Section205CheckRemark',
-                'Section205CheckRemarkBSnorkelLot',
-                'Section205UserInputImageA',
-                'Section205UserInputImageB'
-            ];
-
-            sectionIDs.forEach(id => {
-                const section = FormSectionedTable.getSection(id);
-                if (section) {
-                    section.setVisible(true);
-                }
-            });
+          const Section203TakePhoto =FormSectionedTable.getSection('Section211Form');
+    Section203TakePhoto.setVisible('true');
 
             // Example: hide Next button if needed
-            Section204.getControl('Section205NextButton')?.setVisible(false);
+            Section204.getControl('Section211NextButton')?.setVisible(false);
 
             return clientAPI.executeAction({
                 Name: '/TRL_RH_SnorkelApp/Actions/Section204Create.action'

@@ -29,7 +29,7 @@ export default function Section161Validation(clientAPI) {
     const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
     const Section161UserInputImage1 =FormSectionedTable.getSection('Section162Form');
     Section161UserInputImage1.setVisible('true');
-    // FormSectionedTable.getSection('Section161Form').getControl('Section162NextButton').setVisible(false);
+     FormSectionedTable.getSection('Section161Form').getControl('Section162NextButton').setVisible(false);
             return clientAPI.executeAction({
                 Name: '/TRL_RH_SnorkelApp/Actions/Section161Create.action'
             });

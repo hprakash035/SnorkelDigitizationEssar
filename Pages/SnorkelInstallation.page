@@ -2954,7 +2954,7 @@
 							"_Name": "Section71NextButton",
 							"IsVisible": true,
 							"Separator": true,
-							"Title": "Next Sheet",
+							"Title": "Next",
 							"Alignment": "Center",
 							"ButtonType": "Text",
 							"Semantic": "Tint",
@@ -3012,7 +3012,7 @@
 				"_Name": "NextPage",
 				"Caption": "",
 				"Icon": "sap-icon://navigation-right-arrow",
-				"Position": "Right",
+				"Position": "Left",
 				"IsIconCircular": false,
 				"Visible": true,
 				"OnPress": "/TRL_RH_SnorkelApp/Actions/Nav2Sheet2.action"

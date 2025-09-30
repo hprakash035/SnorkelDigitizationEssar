@@ -1,0 +1,23 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "QCMeasurementsCreateRow_A"
+	},
+	"Target": {
+		"Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_MEASUREMENTS"
+	},
+	"Properties": {
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value",
+		"measurementItem": "Overall Height",
+		"sign": "#Page:FinalInspection/#Control:Sign_A/#Value",
+		"standard": "#Page:FinalInspection/#Control:Std_A/#Value",
+		"mp1": "#Page:FinalInspection/#Control:MeasurePoint_A1/#Value",
+		"mp2": "#Page:FinalInspection/#Control:MeasurePoint_A2/#Value",
+		"mp3": "#Page:FinalInspection/#Control:MeasurePoint_A3/#Value",
+		"mp4": "#Page:FinalInspection/#Control:MeasurePoint_A4/#Value",
+		"mp5": "#Page:FinalInspection/#Control:MeasurePoint_A5/#Value",
+		"checkStatus": "#Page:FinalInspection/#Control:Check_A/#SelectedValue",
+		"remarks": ""
+	}
+}

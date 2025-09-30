@@ -5,13 +5,14 @@ export async function loadSection131Data(pageProxy, qcItem131, FormSectionedTabl
         if (!section131) {
             throw new Error("Section131Form not found.");
         }
+             await section131.setVisible(true);
 
         const nextButton = section131.getControl('Secion131StaticButton');
         if (nextButton) {
             await nextButton.setVisible(false);
         }
 
-        await section131.setVisible(true);
+   
 
         if (qcItem131?.DATE_INSPECTED) {
             const dateControl = section131.getControl('Section131Date');
@@ -61,7 +62,7 @@ export async function loadSection131Data(pageProxy, qcItem131, FormSectionedTabl
                     await userInputImageSection.setVisible(false);
                 }
             } else {
-                binding.imageUri = '/TRL_RH_SnorkelApp/Images/NoImageAvailable.png';
+                binding.imageUri = '/TRL_Snorkel_Digitization_TSL/Images/NoImageAvailable.png';
                 await dynamicImageSection.setVisible(false);
                 await dynamicImageSection.redraw();
 
@@ -73,7 +74,7 @@ export async function loadSection131Data(pageProxy, qcItem131, FormSectionedTabl
 
              FormSectionedTable.getSection('Section132Form').setVisible(true);
         } else {
-            binding.imageUri = '/TRL_RH_SnorkelApp/Images/NoImageAvailable.png';
+            binding.imageUri = '/TRL_Snorkel_Digitization_TSL/Images/NoImageAvailable.png';
             await dynamicImageSection?.setVisible(false);
             await dynamicImageSection?.redraw();
 

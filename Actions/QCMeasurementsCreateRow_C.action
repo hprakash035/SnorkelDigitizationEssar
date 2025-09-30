@@ -1,0 +1,21 @@
+{
+  "_Type": "Action.Type.ODataService.CreateEntity",
+  "ActionResult": { "_Name": "QCMeasurementsCreateRow_C" },
+  "Target": {
+    "Service": "/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service",
+    "EntitySet": "QC_MEASUREMENTS"
+  },
+  "Properties": {
+    "qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value",
+    "measurementItem": "Inside Diameter",
+    "sign": "#Page:FinalInspection/#Control:Sign_C/#Value",
+    "standard": "#Page:FinalInspection/#Control:Std_C/#Value",
+    "mp1": "#Page:FinalInspection/#Control:MeasurePoint_C1/#Value",
+    "mp2": "#Page:FinalInspection/#Control:MeasurePoint_C2/#Value",
+    "mp3": "#Page:FinalInspection/#Control:MeasurePoint_C3/#Value",
+    "mp4": "#Page:FinalInspection/#Control:MeasurePoint_C4/#Value",
+    "mp5": "#Page:FinalInspection/#Control:MeasurePoint_C5/#Value",
+    "checkStatus": "#Page:FinalInspection/#Control:Check_C/#SelectedValue",
+    "remarks": ""
+  }
+}

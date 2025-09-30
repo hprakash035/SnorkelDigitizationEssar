@@ -9,7 +9,7 @@ export async function loadSection63Data(pageProxy, qcItem63, FormSectionedTable,
 
         const nextButton = Section63.getControl('Section71NextButton');
         if (nextButton) {
-            // await nextButton.setVisible(false);
+             await nextButton.setVisible(false);
             
             if (flags?.next === false) {
               

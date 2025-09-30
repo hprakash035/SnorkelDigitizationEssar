@@ -1152,7 +1152,7 @@
 						},
 						{
 							"_Type": "Control.Type.FormCell.Button",
-							"_Name": "FormCellButton0",
+							"_Name": "Section122NextButton",
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -1648,41 +1648,6 @@
 					},
 					"_Type": "Section.Type.FormCell",
 					"_Name": "Section123UserInputImage"
-				},
-				{
-					"Separators": {
-						"TopSectionSeparator": false,
-						"BottomSectionSeparator": true,
-						"HeaderSeparator": true,
-						"FooterSeparator": true,
-						"ControlSeparator": true
-					},
-					"Layout": {
-						"LayoutType": "Vertical",
-						"HorizontalAlignment": "Leading"
-					},
-					"_Type": "Section.Type.ButtonTable",
-					"_Name": "Sheet3To4NavButtonContainer",
-					"Visible": true,
-					"EmptySection": {
-						"FooterVisible": false
-					},
-					"Buttons": [
-						{
-							"_Type": "ButtonTable.Type.Button",
-							"_Name": "Sheet3To4NavButton",
-							"Title": "Next Sheet",
-							"Alignment": "Center",
-							"ButtonType": "Text",
-							"Semantic": "Tint",
-							"Image": "sap-icon://open-command-field",
-							"ImagePosition": "Trailing",
-							"FullWidth": false,
-							"Visible": true,
-							"Enabled": true,
-							"OnPress": "/TRL_RH_SnorkelApp/Actions/Nav2Sheet4.action"
-						}
-					]
 				}
 			]
 		}
@@ -1704,16 +1669,6 @@
 			},
 			{
 				"_Type": "Control.Type.ActionBarItem",
-				"_Name": "UpdateButton",
-				"Caption": "",
-				"Icon": "sap-icon://save",
-				"Position": "Right",
-				"IsIconCircular": false,
-				"Visible": false,
-				"OnPress": "/TRL_RH_SnorkelApp/Rules/UpdateSnorkelData_Sheet3.js"
-			},
-			{
-				"_Type": "Control.Type.ActionBarItem",
 				"_Name": "NextPage",
 				"Caption": "",
 				"Icon": "sap-icon://navigation-right-arrow",
@@ -1721,6 +1676,16 @@
 				"IsIconCircular": false,
 				"Visible": true,
 				"OnPress": "/TRL_RH_SnorkelApp/Actions/Nav2Sheet4.action"
+			},
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "UpdateButton",
+				"Caption": "",
+				"Icon": "sap-icon://save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": false,
+				"OnPress": "/TRL_RH_SnorkelApp/Rules/UpdateSnorkelData_Sheet3.js"
 			},
 			{
 				"_Type": "Control.Type.ActionBarItem",

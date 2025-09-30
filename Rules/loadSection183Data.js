@@ -1,28 +1,35 @@
-export async function loadSection183Data(pageProxy, qcItem183, FormSectionedTable, attachments, flags, testdataArray) {
+export async function loadSection183Data(
+    pageProxy,
+    qcItem183,
+    FormSectionedTable,
+    attachments,
+    flags,
+    testdataArray
+) {
     try {
         const Section183 = FormSectionedTable.getSection('Section183Form');
         if (!Section183) {
             throw new Error("Section183Form not found in FormSectionedTable.");
         }
 
+        // Always make Section183 visible
         await Section183.setVisible(true);
 
+        // --- Hide Next button after loading ---
         const nextButton = Section183.getControl('Section184NextButton');
         if (nextButton) {
             await nextButton.setVisible(false);
-            
-            if (flags?.next === false) {
-              
-                const Section41Form = FormSectionedTable.getSection('Section184Form');
-                if (Section41Form) {
-                    await Section41Form.setVisible(true);
-                }
-            }
-           
         }
 
-        await Section183.setVisible(true);
+        // --- Conditionally open Section183 if next flag is false ---
+        if (flags?.next === false) {
+            const Section183Form = FormSectionedTable.getSection('Section184Form');
+            if (Section183Form) {
+                await Section183Form.setVisible(true);
+            }
+        }
 
+        // --- Populate fields if values exist ---
         if (qcItem183?.DATE_INSPECTED) {
             const dateControl = Section183.getControl('Section183Date');
             if (dateControl) {

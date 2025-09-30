@@ -32,7 +32,7 @@ export default function Section201Validation(clientAPI) {
     
      const Section201UserInputForm =FormSectionedTable.getSection('Section201UserInputForm');
     Section201UserInputForm.setVisible('true');
-    FormSectionedTable.getSection('Section201Form').getControl('Section201StaticNextButton').setVisible(false);
+    FormSectionedTable.getSection('Section201Form').getControl('Section202NextButton').setVisible(false);
             return clientAPI.executeAction({
                 Name: '/TRL_RH_SnorkelApp/Actions/Section201Create.action'
             });

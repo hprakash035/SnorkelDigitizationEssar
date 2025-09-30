@@ -1,0 +1,10 @@
+{
+	"_Type": "Action.Type.Message",
+	"ActionResult": {
+		"_Name": "SuccessSubmitMessage"
+	},
+	"Message": "Form Submitted",
+	"Title": "Success",
+	"OnOK": "/TRL_RH_SnorkelApp/Actions/Nav2Home.action",
+	"OnCancel": "/TRL_RH_SnorkelApp/Actions/Nav2Home.action"
+}

@@ -31,8 +31,8 @@
                     <NavigationPropertyBinding Path="headerFiles" Target="QC_HEADER_FILES"/>
                     <NavigationPropertyBinding Path="twentyPointFive" Target="TwentyPointFive"/>
                     <NavigationPropertyBinding Path="qc_MEASUREMENTS" Target="QC_MEASUREMENTS"/>
-                    <NavigationPropertyBinding Path="qc_CASTING" Target="QC_ITEM"/>
-                    <NavigationPropertyBinding Path="qc_CHECK" Target="QC_ITEM"/>
+                    <NavigationPropertyBinding Path="qc_CASTING" Target="QC_CASTING"/>
+                    <NavigationPropertyBinding Path="qc_CHECK" Target="QC_CHECK"/>
                 </EntitySet>
                 <EntitySet Name="QC_HEADER_FILES" EntityType="RHSnorkelQCTrackerService.QC_HEADER_FILES">
                     <NavigationPropertyBinding Path="qC_HEADER" Target="QC_HEADER"/>
@@ -121,10 +121,10 @@
                 <NavigationProperty Name="qc_MEASUREMENTS" Type="Collection(RHSnorkelQCTrackerService.QC_MEASUREMENTS)" Partner="qC_HEADER">
                     <OnDelete Action="Cascade"/>
                 </NavigationProperty>
-                <NavigationProperty Name="qc_CASTING" Type="Collection(RHSnorkelQCTrackerService.QC_ITEM)">
+                <NavigationProperty Name="qc_CASTING" Type="Collection(RHSnorkelQCTrackerService.QC_CASTING)" Partner="qC_HEADER">
                     <OnDelete Action="Cascade"/>
                 </NavigationProperty>
-                <NavigationProperty Name="qc_CHECK" Type="Collection(RHSnorkelQCTrackerService.QC_ITEM)">
+                <NavigationProperty Name="qc_CHECK" Type="Collection(RHSnorkelQCTrackerService.QC_CHECK)" Partner="qC_HEADER">
                     <OnDelete Action="Cascade"/>
                 </NavigationProperty>
             </EntityType>
@@ -165,10 +165,23 @@
                 <Property Name="VISIBLE" Type="Edm.Boolean"/>
                 <Property Name="WORK_ITEM_DESCRIPTION" Type="Edm.String" MaxLength="100"/>
                 <Property Name="WorkProcessStep" Type="Edm.String" MaxLength="100"/>
+                <Property Name="PipeNo1" Type="Edm.String" MaxLength="50"/>
+                <Property Name="PipeNo2" Type="Edm.String" MaxLength="50"/>
+                <Property Name="PipeNo3" Type="Edm.String" MaxLength="50"/>
+                <Property Name="PipeNo4" Type="Edm.String" MaxLength="50"/>
+                <Property Name="PipeNo5" Type="Edm.String" MaxLength="50"/>
+                <Property Name="PipeNo6" Type="Edm.String" MaxLength="50"/>
+                <Property Name="PipeNo7" Type="Edm.String" MaxLength="50"/>
+                <Property Name="PipeNo8" Type="Edm.String" MaxLength="50"/>
+                <Property Name="PipeNo9" Type="Edm.String" MaxLength="50"/>
+                <Property Name="PipeNo10" Type="Edm.String" MaxLength="50"/>
+                <Property Name="PipeNo11" Type="Edm.String" MaxLength="50"/>
+                <Property Name="PipeNo12" Type="Edm.String" MaxLength="50"/>
+                <Property Name="characterField" Type="Edm.String" MaxLength="50"/>
                 <NavigationProperty Name="aTTACHMENTS" Type="Collection(RHSnorkelQCTrackerService.ATTACHMENTS)" Partner="qC_ITEM">
                     <OnDelete Action="Cascade"/>
                 </NavigationProperty>
-                <NavigationProperty Name="qC_HEADER" Type="RHSnorkelQCTrackerService.QC_HEADER">
+                <NavigationProperty Name="qC_HEADER" Type="RHSnorkelQCTrackerService.QC_HEADER" Partner="qc_ITEMS">
                     <ReferentialConstraint Property="qC_HEADER_SNORKEL_NO" ReferencedProperty="SNORKEL_NO"/>
                 </NavigationProperty>
                 <Property Name="qC_HEADER_SNORKEL_NO" Type="Edm.String" MaxLength="100"/>
@@ -188,7 +201,8 @@
                 <Property Name="sheetNo" Type="Edm.String" MaxLength="10"/>
                 <Property Name="actualvalue" Type="Edm.String" MaxLength="100"/>
                 <Property Name="date" Type="Edm.DateTimeOffset"/>
-                <Property Name="ff" Type="Edm.String" MaxLength="100"/>
+                <Property Name="ff1" Type="Edm.String" MaxLength="100"/>
+                <Property Name="ff2" Type="Edm.String" MaxLength="100"/>
                 <Property Name="fluidity" Type="Edm.String" MaxLength="100"/>
                 <Property Name="method" Type="Edm.String" MaxLength="100"/>
                 <Property Name="no" Type="Edm.String" MaxLength="100"/>
@@ -200,10 +214,13 @@
                 <Property Name="specification" Type="Edm.String" MaxLength="100"/>
                 <Property Name="testNo" Type="Edm.String" MaxLength="100"/>
                 <Property Name="testname" Type="Edm.String" MaxLength="100"/>
-                <Property Name="tf" Type="Edm.String" MaxLength="100"/>
+                <Property Name="tf1" Type="Edm.String" MaxLength="100"/>
+                <Property Name="tf2" Type="Edm.String" MaxLength="100"/>
                 <Property Name="tolerance" Type="Edm.String" MaxLength="100"/>
                 <Property Name="vibration" Type="Edm.String" MaxLength="100"/>
                 <Property Name="watercasting" Type="Edm.String" MaxLength="100"/>
+                <Property Name="QUESTION" Type="Edm.String" MaxLength="200"/>
+                <Property Name="batchNo" Type="Edm.String" MaxLength="100"/>
                 <NavigationProperty Name="qC_HEADER" Type="RHSnorkelQCTrackerService.QC_HEADER" Partner="qc_TESTS">
                     <ReferentialConstraint Property="qC_HEADER_SNORKEL_NO" ReferencedProperty="SNORKEL_NO"/>
                 </NavigationProperty>
@@ -279,10 +296,14 @@
                 <Property Name="argonPipeFlowJ" Type="Edm.String"/>
                 <Property Name="argonPipeFlowK" Type="Edm.String"/>
                 <Property Name="argonPipeFlowL" Type="Edm.String"/>
+                <Property Name="remarkA" Type="Edm.String" MaxLength="255"/>
+                <Property Name="checkA" Type="Edm.String" MaxLength="50"/>
+                <Property Name="remarkB" Type="Edm.String" MaxLength="255"/>
+                <Property Name="checkB" Type="Edm.String" MaxLength="50"/>
                 <Property Name="remarks" Type="Edm.String" MaxLength="255"/>
                 <Property Name="checkStatus" Type="Edm.String" MaxLength="20"/>
                 <Property Name="type" Type="Edm.String"/>
-                <NavigationProperty Name="qC_HEADER" Type="RHSnorkelQCTrackerService.QC_HEADER">
+                <NavigationProperty Name="qC_HEADER" Type="RHSnorkelQCTrackerService.QC_HEADER" Partner="qc_CASTING">
                     <ReferentialConstraint Property="qC_HEADER_SNORKEL_NO" ReferencedProperty="SNORKEL_NO"/>
                 </NavigationProperty>
                 <Property Name="qC_HEADER_SNORKEL_NO" Type="Edm.String" MaxLength="100"/>
@@ -300,10 +321,14 @@
                 <Property Name="argonPipeWelding" Type="Edm.String" MaxLength="20"/>
                 <Property Name="snorkelLotNo" Type="Edm.String" MaxLength="50"/>
                 <Property Name="stencilingMarking" Type="Edm.String" MaxLength="100"/>
+                <Property Name="remarkA" Type="Edm.String" MaxLength="255"/>
+                <Property Name="checkA" Type="Edm.String" MaxLength="50"/>
+                <Property Name="remarkB" Type="Edm.String" MaxLength="255"/>
+                <Property Name="checkB" Type="Edm.String" MaxLength="50"/>
                 <Property Name="type" Type="Edm.String"/>
                 <Property Name="remarks" Type="Edm.String" MaxLength="255"/>
                 <Property Name="checkStatus" Type="Edm.String" MaxLength="20"/>
-                <NavigationProperty Name="qC_HEADER" Type="RHSnorkelQCTrackerService.QC_HEADER">
+                <NavigationProperty Name="qC_HEADER" Type="RHSnorkelQCTrackerService.QC_HEADER" Partner="qc_CHECK">
                     <ReferentialConstraint Property="qC_HEADER_SNORKEL_NO" ReferencedProperty="SNORKEL_NO"/>
                 </NavigationProperty>
                 <Property Name="qC_HEADER_SNORKEL_NO" Type="Edm.String" MaxLength="100"/>

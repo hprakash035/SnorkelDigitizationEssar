@@ -14,6 +14,7 @@
 		"position": "#Page:SnorkelInstallation/#Control:Section41TestPositionGapD/#Value",
 		"testname": "*1 Gap measurement between 1st ring brick and the Core Shell *(Actual Max - Actual Min) < 2mm",
 		"tolerance": "#Page:SnorkelInstallation/#Control:Section41TestToleranceD/#Value",
+		"QUESTION": "4.1 Result of gap measurement  *1( Uniform gap is required in the circumference)",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}
 }

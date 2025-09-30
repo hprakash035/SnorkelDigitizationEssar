@@ -31,7 +31,7 @@ export default function Section203Validation(clientAPI) {
     Section203UserInputImage1.setVisible('true');
     const Section203TakePhoto =FormSectionedTable.getSection('Section203UserInputForm');
     Section203TakePhoto.setVisible('true');
-    FormSectionedTable.getSection('Section203Form').getControl('Section203StaticNextButton').setVisible(false);
+    FormSectionedTable.getSection('Section203Form').getControl('Section204NextButton').setVisible(false);
             return clientAPI.executeAction({
                 Name: '/TRL_RH_SnorkelApp/Actions/Section203Create.action'
             });

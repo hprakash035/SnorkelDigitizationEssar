@@ -73,10 +73,8 @@ const binding = pageProxy.getBindingObject();
             }
         });
 
-        // ✅ Show next section
-        // sectionedTable.getSection('Section132TestFormName').setVisible(true);
-        // sectionedTable.getSection('Section132TestForm').setVisible(true);
-
+       sectionedTable.getSection('SectionFormCell5').setVisible(true);
+      sectionedTable.getSection('Section162Test2Form').setVisible(true);
     } catch (error) {
         await clientAPI.executeAction({
             Name: "/TRL_RH_SnorkelApp/Actions/AttachmnetValidation.action",
