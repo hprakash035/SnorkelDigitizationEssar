@@ -220,6 +220,7 @@
                 <Property Name="vibration" Type="Edm.String" MaxLength="100"/>
                 <Property Name="watercasting" Type="Edm.String" MaxLength="100"/>
                 <Property Name="QUESTION" Type="Edm.String" MaxLength="200"/>
+                <Property Name="SSFiber" Type="Edm.String" MaxLength="100"/>
                 <Property Name="batchNo" Type="Edm.String" MaxLength="100"/>
                 <NavigationProperty Name="qC_HEADER" Type="RHSnorkelQCTrackerService.QC_HEADER" Partner="qc_TESTS">
                     <ReferentialConstraint Property="qC_HEADER_SNORKEL_NO" ReferencedProperty="SNORKEL_NO"/>
