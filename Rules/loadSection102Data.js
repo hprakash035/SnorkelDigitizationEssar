@@ -10,7 +10,7 @@ export async function loadSection102Data(pageProxy, qcItem102, FormSectionedTabl
                 const btn = section.getControl(buttonName);
                 if (btn) {
                     await btn.setVisible(false);
-                    // console.log(`🚫 Hidden ${buttonName}`);
+                    // console.log(🚫 Hidden ${buttonName});
                 }
             }
         };
@@ -52,7 +52,7 @@ export async function loadSection102Data(pageProxy, qcItem102, FormSectionedTabl
             const mimeType = firstAttachment?.mimeType || 'image/png';
 
             if (base64 && base64.length > 100) {
-                binding.imageUri = `data:${mimeType};base64,${base64}`;
+                 binding.imageUri = `data:${mimeType};base64,${base64}`;
                 await dynamicImageSection.setVisible(true);
                 await dynamicImageSection.redraw();
 
@@ -99,12 +99,13 @@ export async function loadSection102Data(pageProxy, qcItem102, FormSectionedTabl
                         }
                     };
 
-                    await setFormValue(`Section102TestBatchNo${suffix}`, test.batchNo);
-                    await setFormValue(`Section102PowerWeight${suffix}`, test.powderweight);
-                    await setFormValue(`Section102WaterCasting${suffix}`, test.watercasting);
-                    await setFormValue(`Section102FludityOfCastable${suffix}`, test.fluidity ? [test.fluidity] : []);
-                    await setFormValue(`Section102AddingVibration${suffix}`, test.vibration);
-                    await setFormValue(`Section102Remark${suffix}`, test.remark);
+                    await setFormValue(Section102TestBatchNo`${suffix}`, test.batchNo);
+                    await setFormValue(Section102PowerWeight`${suffix}`, test.powderweight);
+                    await setFormValue(Section102WaterCasting`${suffix}`, test.watercasting);
+                    await setFormValue(Section102FludityOfCastable`${suffix}`, test.fluidity ? [test.fluidity] : []);
+                    await setFormValue(Section102AddingVibration`${suffix}`, test.vibration);
+                     await setFormValue(Section102SSFiber`${suffix}`, test.ssFiber);
+                    await setFormValue(Section102Remark`${suffix}`, test.remark);
                 }
 
                 // hide NEXT only if mixing data exists
@@ -139,7 +140,7 @@ export async function loadSection102Data(pageProxy, qcItem102, FormSectionedTabl
                 const suffix = positionMap[gap.position];
                 if (!suffix) continue;
 
-                const ctrl = gapForm.getControl(`Section102TestActualGap${suffix}`);
+                const ctrl = gapForm.getControl(Section102TestActualGap`${suffix}`);
                 if (ctrl && gap.actualvalue) {
                     await ctrl.setValue(gap.actualvalue);
                     hasGapData = true;

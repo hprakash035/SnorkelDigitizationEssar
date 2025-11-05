@@ -78,7 +78,7 @@ export async function loadSection203Data(pageProxy, qcItem203, FormSectionedTabl
             }
 
             // If you want to show next form (e.g., Section203) like in Section211 logic
-            const nextSection = FormSectionedTable.getSection('Section203Form');
+            const nextSection = FormSectionedTable.getSection('Section204Form');
             if (nextSection) {
                 await nextSection.setVisible(true);
             }

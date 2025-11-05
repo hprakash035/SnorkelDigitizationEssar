@@ -60,18 +60,25 @@ export async function loadSection91Data(pageProxy, qcItem91, FormSectionedTable,
     };
 
     // ✅ Collect all "outer castable workablity" tests
-    const parsedTestDataArray = testdataArray
-      .filter(item => (item.testname || '').toLowerCase().includes('outer castable workablity'))
-      .map(item => ({
-        batchNo: safeVal(item.batchNo),
-        water: safeVal(item.watercasting || item.water),
-        ff1: safeVal(item.ff1),
-        ff2: safeVal(item.ff2),
-        tf1: safeVal(item.tf1),
-        tf2: safeVal(item.tf2),
-        settingtime: safeVal(item.settleduration || item.settingtime),
-        remark: safeVal(item.remark)
-      }));
+   const parsedTestDataArray = testdataArray
+  .filter(item => {
+    const testname = item.testname || '';
+    const question = item.QUESTION || '';
+
+    // Check if either testname or question contains "*3"
+    return testname.includes('*3') || question.includes('*3');
+  })
+  .map(item => ({
+    batchNo: safeVal(item.batchNo),
+    water: safeVal(item.watercasting || item.water),
+    ff1: safeVal(item.ff1),
+    ff2: safeVal(item.ff2),
+    tf1: safeVal(item.tf1),
+    tf2: safeVal(item.tf2),
+    settingtime: safeVal(item.settleduration || item.settingtime),
+    remark: safeVal(item.remark)
+  }));
+
 
     // console.log("✅ Parsed Section91 data:", parsedTestDataArray);
 

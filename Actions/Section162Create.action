@@ -13,7 +13,7 @@
 		"DECISION_TAKEN": "#Page:SnorkelInstallation5/#Control:Section162DecisionTaken/#SelectedValue",
 		"INSPECTED_BY": "#Page:SnorkelInstallation5/#Control:Section162InspectedBy/#SelectedValue",
 		"METHOD": "#Page:SnorkelInstallation5/#Control:Section162Method/#Value",
-		"QUESTION": " 16.2 The gap between the top of brick surface to the top face of casting    *11",
+		"QUESTION": "16.2 The gap between the top of brick surface to the top face of casting    *11",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}
 }

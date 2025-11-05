@@ -37,10 +37,10 @@ export default async function LoadSnorkelDataPage6(clientAPI) {
         const flags = { next: false };
 
         // --- Process Header Files ---
-         if (clientAPI.binding.SNORKEL_NO) {
+       
             FormSectionedTable.getSection('Section171Form').setVisible(true);
             
-        }
+        
        
         // --- Section Keys (Page 4 only) ---
         const orderedSectionKeys = [

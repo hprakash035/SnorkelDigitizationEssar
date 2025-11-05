@@ -1,80 +1,57 @@
 import LoadSnorkelData5 from './LoadSnorkelData5';
 
 export default async function UpdateSnorkelData_Sheet5(clientAPI) {
-    // console.log('🚀 Entered UpdateSnorkelData_Sheet3');
     clientAPI.showActivityIndicator("...");
     const snorkelNo = clientAPI.binding.SNORKEL_NO;
     const service = '/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service';
     try {
         const pageProxy = clientAPI.getPageProxy();
-        // console.log('📌 Got pageProxy:', pageProxy);
 
         const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
-        // console.log('📌 Got FormSectionedTable:', FormSectionedTable);
 
         const binding = pageProxy.getBindingObject();
-        // console.log('📌 Got binding object:', binding);
-
-        // console.log('🔗 Service Path:', service);
-
-        // console.log('🔍 SnorkelNo Value:', snorkelNo);
 
         const headerResults = await clientAPI.read(service, 'QC_HEADER', [], `$filter=SNORKEL_NO eq '${snorkelNo}'`);
-        // console.log('📥 headerResults:', headerResults);
 
         if (!headerResults || !Array.isArray(headerResults._array) || headerResults._array.length !== 1) {
-            // console.error('❌ QC_HEADER not found or multiple found', headerResults);
             throw new Error(`❌ QC_HEADER not found or multiple found`);
         }
 
         const header = headerResults._array[0];
-        // console.log('📌 Loaded header:', header);
 
         const headerReadLink = header['@odata.readLink'];
-        // console.log('🔗 headerReadLink:', headerReadLink);
 
         const itemsResult = await clientAPI.read(service, `${headerReadLink}/qc_ITEMS`, [], '');
-        // console.log('📥 itemsResult:', itemsResult);
 
         const items = itemsResult?._array || [];
-        // console.log(`🔍 Found ${items.length} QC_ITEMs`);
 
         for (const item of items) {
             const question = item.QUESTION || '';
             const sectionKey = question.match(/^(\d+\.\d+)/)?.[1];
-            // console.log(`➡️ Processing item ID: ${item.ID}, Question: ${question}, SectionKey: ${sectionKey}`);
 
             if (!sectionKey) {
-                // console.warn(`⚠️ No sectionKey extracted for item ${item.ID}`);
                 continue;
             }
 
             const sectionId = getSectionFormId(sectionKey);
-            // console.log(`🔗 Mapped sectionKey ${sectionKey} → sectionId ${sectionId}`);
 
             const section = FormSectionedTable.getSection(sectionId);
-            // console.log(`📌 Section object for ${sectionId}:`, section);
 
             if (!section) {
-                // console.warn(`⚠️ No section found for ID: ${sectionId}`);
                 continue;
             }
 
             if (!section.getVisible()) {
-                // console.warn(`⚠️ Section ${sectionId} not visible`);
                 continue;
             }
 
             const values = await getUpdatedValuesForSection(sectionKey, section);
-            // console.log(`📥 Extracted values for item ${item.ID}:`, values);
 
             if (Object.keys(values).length === 0) {
-                // console.warn(`⚠️ No values to update for item ${item.ID}`);
                 continue;
             }
 
             const itemReadLink = item['@odata.readLink'] || `QC_ITEM(${item.ID})`;
-            // console.log(`🔗 itemReadLink for update: ${itemReadLink}`);
 
             try {
                 await clientAPI.executeAction({
@@ -88,34 +65,28 @@ export default async function UpdateSnorkelData_Sheet5(clientAPI) {
                         Properties: values
                     }
                 });
-                // console.log(`✅ Successfully updated QC_ITEM: ${itemReadLink}`, values);
             } catch (err) {
-                // console.error(`❌ Failed to update QC_ITEM ${itemReadLink}:`, err);
             }
         }
 
-        // console.log('🔄 Reloading UI via LoadSnorkelData3');
         await LoadSnorkelData5(clientAPI);
 
         clientAPI.dismissActivityIndicator();
-        // console.log('🎉 UpdateSnorkelData_Sheet3 completed successfully');
     } catch (error) {
         clientAPI.dismissActivityIndicator();
-        // console.error('❌ Error in UpdateSnorkelData_Sheet3:', error);
     }
 
     function getSectionFormId(key) {
-        // console.log(`📌 getSectionFormId called with key: ${key}`);
         return {
-            '14.1': 'Section141Form',
+           '14.1': 'Section141Form',
             '14.2': 'Section142Form',
             '14.3': 'Section143Form',
             '14.4': 'Section144Form',
             '14.5': 'Section145Form',
+            '14.6': 'Section146Form',
             '15.1': 'Section151Form',
             '16.1': 'Section161Form',
             '16.2': 'Section162Form'
-
         }[key];
     }
 
@@ -127,7 +98,7 @@ export default async function UpdateSnorkelData_Sheet5(clientAPI) {
             return val ? new Date(val).toISOString() : undefined;
         };
 
-               if (key === '14.1') {
+    if (key === '14.1') {
             updated.DATE_INSPECTED = await getDate('Section141Date');
             updated.INSPECTED_BY = (await section.getControl('Section141InspectedBy').getValue())?.[0]?.ReturnValue || '';
             updated.METHOD = await section.getControl('Section141Method').getValue();
@@ -157,6 +128,12 @@ export default async function UpdateSnorkelData_Sheet5(clientAPI) {
             updated.METHOD = await section.getControl('Section145Method').getValue();
             updated.DECISION_TAKEN = (await section.getControl('Section145DecisionTaken').getValue())?.[0]?.ReturnValue || '';
         }
+        if (key === '14.6') {
+            updated.DATE_INSPECTED = await getDate('Section146Date');
+            updated.INSPECTED_BY = (await section.getControl('Section146InspectedBy').getValue())?.[0]?.ReturnValue || '';
+            updated.METHOD = await section.getControl('Section146Method').getValue();
+            updated.DECISION_TAKEN = (await section.getControl('Section146DecisionTaken').getValue())?.[0]?.ReturnValue || '';
+        }
         if (key === '15.1') {
             updated.DATE_INSPECTED = await getDate('Section151Date');
             updated.INSPECTED_BY = (await section.getControl('Section151InspectedBy').getValue())?.[0]?.ReturnValue || '';
@@ -169,20 +146,20 @@ export default async function UpdateSnorkelData_Sheet5(clientAPI) {
             updated.METHOD = await section.getControl('Section161Method').getValue();
             updated.DECISION_TAKEN = (await section.getControl('Section161DecisionTaken').getValue())?.[0]?.ReturnValue || '';
         }
-         if (key === '16.2') {
+        if (key == '16.2') {
             updated.DATE_INSPECTED = await getDate('Section162Date');
             updated.INSPECTED_BY = (await section.getControl('Section162InspectedBy').getValue())?.[0]?.ReturnValue || '';
             updated.METHOD = await section.getControl('Section162Method').getValue();
             updated.DECISION_TAKEN = (await section.getControl('Section162DecisionTaken').getValue())?.[0]?.ReturnValue || '';
-          await UpdateSection162TestForm(clientAPI);
-        await  UpdateSection162Test2Form(clientAPI);
+            await UpdateSection162TestForm(clientAPI);
+            await UpdateSection162Test2Form(clientAPI);
         }
 
         Object.keys(updated).forEach(k => updated[k] === undefined && delete updated[k]);
         return updated;
     }
 
-  async function UpdateSection162TestForm(clientAPI) {
+async function UpdateSection162TestForm(clientAPI) {
     try {
         const pageProxy = clientAPI.getPageProxy();
         const form = pageProxy.getControl('FormSectionedTable');
@@ -210,48 +187,54 @@ export default async function UpdateSnorkelData_Sheet5(clientAPI) {
         }
 
         // Map UI controls → backend entity
-        const testInputs = [
-            {
-                fluidity: section162.getControl('Section162FludityOfCastable1')?.getValue()?.[0]?.ReturnValue,
-                powder: section162.getControl('Section162PowerWeight1')?.getValue(),
-                remark: section162.getControl('Section162Remark1')?.getValue(),
-                vibration: section162.getControl('Section162AddingVibration1')?.getValue(),
-                water: section162.getControl('Section162WaterCasting1')?.getValue(),
-                entity: tests[0]
-            },
-            {
-                fluidity: section162.getControl('Section162FludityOfCastable2')?.getValue()?.[0]?.ReturnValue,
-                powder: section162.getControl('Section162PowerWeight2')?.getValue(),
-                remark: section162.getControl('Section162Remark2')?.getValue(),
-                vibration: section162.getControl('Section162AddingVibration2')?.getValue(),
-                water: section162.getControl('Section162WaterCasting2')?.getValue(),
-                entity: tests[1]
-            },
-            {
-                fluidity: section162.getControl('Section162FludityOfCastable3')?.getValue()?.[0]?.ReturnValue,
-                powder: section162.getControl('Section162PowerWeight3')?.getValue(),
-                remark: section162.getControl('Section162Remark3')?.getValue(),
-                vibration: section162.getControl('Section162AddingVibration3')?.getValue(),
-                water: section162.getControl('Section162WaterCasting3')?.getValue(),
-                entity: tests[2]
-            },
-            {
-                fluidity: section162.getControl('Section162FludityOfCastable4')?.getValue()?.[0]?.ReturnValue,
-                powder: section162.getControl('Section162PowerWeight4')?.getValue(),
-                remark: section162.getControl('Section162Remark4')?.getValue(),
-                vibration: section162.getControl('Section162AddingVibration4')?.getValue(),
-                water: section162.getControl('Section162WaterCasting4')?.getValue(),
-                entity: tests[3]
-            },
-            {
-                fluidity: section162.getControl('Section162FludityOfCastable5')?.getValue()?.[0]?.ReturnValue,
-                powder: section162.getControl('Section162PowerWeight5')?.getValue(),
-                remark: section162.getControl('Section162Remark5')?.getValue(),
-                vibration: section162.getControl('Section162AddingVibration5')?.getValue(),
-                water: section162.getControl('Section162WaterCasting5')?.getValue(),
-                entity: tests[4]
-            }
-        ];
+     const testInputs = [
+    {
+        batchNo: section162.getControl('Section162TestBatchNo1')?.getValue(),
+        fluidity: section162.getControl('Section162FludityOfCastable1')?.getValue()?.[0]?.ReturnValue,
+        powder: section162.getControl('Section162PowerWeight1')?.getValue(),
+        remark: section162.getControl('Section162Remark1')?.getValue(),
+        vibration: section162.getControl('Section162AddingVibration1')?.getValue()?.[0]?.ReturnValue,
+        water: section162.getControl('Section162WaterCasting1')?.getValue(),
+        entity: tests[0]
+    },
+    {
+        batchNo: section162.getControl('Section162TestBatchNo2')?.getValue(),
+        fluidity: section162.getControl('Section162FludityOfCastable2')?.getValue()?.[0]?.ReturnValue,
+        powder: section162.getControl('Section162PowerWeight2')?.getValue(),
+        remark: section162.getControl('Section162Remark2')?.getValue(),
+        vibration: section162.getControl('Section162AddingVibration2')?.getValue()?.[0]?.ReturnValue,
+        water: section162.getControl('Section162WaterCasting2')?.getValue(),
+        entity: tests[1]
+    },
+    {
+        batchNo: section162.getControl('Section162TestBatchNo3')?.getValue(),
+        fluidity: section162.getControl('Section162FludityOfCastable3')?.getValue()?.[0]?.ReturnValue,
+        powder: section162.getControl('Section162PowerWeight3')?.getValue(),
+        remark: section162.getControl('Section162Remark3')?.getValue(),
+        vibration: section162.getControl('Section162AddingVibration3')?.getValue()?.[0]?.ReturnValue,
+        water: section162.getControl('Section162WaterCasting3')?.getValue(),
+        entity: tests[2]
+    },
+    {
+        batchNo: section162.getControl('Section162TestBatchNo4')?.getValue(),
+        fluidity: section162.getControl('Section162FludityOfCastable4')?.getValue()?.[0]?.ReturnValue,
+        powder: section162.getControl('Section162PowerWeight4')?.getValue(),
+        remark: section162.getControl('Section162Remark4')?.getValue(),
+        vibration: section162.getControl('Section162AddingVibration4')?.getValue()?.[0]?.ReturnValue,
+        water: section162.getControl('Section162WaterCasting4')?.getValue(),
+        entity: tests[3]
+    },
+    {
+        batchNo: section162.getControl('Section162TestBatchNo5')?.getValue(),
+        fluidity: section162.getControl('Section162FludityOfCastable5')?.getValue()?.[0]?.ReturnValue,
+        powder: section162.getControl('Section162PowerWeight5')?.getValue(),
+        remark: section162.getControl('Section162Remark5')?.getValue(),
+        vibration: section162.getControl('Section162AddingVibration5')?.getValue()?.[0]?.ReturnValue,
+        water: section162.getControl('Section162WaterCasting5')?.getValue(),
+        entity: tests[4]
+    }
+];
+
 
         // Loop through & update
         for (const [i, test] of testInputs.entries()) {
@@ -261,6 +244,7 @@ export default async function UpdateSnorkelData_Sheet5(clientAPI) {
             }
 
             const values = {
+                batchNo:test.batchNo || '',
                 fluidity: test.fluidity || '',
                 powderweight: test.powder || '',
                 remark: test.remark || '',
@@ -320,7 +304,7 @@ async function UpdateSection162Test2Form(clientAPI) {
             service,
             'QC_Test_Table',
             [],
-            `$filter=qC_HEADER_SNORKEL_NO eq '${snorkelNo}' and testname eq '*11 The gap between the top of brick surface to the top face of castable (*12, 3, 6, and 9 oclock-wise direction should be inspected)'`
+            `$filter=qC_HEADER_SNORKEL_NO eq '${snorkelNo}' and testname eq '*11 The gap between the top of brick surface to the top face of castable'`
         );
         const tests = results?._array || [];
 

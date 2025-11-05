@@ -13,7 +13,7 @@
 		"DECISION_TAKEN": "#Page:SnorkelInstallation6/#Control:Section182DecisionTaken/#SelectedValue",
 		"INSPECTED_BY": "#Page:SnorkelInstallation6/#Control:Section182InspectedBy/#SelectedValue",
 		"METHOD": "#Page:SnorkelInstallation6/#Control:Section182Method/#Value",
-		"QUESTION": " 18.2 Drying time (76~80 hrs)",
+		"QUESTION": "18.2 Drying time (76~80 hrs)",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}
 }

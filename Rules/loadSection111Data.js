@@ -88,7 +88,7 @@ export async function loadSection111Data(pageProxy, qcItem111, FormSectionedTabl
     if (dataMapped) {
       const nextBtn112 =  FormSectionedTable.getSection('Section111TestForm')?.getControl('Section112NextButton');
       if (nextBtn112) await nextBtn112.setVisible(false);
-      const Section112Form = FormSectionedTable.getSection('Section112Form');
+      const Section112Form = FormSectionedTable.getSection('Section121FormOutlet');
       if (Section112Form) await Section112Form.setVisible(true);
 
       // Hide Section112 Next button if exists

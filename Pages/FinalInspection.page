@@ -41,9 +41,13 @@
 							},
 							"_Type": "Control.Type.FormCell.Attachment",
 							"_Name": "SectionFinalTakePhotoA",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"OnValueChange": "/TRL_RH_SnorkelApp/Rules/ValidationandConvertFileFinalA.js",
+							"IsEditable": true,
+							"MaxAttachments": 0,
+							"MaxFileSize": 0,
 							"AttachmentActionType": [
 								"TakePhoto"
 							],
@@ -118,9 +122,13 @@
 							},
 							"_Type": "Control.Type.FormCell.Attachment",
 							"_Name": "SectionFinalTakePhotoB",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"OnValueChange": "/TRL_RH_SnorkelApp/Rules/ValidationandConvertFileFinalB.js",
+							"IsEditable": true,
+							"MaxAttachments": 0,
+							"MaxFileSize": 0,
 							"AttachmentActionType": [
 								"TakePhoto"
 							],
@@ -204,6 +212,7 @@
 							"Value": "Overall Height",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Item_OverallHeight",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement items",
@@ -214,6 +223,7 @@
 							"Value": "A",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Sign_A",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Sign",
@@ -224,6 +234,7 @@
 							"Value": "900 +10-5",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Std_A",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Standard",
@@ -233,6 +244,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_A1",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point A",
@@ -242,6 +254,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_A2",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point B",
@@ -251,6 +264,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_A3",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point C",
@@ -260,6 +274,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_A4",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point D",
@@ -269,6 +284,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_A5",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point E",
@@ -278,6 +294,7 @@
 						{
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Check_A",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": true,
@@ -315,6 +332,7 @@
 							"Value": "Outside Diameter",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Item_OutsideDiameter",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement items",
@@ -325,6 +343,7 @@
 							"Value": "B",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Sign_B",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Sign",
@@ -335,6 +354,7 @@
 							"Value": "1280 ± 5",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Std_B",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Standard",
@@ -344,6 +364,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_B1",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point A",
@@ -353,6 +374,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_B2",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point B",
@@ -362,6 +384,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_B3",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point C",
@@ -371,6 +394,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_B4",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point D",
@@ -380,6 +404,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_B5",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point E",
@@ -389,6 +414,7 @@
 						{
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Check_B",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": true,
@@ -426,6 +452,7 @@
 							"Value": "Inside Diameter",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Item_InsideDiameter",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement items",
@@ -436,6 +463,7 @@
 							"Value": "C",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Sign_C",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Sign",
@@ -446,6 +474,7 @@
 							"Value": "500 -1+4",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Std_C",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Standard",
@@ -455,6 +484,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_C1",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point A",
@@ -464,6 +494,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_C2",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point B",
@@ -473,6 +504,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_C3",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point C",
@@ -482,6 +514,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_C4",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point D",
@@ -491,6 +524,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_C5",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point E",
@@ -500,6 +534,7 @@
 						{
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Check_C",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": true,
@@ -537,6 +572,7 @@
 							"Value": "Flange~ Brick height",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Item_FlangeBrickHeight",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement items",
@@ -547,6 +583,7 @@
 							"Value": "D",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Sign_D",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Sign",
@@ -557,6 +594,7 @@
 							"Value": "+0/-5",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Std_D",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Standard",
@@ -566,6 +604,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_D1",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point A",
@@ -575,6 +614,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_D2",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point B",
@@ -584,6 +624,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_D3",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point C",
@@ -593,6 +634,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_D4",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point D",
@@ -602,6 +644,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_D5",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point E",
@@ -611,6 +654,7 @@
 						{
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Check_D",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": true,
@@ -648,6 +692,7 @@
 							"Value": "Shell~ Ar pipe opening",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Item_ShellPipeOpening",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement items",
@@ -658,6 +703,7 @@
 							"Value": "E",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Sign_E",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Sign",
@@ -668,6 +714,7 @@
 							"Value": "255 ± 2",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Std_E",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Standard",
@@ -677,6 +724,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_E1",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point A",
@@ -686,6 +734,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_E2",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point B",
@@ -695,6 +744,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_E3",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point C",
@@ -704,6 +754,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_E4",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point D",
@@ -713,6 +764,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_E5",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point E",
@@ -722,6 +774,7 @@
 						{
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Check_E",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": true,
@@ -759,6 +812,7 @@
 							"Value": "Flange~ Ar pipe Height",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Item_FlangePipeHeight",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement items",
@@ -769,6 +823,7 @@
 							"Value": "F",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Sign_F",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Sign",
@@ -779,6 +834,7 @@
 							"Value": "62 ± 5",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Std_F",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Standard",
@@ -788,6 +844,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_F1",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point A",
@@ -797,6 +854,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_F2",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point B",
@@ -806,6 +864,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_F3",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point C",
@@ -815,6 +874,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_F4",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point D",
@@ -824,6 +884,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MeasurePoint_F5",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Measurement Point E",
@@ -833,6 +894,7 @@
 						{
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Check_F",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": true,
@@ -887,6 +949,7 @@
 							"Value": "Argon Pipe Flow-LPM",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "SectionFinalCastingAragon",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
@@ -923,6 +986,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Flow_A",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "A",
@@ -932,6 +996,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Flow_B",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "B",
@@ -941,6 +1006,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Flow_C",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "C",
@@ -950,6 +1016,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Flow_D",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "D",
@@ -959,6 +1026,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Flow_E",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "E",
@@ -968,6 +1036,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Flow_F",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "F",
@@ -977,6 +1046,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Flow_G",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "G",
@@ -986,6 +1056,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Flow_H",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "H",
@@ -995,6 +1066,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Flow_I",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "I",
@@ -1004,6 +1076,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Flow_J",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "J",
@@ -1013,6 +1086,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Flow_K",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "K",
@@ -1022,6 +1096,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Flow_L",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "L",
@@ -1031,6 +1106,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "BrickBrand",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Brick Brand Name",
@@ -1040,6 +1116,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "CastableBrand",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Castable Brand Name",
@@ -1049,6 +1126,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "AddedWater",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Added Water %",
@@ -1058,6 +1136,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "MixingTime",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Mixing Time (min/Batch)",
@@ -1067,6 +1146,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "BrickLot",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Brick Lot No",
@@ -1076,6 +1156,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "CastableLot",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Castable Lot No",
@@ -1106,6 +1187,7 @@
 							"Value": "Brick Lot No",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "SectionFinalCastingRemarkStatusFormABrickLotNo",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
@@ -1115,6 +1197,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "SectionFinalCastingRemarkStatusFormARemarks",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Remarks",
@@ -1125,6 +1208,7 @@
 						{
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "SectionFinalCastingRemarkStatusFormACheck",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": true,
@@ -1188,6 +1272,7 @@
 							"Value": "Castable Lot No\t \t\t",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "SectionFinalCastingRemarkStatusFormBCastableLot",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
@@ -1197,6 +1282,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "SectionFinalCastingRemarkStatusFormBRemark",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Remarks",
@@ -1207,6 +1293,7 @@
 						{
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "SectionFinalCastingRemarkStatusFormBCheck",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": true,
@@ -1295,6 +1382,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "CuringTime",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Curing Time(hr)",
@@ -1304,6 +1392,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "DryingTime(hr)",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Drying Time(hr)",
@@ -1313,6 +1402,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "DryingFurnace(MT)",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Drying Furnace(MT)",
@@ -1322,6 +1412,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "AfterDryingPreAssembly",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "After Drying Pre-assembly",
@@ -1331,6 +1422,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "SnorkelLot",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Snorkel Lot No",
@@ -1340,6 +1432,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "StencilingMarking",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Stenciling & Marking",
@@ -1349,6 +1442,7 @@
 						{
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "SectionFinalCheckaragon",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": true,
@@ -1400,6 +1494,7 @@
 							"Value": "Snorkel Lot No\t \t",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "SectionFinalCheckRemarkASnorkelLot",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
@@ -1409,6 +1504,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "SectionFinalCheckRemarkASnorkelLotRemark",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Remarks",
@@ -1419,6 +1515,7 @@
 						{
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "SectionFinalCheckRemarkACheck",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": true,
@@ -1482,6 +1579,7 @@
 							"Value": "Stenciling & Marking\t \t \t\t \t\t",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "SectionFinalCheckRemarkBStenciling",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
@@ -1491,6 +1589,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "SectionFinalCheckRemarkBRemark",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Remarks",
@@ -1501,6 +1600,7 @@
 						{
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "SectionFinalCheckRemarkBcheck",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": true,
@@ -1543,6 +1643,7 @@
 						{
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Save",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Save",
@@ -1589,7 +1690,7 @@
 				"Icon": "sap-icon://save",
 				"Position": "Right",
 				"IsIconCircular": false,
-				"Visible": true,
+				"Visible": false,
 				"OnPress": "/TRL_RH_SnorkelApp/Rules/UpdateSnorkelData_Sheet5.js"
 			},
 			{

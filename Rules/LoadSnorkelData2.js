@@ -22,10 +22,10 @@ export default async function LoadSnorkelDataPage2(clientAPI) {
 
         // Header setup
         // headerSection.getControl('SnorkelNo').setEditable(false);
-        if (clientAPI.binding.SNORKEL_NO) {
+       
             FormSectionedTable.getSection('Section71Form').setVisible(true);
             
-        }
+        
 
         // Read all backend data in parallel
         const [itemsResult, headerFiles, attachmentsResult, testdata] = await Promise.all([

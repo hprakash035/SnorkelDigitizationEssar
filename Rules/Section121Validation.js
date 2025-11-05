@@ -31,7 +31,7 @@ export default function Section121Validation(clientAPI) {
   
     const Section122Form =FormSectionedTable.getSection('Section122Form');
     Section122Form.setVisible('true');
-    FormSectionedTable.getSection('Section121Form').getControl('FormCellButton0').setVisible(false);
+    FormSectionedTable.getSection('Section121Form').getControl('Section122NextButton').setVisible(false);
    
             return clientAPI.executeAction({
                 Name: '/TRL_RH_SnorkelApp/Actions/Section121Create.action'

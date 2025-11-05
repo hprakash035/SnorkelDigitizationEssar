@@ -39,12 +39,10 @@ export default async function LoadSnorkelDataPage3(clientAPI) {
         // console.log(`🧪 Test data loaded: ${testdata._array.length}`);
 
         // --- Process Header Files ---
-        if (clientAPI.binding.SNORKEL_NO) {
+        
             // console.log(`📋 SNORKEL_NO found: ${clientAPI.binding.SNORKEL_NO}`);
             FormSectionedTable.getSection('Section111Form').setVisible(true);
-        } else {
-            // console.warn('⚠️ SNORKEL_NO not found in binding');
-        }
+       
 
         // --- Section Keys (Page 3 only) ---
         const orderedSectionKeys = [

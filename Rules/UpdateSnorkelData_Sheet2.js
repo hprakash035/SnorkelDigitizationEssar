@@ -1,6 +1,6 @@
 import LoadSnorkelData2 from './LoadSnorkelData2';
 
-export default async function UpdateSnorkelData_Sheet1(clientAPI) {
+export default async function UpdateSnorkelData_Sheet2(clientAPI) {
     console.log('🚀 Entered UpdateSnorkelData_Sheet2');
     clientAPI.showActivityIndicator("...");
 const snorkelNo =clientAPI.binding.SNORKEL_NO;
@@ -215,98 +215,87 @@ UpdateSection91TestForm(clientAPI);
         return updated;
     } 
 
- async function UpdateSection91TestForm(clientAPI) {
+async function UpdateSection91TestForm(clientAPI) {
     try {
         const pageProxy = clientAPI.getPageProxy();
         const form = pageProxy.getControl('FormSectionedTable');
         const section91 = form.getSection('Section91TestForm');
 
         const snorkelNo = pageProxy.binding?.SNORKEL_NO;
-        if (!snorkelNo) {
-            throw new Error("❌ Missing SNORKEL_NO in binding");
-        }
+        if (!snorkelNo) throw new Error("Missing SNORKEL_NO in binding");
 
         const service = '/TRL_RH_SnorkelApp/Services/TRL_Snorkel_CAP_SRV.service';
 
-        // 🔎 Read existing QC_Test_Table entries for this header/snorkel
-        const results = await clientAPI.read(service, 'QC_Test_Table', [], `$filter=qC_HEADER_SNORKEL_NO eq '${snorkelNo}' and testname eq '*3 Inspection result of outer castable workablity'`);
+        // Read QC_Test_Table entries for Section 91 (Final Inspection A & B)
+        const results = await clientAPI.read(service, 'QC_Test_Table', [], 
+            `$filter=qC_HEADER_SNORKEL_NO eq '${snorkelNo}' and testname eq '*3 Inspection result of outer castable workablity'`
+        );
         const tests = results?._array || [];
+        if (tests.length === 0) return; // no tests found
 
-        if (tests.length === 0) {
-            // console.warn("⚠️ No QC_Test_Table records found for snorkel:", snorkelNo);
-            return;
-        }
-
-        // Map UI controls to entity properties
+        // Map UI controls to backend properties for 3 batches
         const testInputs = [
             {
                 water: section91.getControl('Section91TestWaterCasteing1')?.getValue(),
-                ff: section91.getControl('Section91FF1')?.getValue(),
-                tf: section91.getControl('Section91TF1')?.getValue(),
+                ff1: section91.getControl('Section91FF1')?.getValue(),
+                ff2: section91.getControl('Section91FF12')?.getValue(),
+                tf1: section91.getControl('Section91TF1')?.getValue(),
+                tf2: section91.getControl('Section91TF12')?.getValue(),
                 setting: section91.getControl('Section91SettingTime1')?.getValue(),
                 remark: section91.getControl('Section91TestRemark1')?.getValue(),
                 entity: tests[0]
             },
             {
                 water: section91.getControl('Section91TestWaterCasteing2')?.getValue(),
-                ff: section91.getControl('Section91FF2')?.getValue(),
-                tf: section91.getControl('Section91TF2')?.getValue(),
+                ff1: section91.getControl('Section91FF2')?.getValue(),
+                ff2: section91.getControl('Section91FF22')?.getValue(),
+                tf1: section91.getControl('Section91TF2')?.getValue(),
+                tf2: section91.getControl('Section91TF22')?.getValue(),
                 setting: section91.getControl('Section91SettingTime2')?.getValue(),
                 remark: section91.getControl('Section91TestRemark2')?.getValue(),
                 entity: tests[1]
             },
             {
                 water: section91.getControl('Section91TestWaterCasteing3')?.getValue(),
-                ff: section91.getControl('Section91FF3')?.getValue(),
-                tf: section91.getControl('Section91TF3')?.getValue(),
+                ff1: section91.getControl('Section91FF3')?.getValue(),
+                ff2: section91.getControl('Section91FF32')?.getValue(),
+                tf1: section91.getControl('Section91TF3')?.getValue(),
+                tf2: section91.getControl('Section91TF32')?.getValue(),
                 setting: section91.getControl('Section91SettingTime3')?.getValue(),
                 remark: section91.getControl('Section91TestRemark3')?.getValue(),
                 entity: tests[2]
             }
         ];
 
+        // Update each test entity
         for (const [i, test] of testInputs.entries()) {
-            if (!test.entity) {
-                // console.warn(`⚠️ No entity found for Test ${i+1}, skipping`);
-                continue;
-            }
+            if (!test.entity) continue;
 
             const values = {
                 watercasting: test.water || '',
-                ff: test.ff || '',
-                tf: test.tf || '',
+                ff1: test.ff1 || '',
+                ff2: test.ff2 || '',
+                tf1: test.tf1 || '',
+                tf2: test.tf2 || '',
                 settleduration: test.setting || '',
                 remark: test.remark || ''
             };
 
-            // Remove undefined values
+            // Remove undefined
             Object.keys(values).forEach(k => values[k] === undefined && delete values[k]);
-
-            if (Object.keys(values).length === 0) {
-                // console.log(`⚠️ No updates for Test ${i+1}`);
-                continue;
-            }
+            if (Object.keys(values).length === 0) continue;
 
             const readLink = test.entity['@odata.readLink'];
-            // console.log(`🔗 Updating Test ${i+1} → ${readLink}`, values);
-
             await clientAPI.executeAction({
                 Name: '/TRL_RH_SnorkelApp/Actions/UpdateEntity.action',
                 Properties: {
-                    Target: {
-                        EntitySet: 'QC_Test_Table',
-                        Service: service,
-                        ReadLink: readLink
-                    },
+                    Target: { EntitySet: 'QC_Test_Table', Service: service, ReadLink: readLink },
                     Properties: values
                 }
             });
-
-            // console.log(`✅ Successfully updated Test ${i+1}`);
         }
 
     } catch (e) {
-        // console.error("❌ Error in UpdateSection91TestForm:", e);
         return clientAPI.executeAction({
             Name: '/TRL_RH_SnorkelApp/Actions/ValidationFailed.action',
             Properties: { Message: "Update failed: " + e.message }
@@ -342,48 +331,54 @@ async function UpdateSection102TestForm(clientAPI) {
         }
 
         // Map UI controls → backend entity
-        const testInputs = [
-            {
-                fluidity: section102.getControl('Section102FludityOfCastable1')?.getValue()?.[0]?.ReturnValue,
-                powder: section102.getControl('Section102PowerWeight1')?.getValue(),
-                remark: section102.getControl('Section102Remark1')?.getValue(),
-                vibration: section102.getControl('Section102AddingVibration1')?.getValue(),
-                water: section102.getControl('Section102WaterCasting1')?.getValue(),
-                entity: tests[0]
-            },
-            {
-                fluidity: section102.getControl('Section102FludityOfCastable2')?.getValue()?.[0]?.ReturnValue,
-                powder: section102.getControl('Section102PowerWeight2')?.getValue(),
-                remark: section102.getControl('Section102Remark2')?.getValue(),
-                vibration: section102.getControl('Section102AddingVibration2')?.getValue(),
-                water: section102.getControl('Section102WaterCasting2')?.getValue(),
-                entity: tests[1]
-            },
-            {
-                fluidity: section102.getControl('Section102FludityOfCastable3')?.getValue()?.[0]?.ReturnValue,
-                powder: section102.getControl('Section102PowerWeight3')?.getValue(),
-                remark: section102.getControl('Section102Remark3')?.getValue(),
-                vibration: section102.getControl('Section102AddingVibration3')?.getValue(),
-                water: section102.getControl('Section102WaterCasting3')?.getValue(),
-                entity: tests[2]
-            },
-            {
-                fluidity: section102.getControl('Section102FludityOfCastable4')?.getValue()?.[0]?.ReturnValue,
-                powder: section102.getControl('Section102PowerWeight4')?.getValue(),
-                remark: section102.getControl('Section102Remark4')?.getValue(),
-                vibration: section102.getControl('Section102AddingVibration4')?.getValue(),
-                water: section102.getControl('Section102WaterCasting4')?.getValue(),
-                entity: tests[3]
-            },
-            {
-                fluidity: section102.getControl('Section102FludityOfCastable5')?.getValue()?.[0]?.ReturnValue,
-                powder: section102.getControl('Section102PowerWeight5')?.getValue(),
-                remark: section102.getControl('Section102Remark5')?.getValue(),
-                vibration: section102.getControl('Section102AddingVibration5')?.getValue(),
-                water: section102.getControl('Section102WaterCasting5')?.getValue(),
-                entity: tests[4]
-            }
-        ];
+     const testInputs = [
+    {
+        batchNo: section102.getControl('Section102TestBatchNo1')?.getValue(),
+        fluidity: section102.getControl('Section102FludityOfCastable1')?.getValue()?.[0]?.ReturnValue,
+        powder: section102.getControl('Section102PowerWeight1')?.getValue(),
+        remark: section102.getControl('Section102Remark1')?.getValue(),
+        vibration: section102.getControl('Section102AddingVibration1')?.getValue()?.[0]?.ReturnValue,
+        water: section102.getControl('Section102WaterCasting1')?.getValue(),
+        entity: tests[0]
+    },
+    {
+        batchNo: section102.getControl('Section102TestBatchNo2')?.getValue(),
+        fluidity: section102.getControl('Section102FludityOfCastable2')?.getValue()?.[0]?.ReturnValue,
+        powder: section102.getControl('Section102PowerWeight2')?.getValue(),
+        remark: section102.getControl('Section102Remark2')?.getValue(),
+        vibration: section102.getControl('Section102AddingVibration2')?.getValue()?.[0]?.ReturnValue,
+        water: section102.getControl('Section102WaterCasting2')?.getValue(),
+        entity: tests[1]
+    },
+    {
+        batchNo: section102.getControl('Section102TestBatchNo3')?.getValue(),
+        fluidity: section102.getControl('Section102FludityOfCastable3')?.getValue()?.[0]?.ReturnValue,
+        powder: section102.getControl('Section102PowerWeight3')?.getValue(),
+        remark: section102.getControl('Section102Remark3')?.getValue(),
+        vibration: section102.getControl('Section102AddingVibration3')?.getValue()?.[0]?.ReturnValue,
+        water: section102.getControl('Section102WaterCasting3')?.getValue(),
+        entity: tests[2]
+    },
+    {
+        batchNo: section102.getControl('Section102TestBatchNo4')?.getValue(),
+        fluidity: section102.getControl('Section102FludityOfCastable4')?.getValue()?.[0]?.ReturnValue,
+        powder: section102.getControl('Section102PowerWeight4')?.getValue(),
+        remark: section102.getControl('Section102Remark4')?.getValue(),
+        vibration: section102.getControl('Section102AddingVibration4')?.getValue()?.[0]?.ReturnValue,
+        water: section102.getControl('Section102WaterCasting4')?.getValue(),
+        entity: tests[3]
+    },
+    {
+        batchNo: section102.getControl('Section102TestBatchNo5')?.getValue(),
+        fluidity: section102.getControl('Section102FludityOfCastable5')?.getValue()?.[0]?.ReturnValue,
+        powder: section102.getControl('Section102PowerWeight5')?.getValue(),
+        remark: section102.getControl('Section102Remark5')?.getValue(),
+        vibration: section102.getControl('Section102AddingVibration5')?.getValue()?.[0]?.ReturnValue,
+        water: section102.getControl('Section102WaterCasting5')?.getValue(),
+        entity: tests[4]
+    }
+];
+
 
         // Loop through & update
         for (const [i, test] of testInputs.entries()) {
@@ -393,6 +388,7 @@ async function UpdateSection102TestForm(clientAPI) {
             }
 
             const values = {
+                batchNo:test.batchNo || '',
                 fluidity: test.fluidity || '',
                 powderweight: test.powder || '',
                 remark: test.remark || '',

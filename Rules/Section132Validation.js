@@ -22,7 +22,7 @@ export default function Section132Validation(clientAPI) {
         const inspectionMethod = inspectionMethodCtrl?.getValue();
 
         if (decisionTaken && inspectedBy && inspectionMethod && decisionTaken !== "") {
-            FormSectionedTable.getSection('Section132Form').getSection(Section132StaticNextButton).setVisible(false);
+            FormSectionedTable.getSection('Section132Form').getControl('Section132StaticNextButton').setVisible(false);
             const Section132UserInputImage = FormSectionedTable.getSection('Section132UserInputImage123');
             Section132UserInputImage.setVisible(true);
             const takePhotoControl = Section132UserInputImage.getControl('Section132TakePhoto123');

@@ -1326,7 +1326,7 @@
 							"Caption": "Method",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"Value": [

@@ -35,11 +35,9 @@ export default async function LoadSnorkelDataPage5(clientAPI) {
         const attachmentGroups = groupAttachmentsByQuestion(attachments);
         const flags = { next: false };
 
-        // --- Process Header Files ---
-         if (clientAPI.binding.SNORKEL_NO) {
             FormSectionedTable.getSection('Section141Form').setVisible(true);
             
-        }
+        
        
         // --- Section Keys (Page 4 only) ---
         const orderedSectionKeys = [

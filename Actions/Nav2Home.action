@@ -4,5 +4,6 @@
 		"_Name": "Nav2Home"
 	},
 	"PageToOpen": "/TRL_RH_SnorkelApp/Pages/Main.page",
-	"BackStackVisible": false
+	"BackStackVisible": false,
+	"ClearHistory": true
 }
